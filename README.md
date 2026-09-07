@@ -4,8 +4,6 @@ Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behin
 
 [Download v0.1.0](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) · [Install the CLI and VS Code extension](docs/INSTALL.md) · [72-second demo](docs/demo/walkthrough.mp4) · [Compatibility](docs/COMPATIBILITY.md)
 
-[![Dynamo Diff walkthrough: compare captured compilations and inspect original guard evidence](docs/demo/walkthrough.gif)](https://github.com/Arnavsharma2/dynamo-diff/releases/download/v0.1.0/walkthrough.mp4)
-
 The demo presents actual CLI output with a paced timeline. [Transcript and provenance](docs/DEMO.md) include the original commands and results.
 
 ## What a comparison tells you

@@ -4,17 +4,17 @@
 
 | Component | Tested version / role |
 |---|---|
-| CPython | 3.13.2, macOS arm64 |
+| CPython | 3.13.2 locally on macOS arm64; hosted 3.13.14 on macOS arm64 and 3.13.15 on Linux x64 |
 | PyTorch | 2.14.0, source commit `08187d9e0fba026dc8217405802ab5381dc88d90` |
 | Transformers | 5.10.1, full CPU `generate()` static-cache case study |
 | tlparse | Published package 0.4.3; `raw.jsonl` export and linked payloads |
 | Dynamo metrics | `log_format_version=3` |
 | Pydantic | 2.13.5 |
 | MCP Python SDK | 2.1.1, stdio server/client round trip |
-| VS Code | 1.132.1, macOS arm64 isolated extension host |
+| VS Code | 1.132.1, macOS arm64 and Linux x64 isolated development/installed-VSIX hosts |
 | TypeScript | 7.0.2; extension uses VS Code 1.100 API types |
 
-The extension's API floor is declared as VS Code 1.100. Runtime tests currently cover 1.132.1 only. The Python package declares 3.11+, but the verified local environment is 3.13.2. Linux/Windows and additional versions need CI/runtime evidence before being called tested.
+The extension's API floor is declared as VS Code 1.100. Runtime tests currently cover 1.132.1 only. The Python package declares 3.11+, but verified environments are Python 3.13. The [hosted CI checkpoint](../artifacts/HOSTED_CI.md) records passing wheel checks on macOS 26.5.2 and Ubuntu 24.04.4, plus Linux editor checks. Windows and additional Python/editor versions remain unverified. Compiler workload generation was performed on the original local toolchain; hosted CI inspects the retained captures without ML runtimes.
 
 The converter is outside the analyzer. A report must contain a single string-table header, metadata records, and referenced payload files from the tested export. Import does not check an HTML report's appearance or run tlparse automatically. Producer/metrics versions outside the supported pair are rejected. Missing version metadata yields partial/unknown results, not a successful compatibility claim.
 

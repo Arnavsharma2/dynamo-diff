@@ -2,7 +2,7 @@
 
 Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behind the difference. A local Python analyzer powers a CLI, three MCP tools, and a small VS Code extension.
 
-**Development status:** the core, MCP transport and editor integration have local tests, the [import benchmark](docs/PERFORMANCE.md) has a measured baseline, and a [real Transformers investigation](case_studies/transformers_cache/README.md) retains before/after traces and eager-output checks. The [60-trial diagnostic pilot](benchmarks/agent_pilot/README.md) finished without demonstrating end-to-end agent improvement; human review and the final release audit remain open. See [delivery status](docs/STATUS.md). This project is not yet published to PyPI or the VS Code Marketplace.
+**Development status:** [hosted CI](artifacts/HOSTED_CI.md) passes core and MCP checks on macOS/Linux and development/installed-extension checks on Linux; local macOS editor checks also pass. The [import benchmark](docs/PERFORMANCE.md) has a measured baseline, and a [real Transformers investigation](case_studies/transformers_cache/README.md) retains before/after traces and eager-output checks. The [60-trial diagnostic pilot](benchmarks/agent_pilot/README.md) finished without demonstrating end-to-end agent improvement; human review and the final release audit remain open. See [delivery status](docs/STATUS.md). This project is not yet published to PyPI or the VS Code Marketplace.
 
 ## What a comparison tells you
 

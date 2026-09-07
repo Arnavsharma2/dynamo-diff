@@ -2,7 +2,7 @@
 
 Implementation started September 6, 2026. The original scope remains the acceptance contract. This is an implementation checkpoint, **not a completed release**.
 
-Current evidence: 93 Python tests pass against the installed wheel with PyTorch and Transformers absent; the real MCP stdio round trip and retained real-project investigation are included. Eleven checks pass against the installed VSIX in VS Code 1.132.1 on macOS, including editor-group preservation and rendered-table activation. The authored-edit demo and the full Transformers static-cache case reproduce their expected comparisons. The CLI now displays both baseline and candidate guard categories. The validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
+Current evidence: [hosted CI](../artifacts/HOSTED_CI.md) passes 93 installed-wheel tests, both offline demonstrations and 12 evaluation-harness tests on macOS and Linux, with PyTorch and Transformers absent. Eleven checks pass against the installed VSIX in VS Code 1.132.1 on both platforms, including editor-group preservation and rendered-table activation. The authored-edit demo and the full Transformers static-cache case reproduce their expected comparisons. The CLI now displays both baseline and candidate guard categories. The validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
 
 ## Milestones
 
@@ -14,7 +14,7 @@ Current evidence: 93 Python tests pass against the installed wheel with PyTorch 
 | MCP interface | Locally verified | Three tools, real stdio test, bounded retrieval, approved roots and CLI/core parity. Evidence discovery now exposes IDs hidden in compact rows. All 60 frozen pilot attempts finished; strict response-format failures prevented a demonstrated end-to-end improvement. |
 | VS Code interface | Installed VSIX verified | Import/compare, native tree, table, captured source/evidence, error paths and actual cancellation pass against the installed package. Visual review remains. |
 | Case studies and evaluation | Real-project case verified; pilot recorded | Full Transformers 5.10.1 generate() case, early-init intervention, raw/normalized evidence and independent eager-output checks. Ten fresh held-out questions, fourteen captures and all 60 individual attempts are retained. Provisional primary and explicitly post-hoc results are documented; human review remains. |
-| Release and demonstration | Local artifacts verified; external gates open | Current wheel and VSIX pass local tests; source archive includes case corpus, upstream license texts and the recorded CLI demo. CI workflow is written and syntax checked; hosted execution and native visual acceptance remain. |
+| Release and demonstration | Private repository and hosted CI verified; review gates open | Current wheel and VSIX pass local and hosted checks; source archive includes case corpus, upstream license texts and the recorded CLI demo. Native visual acceptance and required human review remain. |
 
 ## Acceptance ledger
 
@@ -47,7 +47,7 @@ Current evidence: 93 Python tests pass against the installed wheel with PyTorch 
 - [x] Full Transformers generate() before/after investigation with pinned reproduction, raw compiler evidence, independent backend observations and eager-output oracle. Human explanation review remains separate.
 - [x] Held-out agent pilot and all 60 individual results, including failures; human key and semantic review remain pending.
 - [x] Local wheel/sdist and VSIX; installed-wheel suite and both demonstrations without ML runtimes; installed-VSIX integration checks. These are development artifacts, not a published release.
-- [ ] CI, license/attribution, architecture/semantics/compatibility/capture/release docs.
+- [x] Hosted macOS/Linux core and Linux installed-editor CI; license/attribution, architecture/semantics/compatibility/capture/release docs. Human review remains separate.
 - [x] Requirement-by-requirement audit recorded in `COMPLETION_AUDIT.md`; unresolved gates remain explicit.
 
 Human review of expected fixture explanations and external user feedback must be recorded honestly. No human review, external usage, or benchmark outcome is implied by generated files or tests.
@@ -55,5 +55,5 @@ Human review of expected fixture explanations and external user feedback must be
 ## Next work in the unchanged scope
 
 1. Complete human key and semantic review of the [recorded 60-trial pilot](../benchmarks/agent_pilot/README.md). The strict result shows no demonstrated end-to-end improvement. An explicitly post-hoc answer-member analysis describes formatting sensitivity; it does not replace the primary result. No paid model usage was incurred.
-2. Resume native editor visual verification after the Mac is unlocked. Import, comparison totals and table contents were inspected; the updated profile's final layout and source/evidence walkthrough remain open. The corrected [CLI demonstration](DEMO.md) is recorded and reproducible. Hosted CI has not run while the repository remains local; no Linux runtime claim is made.
+2. Finish native editor visual verification once desktop automation provides consistent current state. The September 7 retry recovered the comparison tree and invoked table/source navigation, but accessibility content and screenshots remained stale and conflicting. The updated profile's final layout and source/evidence walkthrough remain open. The corrected [CLI demonstration](DEMO.md) is recorded and reproducible. The private repository is uploaded and [hosted CI passed](../artifacts/HOSTED_CI.md).
 3. Obtain the required human review of fixture explanations, case study and pilot answer keys, then close the remaining items in the [requirement audit](COMPLETION_AUDIT.md). Human review has not occurred. Demand-validation targets remain unclaimed; no outreach has been sent.

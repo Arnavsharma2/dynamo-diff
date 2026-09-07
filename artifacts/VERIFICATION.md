@@ -1,6 +1,6 @@
 # Verification checkpoint
 
-This records local evidence, not a release-completion claim. Raw compiler fixtures and their expected counts are separate from these test receipts.
+This records local and hosted evidence, not a release-completion claim. Raw compiler fixtures and their expected counts are separate from these test receipts.
 
 ## Python wheel
 
@@ -34,6 +34,12 @@ The user approved installation in a persistent `Dynamo Diff Demo` profile. The C
 
 Native control initially returned stale states, `noWindowsAvailable`, `elementHasNoFrame` and a ScreenCaptureKit stream error. It later recovered enough to select the captures, inspect the expected comparison totals, and inspect the rendered table's validity, event counts, source match and baseline/candidate guard fields through the native accessibility tree. Generated views were closed and the demo window was reloaded after the tested VSIX update. macOS then reported a locked desktop, so visual acceptance of the updated layout and the native source/evidence walkthrough remain pending. The demo workspace uses VS Code's built-in file picker; this is a local demo setting. These automation failures are not evidence of another VS Code crash.
 
+The September 7 follow-up recovered the updated profile's comparison tree with expected totals and one empty editor group. Table and baseline-source actions changed the outer window title to `Preview comparison.md` and then `model.py`, but accessibility content lagged behind those titles and screenshots remained on the earlier empty editor. The native visual gate remains open because those conflicting observations cannot establish the final source/evidence layout. No normal VS Code process was terminated during this retry.
+
+## Hosted CI
+
+After the user approved the private repository upload, [Verify run 34145658752](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34145658752) passed at commit `0fd1053530792a979ec397a1b7f91154b9d4f0d1`. Both macOS and Linux passed 93 installed-wheel tests, both offline demonstrations and 12 evaluation-harness tests. Linux VS Code 1.132.1 passed ten development checks, packaged the VSIX and passed eleven isolated installed-package checks. No CI fixes or model calls were needed. [HOSTED_CI.md](HOSTED_CI.md) links the exact environments, complete log and GitHub status receipt.
+
 ## Real-project investigation
 
 `case_studies/transformers_cache` retains an authored CPU reproduction through unmodified Transformers 5.10.1 `generate()`. Backend totals after three identical requests are **2 → 3 → 3** with lazy initialization and **2 → 2 → 2** with early initialization. Raw terminal records support three versus two completed compilations; explicit recompile artifacts support two versus one successful recompilations. The removed event has both a cached shape rejection and a cache-initialization guard reason.
@@ -48,9 +54,9 @@ The [CLI walkthrough](../docs/DEMO.md) records five successful actual commands, 
 
 ## Packaging and open gates
 
-Wheel, source archive and VSIX exist locally. The source archive includes the offline demonstrations, controlled fixtures, real-project captures, exact upstream license texts, completed pilot and recorded CLI demo. The CI workflow is written, action commits verified, and YAML structure checked; it has not executed on GitHub. The artifacts remain development previews pending hosted CI, native visual acceptance and human fixture/case/answer-key/semantic review. The requirement audit records these open gates.
+Wheel, source archive and VSIX exist locally. The source archive includes the offline demonstrations, controlled fixtures, real-project captures, exact upstream license texts, completed pilot and recorded CLI demo. Hosted CI passed for the uploaded private repository. The artifacts remain development previews pending native visual acceptance and human fixture/case/answer-key/semantic review. The requirement audit records these open gates.
 
-`final-local-checkpoint.json` identifies the current artifacts and test receipts. Earlier `build-receipt.json` and `wheel-profile-checkpoint.json` are historical checkpoints; their hashes describe earlier implementations. No package has been published, no external user validation is claimed, and the original scope remains unchanged.
+`final-local-checkpoint.json` identifies the unchanged local build artifacts and local test receipts; its pre-upload open-gate notes are superseded by the hosted CI checkpoint above. Earlier `build-receipt.json` and `wheel-profile-checkpoint.json` are historical checkpoints; their hashes describe earlier implementations. No package has been published, no external user validation is claimed, and the original scope remains unchanged.
 
 ## Processing benchmark
 

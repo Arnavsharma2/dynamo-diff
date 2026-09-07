@@ -29,7 +29,7 @@ For the extension, run the isolated editor suite and install the VSIX into a sep
 - Review the retained [Transformers investigation](../case_studies/transformers_cache/README.md), its independent output evidence and reproduction recipe.
 - Human review of the completed ten-question, 60-attempt diagnostic pilot across raw logs, tlparse text and Dynamo Diff. Individual results and failures are retained; the primary result shows no demonstrated end-to-end improvement.
 - Review [upstream notices](THIRD_PARTY_NOTICES.md) and the included license texts for redistributed artifacts.
-- Hosted CI execution and native editor visual acceptance. Fresh-wheel and installed-VSIX checks pass locally; the [short CLI demo](DEMO.md) is recorded.
+- Native editor visual acceptance. Fresh-wheel and installed-VSIX checks pass locally and in [hosted CI](../artifacts/HOSTED_CI.md); the [short CLI demo](DEMO.md) is recorded.
 - Requirement-by-requirement comparison against the unchanged original project scope.
 
 Record evidence in `STATUS.md`; never replace an unverified gate with a broader claim based on unit tests. External feedback/adoption remains unclaimed unless actually obtained. Once the gates pass, finalize the version/changelog, hash the artifacts and arrange publication to the chosen repository/package channels.
@@ -40,4 +40,4 @@ The initial 10 MiB/100 MiB processing baseline and separate conversion timings a
 
 `.github/workflows/ci.yml` defines wheel-based core checks on macOS/Linux and an actual VS Code extension-host run under Xvfb on Linux. Official checkout/Python/Node actions are pinned to verified release commits, and the workflow grants read-only repository access. It does not execute recorded workloads or require ML runtimes for normal checks.
 
-The workflow has not run on GitHub while this repository remains local. Successful local runs of `tools/check_release.py` and the macOS editor harness are local evidence only; they do not establish Linux or hosted-CI compatibility. Retain the first hosted run URL and result here when it exists.
+The first [hosted run](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34145658752) passed on September 7, 2026 at commit `0fd1053530792a979ec397a1b7f91154b9d4f0d1`. Both macOS/Linux wheel jobs passed 93 core tests, both offline demonstrations and 12 evaluation-harness tests. The Linux editor job passed ten development-host checks, built the VSIX and passed eleven checks against its isolated installation. [The retained checkpoint](../artifacts/HOSTED_CI.md) records exact environments and links the complete log. These results do not approve the human review or native visual gates.

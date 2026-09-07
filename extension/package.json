@@ -2,9 +2,23 @@
   "name": "dynamo-diff",
   "displayName": "Dynamo Diff",
   "description": "Compare PyTorch Dynamo captures and inspect source-linked compiler evidence.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "dynamo-diff",
   "license": "MIT",
+  "homepage": "https://github.com/Arnavsharma2/dynamo-diff#readme",
+  "bugs": {
+    "url": "https://github.com/Arnavsharma2/dynamo-diff/issues"
+  },
+  "pricing": "Free",
+  "keywords": [
+    "pytorch",
+    "torch.compile",
+    "dynamo",
+    "machine-learning",
+    "profiling",
+    "debugging",
+    "mcp"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Arnavsharma2/dynamo-diff.git",

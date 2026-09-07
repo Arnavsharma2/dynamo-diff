@@ -1,6 +1,6 @@
 # Held-out answer review
 
-**Human review is pending.** These explanations were authored from the compiler records and independent workload observations before any model trial. `answer-key.json` is not available through the evaluation tools. Counts below are for this pinned producer, not general rules inferred from frame numbers.
+**AI-reviewed; independent human review has not occurred.** These explanations were authored from the compiler records and independent workload observations before any model trial. The user made human review optional for project delivery in the September 7 [scope revision](../../docs/PROJECT_SCOPE.md). This does not retrospectively change the frozen protocol or make mechanical scores human-validated. `answer-key.json` is not available through the evaluation tools. Counts below are for this pinned producer, not general rules inferred from frame numbers.
 
 All successful terminals below record guarded code, positive graph-op counts and no failure; the associated graph records are present. Record numbers refer to the respective bundle's converted `report/raw.jsonl`. The raw condition contains the same original process trace. The complete outcome observation files are curator checks; they are deliberately not supplied to an evaluation agent because they directly reveal count answers.
 

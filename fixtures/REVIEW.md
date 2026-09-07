@@ -1,6 +1,6 @@
 # Controlled capture review
 
-**Human review pending.** These explanations were prepared by Codex from the retained compiler records and the separately instrumented backend. They have not been approved by a human. The numeric expectations remain in [expected.json](expected.json).
+**AI-reviewed; independent human review is optional.** These explanations were prepared and inspected by Codex against the retained compiler records and the separately instrumented backend. Human review has not occurred. The user made it optional in the September 7 [scope revision](../docs/PROJECT_SCOPE.md). Numeric expectations remain in [expected.json](expected.json).
 
 The links below refer to the original tlparse metadata and payloads, not the analyzer's normalized output. Line numbers are one-based records in `report/raw.jsonl`. Each bundle also retains the original prefixed process log under `raw/`, its manifest, the executed source snapshot and `workload-result.json`. The latter records backend invocation totals and output comparisons independently of Dynamo Diff. Backend invocations alone are not a general definition of completed Dynamo compilation.
 
@@ -27,4 +27,4 @@ The [Transformers investigation](../case_studies/transformers_cache/README.md) s
 
 ## Recording a review
 
-A reviewer should identify corrections by case and record, or explicitly confirm that they reviewed the explanations and their supporting evidence. Record the reviewer, date, material inspected and any changes. Keep this status pending until that happens; generated tests and agent review do not satisfy the human-review requirement.
+A future human reviewer should identify corrections by case and record, or explicitly confirm inspection of the explanations and supporting evidence. Record the reviewer, date, material inspected and changes. Keep the AI-reviewed label until a human review actually occurs; the optional review does not block portfolio-v1 delivery.

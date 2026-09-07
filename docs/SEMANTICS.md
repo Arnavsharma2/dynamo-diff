@@ -42,6 +42,6 @@ Manifest consistency is a comparison of declarations, not proof of identical exe
 
 ## Review status
 
-Expected fixture counts in `fixtures/expected.json` were written from direct inspection of compiler records and the independent instrumented backend, then checked against the adapter. They have been reviewed by Codex. **Human review is pending.** The held-out agent evaluation must not reuse these fixture names as diagnostic answers.
+Expected fixture counts in `fixtures/expected.json` were written from direct inspection of compiler records and the independent instrumented backend, then checked against the adapter. They are **AI-reviewed by Codex**. Independent human review has not occurred and is optional under the user-approved September 7 scope revision. The held-out agent evaluation must not reuse these fixture names as diagnostic answers.
 
 Upstream references: [cache-size semantics](https://github.com/pytorch/pytorch/blob/v2.14.0/torch/_dynamo/cache_size.py), [frame conversion and metrics](https://github.com/pytorch/pytorch/blob/v2.14.0/torch/_dynamo/convert_frame.py), [guard emitter](https://github.com/pytorch/pytorch/blob/v2.14.0/torch/_dynamo/guards.py), [tlparse](https://github.com/meta-pytorch/tlparse).

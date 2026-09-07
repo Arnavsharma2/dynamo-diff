@@ -1,12 +1,6 @@
 # Dynamo Diff — project scope
 
-**Scoped September 6, 2026; review policy revised September 7, 2026.** This document defines the approved requirements. Current implementation evidence is recorded in `docs/STATUS.md` in the project repository; external user validation remains unclaimed.
-
-## Approved review-policy revision — September 7, 2026
-
-The user approved making independent human review optional for portfolio v1 and retaining the accurate **AI-reviewed** label. Fixture explanations, case-study conclusions and pilot answer/evidence reviews no longer require a human sign-off to complete this project. Human review has not occurred and must not be claimed.
-
-The original requirement is preserved in [the archived proposal](PROJECT_SCOPE_ORIGINAL.md). This revision changes the delivery review gate only. It does not alter recorded trial responses, frozen protocols, numeric scores, the negative primary result or any other implementation/evidence requirement. Mechanical pilot measurements retain their documented limitations; optional human review can improve confidence later.
+**Working name; scoped September 6, 2026. Status: researched proposal, not implemented or user-validated.**
 
 ## 1. Decision and evidence
 
@@ -230,7 +224,7 @@ Set explicit input, record-size, payload, and response bounds. Read metadata inc
 
 ### Required controlled cases
 
-Create small authored workloads under the pinned toolchain, with retained traces, manifests, expected normalized events, and AI-reviewed explanations; independent human review is optional:
+Create small authored workloads under the pinned toolchain, with retained traces, manifests, expected normalized events, and human-reviewed explanations:
 
 1. Stable repeated inputs: initial work followed by reuse.
 2. Static shape sequence A → B → A: a new specialization followed by reuse.
@@ -263,7 +257,7 @@ For simple one-graph examples, an instrumented backend can provide an independen
 
 Prepare 8–12 held-out questions covering diagnosis, before/after comparison, multiple reasons per event, mismatched workloads, and false fixes. Use a fixed model/version, equivalent instructions, tool access, and budget across three conditions: raw logs, tlparse plain text, and Dynamo Diff. Repeat each a small number of times with randomized order.
 
-Score against AI-reviewed answers; independent human review is optional. Measure correct interpretation, unsupported claims, evidence accuracy, input/output tokens, tool calls, and elapsed time. Publish individual results and failures. Avoid revealing answers through filenames or tool descriptions. Treat this as a pilot; if no improvement appears, report that and revise the product. The core release must remain usable without paid model evaluation.
+Score against hand-reviewed answers: correct interpretation, unsupported claims, evidence accuracy, input/output tokens, tool calls, and elapsed time. Publish individual results and failures. Avoid revealing answers through filenames or tool descriptions. Treat this as a pilot; if no improvement appears, report that and revise the product. The core release must remain usable without paid model evaluation.
 
 Any application-speed claim needs separate output-correctness checks and repeated measurements on the relevant hardware, with accelerator synchronization, documented cold/warm conditions, and baseline/candidate order variation. Report variability and inconclusive results. Do not add overlapping compiler phase durations as though they were independent wall-clock costs.
 

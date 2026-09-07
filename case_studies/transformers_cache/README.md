@@ -52,7 +52,7 @@ From the repository root, an environment with the core package installed can run
 python case_studies/transformers_cache/verify.py
 ```
 
-This requires neither PyTorch nor Transformers. It checks retained hashes, raw terminal evidence, reason associations, the independently recorded backend counts, eager-output results and Dynamo Diff's comparison. It uses a temporary store and leaves the original bundles unchanged. [expected.json](expected.json) contains the separately authored expected counts and evidence locations. **Human explanation review remains pending**; automated verification is not that review.
+This requires neither PyTorch nor Transformers. It checks retained hashes, raw terminal evidence, reason associations, the independently recorded backend counts, eager-output results and Dynamo Diff's comparison. It uses a temporary store and leaves the original bundles unchanged. [expected.json](expected.json) contains the separately authored expected counts and evidence locations. The explanation is **AI-reviewed**; independent human review has not occurred and is optional under the September 7 [scope revision](../../docs/PROJECT_SCOPE.md). Historical machine receipts retain their original review-status fields.
 
 To retain a report or inspect evidence interactively:
 

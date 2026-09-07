@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-09-07T17:46:51.077718+00:00",
+  "kind": "approved_review_policy_checkpoint",
+  "review_type": "AI review; independent human review optional and not performed",
+  "portfolio_v1_complete": false,
+  "supersedes_documentation_and_sdist_identity": "artifacts/source-map-checkpoint.json",
+  "tested_implementation_receipt": "artifacts/source-map-checkpoint.json",
+  "python_and_vsix_unchanged_from_tested_receipt": true,
+  "original_scope_archived_exactly": true,
+  "frozen_protocol_responses_and_scores_unchanged": true,
+  "sdist_documentation_payload_verified": true,
+  "native_visual_checks": {
+    "baseline_source": "passed",
+    "comparison_table": "passed",
+    "original_guard_evidence": "passed",
+    "candidate_source": "pending: current AX tab/title differs from stale screenshot"
+  },
+  "files": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "784e97a3899160ddb04970fec07d94171014bb7b96599d7dedef944f25cb6d42",
+      "bytes": 31644
+    },
+    "dist/dynamo_diff-0.1.0.tar.gz": {
+      "sha256": "5b9446603652b1e09c36d115edfdfaede6573e87e722973abbda4ecced28e771",
+      "bytes": 3778840
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "656d722307549ce69c572ec491ffeedd449b97c569ca17c37d87b8eee4b8bcaf",
+      "bytes": 9732
+    },
+    "docs/PROJECT_SCOPE.md": {
+      "sha256": "20348947bf272805077b10f0d4cd57e72d8c6d7cc3fc6489865ebfbc6195c925",
+      "bytes": 28701
+    },
+    "docs/PROJECT_SCOPE_ORIGINAL.md": {
+      "sha256": "bbbfc8f815cde3abb222646ba43403c9026287b1a99effe9f736bbe1a7fbea5a",
+      "bytes": 27673
+    },
+    "docs/CHANGELOG.md": {
+      "sha256": "e95cd4029ced707e5354372a17683e8af17efdc587fba6cad72ce4f83c1e838f",
+      "bytes": 1401
+    }
+  },
+  "remaining": [
+    "Native candidate source visual inspection",
+    "Final delivery audit/status and CI for documentation commit"
+  ]
+}

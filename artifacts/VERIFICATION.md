@@ -1,5 +1,11 @@
 # Verification checkpoint
 
+## Approved review-policy revision and evidence-view completion
+
+On September 7, 2026, the user made independent human fixture/case/pilot review optional for portfolio v1. The [current scope](../docs/PROJECT_SCOPE.md) records that revision and links the byte-preserved [original proposal](../docs/PROJECT_SCOPE_ORIGINAL.md). Reviews remain AI-reviewed; no human validation is claimed. Frozen pilot protocols, responses and scores are unchanged. Earlier pending-review notes below describe their historical checkpoints.
+
+The native evidence view was subsequently inspected in a coherent screenshot of `payload-10-0.txt`: original guard `step == 1`, captured `if step > 0` context, artifact `-_0_1_0/recompile_reasons_4.json`, record 10 and SHA-256 `832c22b265eea6007916338024fa9ad308f931e2ca6ecf4bbc57ce205b43dc6a` were readable in one editor group. This closes evidence-view visual inspection. Baseline source and rendered table were already visually verified; only candidate-source inspection remains.
+
 This records local and hosted evidence, not a release-completion claim. Raw compiler fixtures and their expected counts are separate from these test receipts.
 
 ## Latest input-audit revision
@@ -64,9 +70,9 @@ The [CLI walkthrough](../docs/DEMO.md) records five successful actual commands, 
 
 ## Packaging and open gates
 
-Wheel, source archive and VSIX exist locally. The source archive includes the offline demonstrations, controlled fixtures, real-project captures, exact upstream license texts, completed pilot and recorded CLI demo. Hosted CI passed for the uploaded private repository. The artifacts remain development previews pending native visual acceptance and human fixture/case/answer-key/semantic review. The requirement audit records these open gates.
+Wheel, source archive and VSIX exist locally. The source archive includes the offline demonstrations, controlled fixtures, real-project captures, exact upstream license texts, completed pilot and recorded CLI demo. Hosted CI passed for the uploaded private repository. Current native visual status and the approved optional-human-review policy are recorded at the top of this document; the [requirement audit](../docs/COMPLETION_AUDIT.md) tracks remaining delivery work.
 
-`final-local-checkpoint.json` identifies the unchanged local build artifacts and local test receipts; its pre-upload open-gate notes are superseded by the hosted CI checkpoint above. Earlier `build-receipt.json` and `wheel-profile-checkpoint.json` are historical checkpoints; their hashes describe earlier implementations. No package has been published, no external user validation is claimed, and the original scope remains unchanged.
+`source-map-checkpoint.json` identifies the tested local wheel and unchanged VSIX. It predates the approved review-policy revision and final documentation. `final-local-checkpoint.json`, `build-receipt.json` and `wheel-profile-checkpoint.json` are historical checkpoints; their hashes and open-gate notes describe earlier states. No package has been published and no external user validation is claimed. The original scope is archived, and the approved scope changes only the human-review delivery requirement.
 
 ## Processing benchmark
 

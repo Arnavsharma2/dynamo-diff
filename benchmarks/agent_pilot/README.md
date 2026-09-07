@@ -1,6 +1,6 @@
 # Diagnostic pilot: no demonstrated end-to-end improvement
 
-All **60 planned attempts** finished under the [frozen protocol](PROTOCOL.md), using local Ollama 0.33.2 and the recorded qwen3:8b Q4_K_M digest. The runner's final configuration check passed. No trial was silently retried or removed. **Human answer-key and semantic review are pending**, so the results below are provisional mechanical measurements.
+All **60 planned attempts** finished under the [frozen protocol](PROTOCOL.md), using local Ollama 0.33.2 and the recorded qwen3:8b Q4_K_M digest. The runner's final configuration check passed. No trial was silently retried or removed. The answer key is **AI-reviewed**; independent human answer-key and semantic review have not occurred, so the results below remain provisional mechanical measurements. The user made that outside review optional for project delivery in the September 7 [scope revision](../../docs/PROJECT_SCOPE.md). The frozen protocol and original reports retain their historical review requirements; no trial, score or scientific validation claim was changed by this delivery decision.
 
 ## Primary result
 
@@ -47,4 +47,4 @@ Recreate the mechanical reports without any model call:
 .venv/bin/python benchmarks/agent_pilot/diagnose_formatting.py benchmarks/agent_pilot/runs/run-001
 ```
 
-The original run receipt records source and exposed-input hashes. The answer key in [ANSWER_REVIEW.md](ANSWER_REVIEW.md) remains pending human review; expected counts were authored from direct compiler evidence and independent backend observations, not accepted from the analyzer's answers.
+The original run receipt records source and exposed-input hashes. The answer key in [ANSWER_REVIEW.md](ANSWER_REVIEW.md) is AI-reviewed, with optional human review unclaimed; expected counts were authored from direct compiler evidence and independent backend observations, not accepted from the analyzer's answers.

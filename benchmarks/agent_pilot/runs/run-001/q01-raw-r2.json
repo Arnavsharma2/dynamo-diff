@@ -1,0 +1,43 @@
+{
+  "id": "q01-raw-r2",
+  "question_id": "q01",
+  "condition": "raw",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 4,\n    \"guard_category\": \"tensor_shape_stride\",\n    \"last_call_new_compile\": true,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The workload in capture A has four completed compilation identities. The final repeated call created a new compilation, and the guard category 'tensor_shape_stride' explains the recorded specialization.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload\\\": {\\\"calls\\\": [ ... ]}\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"capture\\\": {\\\"workload_completed\\\": true, \\\"process_exit_code\\\": 0, \\\"converter_exit_code\\\": 0, \\\"report_sha256\\\": \\\"3843de9e239e10534dc497d06b4207fa2e51a1178fd9da2e12a446603e0e1659\\\"}\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 4,
+      "guard_category": "tensor_shape_stride",
+      "last_call_new_compile": true,
+      "successful_recompiles": 0
+    },
+    "explanation": "The workload in capture A has four completed compilation identities. The final repeated call created a new compilation, and the guard category 'tensor_shape_stride' explains the recorded specialization.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload\": {\"calls\": [ ... ]}"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"capture\": {\"workload_completed\": true, \"process_exit_code\": 0, \"converter_exit_code\": 0, \"report_sha256\": \"3843de9e239e10534dc497d06b4207fa2e51a1178fd9da2e12a446603e0e1659\"}"
+      }
+    ]
+  },
+  "model_requests": 6,
+  "tool_calls_requested": 5,
+  "tool_calls_executed": 5,
+  "input_tokens": 8775,
+  "output_tokens": 449,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 3342,
+  "model_total_duration_ns": 46864978374,
+  "model_load_duration_ns": 24756040,
+  "token_counters_available": true,
+  "wall_seconds": 46.88902249999228
+}

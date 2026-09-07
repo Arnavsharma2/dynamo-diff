@@ -1,0 +1,32 @@
+{
+  "case": "no_graph",
+  "backend_calls": [],
+  "calls": [
+    {
+      "shape": [
+        4
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "requires_grad": false,
+      "scale": 2,
+      "backend_calls_so_far": 0,
+      "output_correct": true
+    },
+    {
+      "shape": [
+        4
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "requires_grad": false,
+      "scale": 2,
+      "backend_calls_so_far": 0,
+      "output_correct": true
+    }
+  ],
+  "expected_error": null,
+  "workload_completed": true,
+  "torch_version": "2.14.0",
+  "torch_git_version": "08187d9e0fba026dc8217405802ab5381dc88d90"
+}

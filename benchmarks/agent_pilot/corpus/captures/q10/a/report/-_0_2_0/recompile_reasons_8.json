@@ -1,0 +1,4 @@
+[
+  "0/1: tensor 'x' requires_grad mismatch. expected requires_grad=0",
+  "0/0: tensor 'x' dtype mismatch. expected Float, actual Double"
+]

@@ -1,0 +1,18 @@
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Graph break in user code at /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:9
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Graph Break Reason: Encountered graph break when attempting to trace CALL: a function call, e.g. f(x, y):
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Call to `torch._dynamo.graph_break()`
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Explanation: User-inserted graph break. Message: None
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Hint: Remove the `torch._dynamo.graph_break()` call.
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Developer debug context: Called `torch._dynamo.graph_break()` with args `[]`, kwargs `{}`
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]  For more details about this graph break, please visit: https://meta-pytorch.github.io/compile-graph-break-site/gb/gb0025.html
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] User code traceback:
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 42, in <module>
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     actual = compiled[position](x, call["argument"])
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 9, in f
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     torch._dynamo.graph_break()
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+V0906 23:23:57.659000 14480 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 

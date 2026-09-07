@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-09-07T03:35:30.611397+00:00",
+  "profile": "record-replication-v1",
+  "platform": {
+    "system": "Darwin",
+    "release": "25.1.0",
+    "machine": "arm64",
+    "python": "3.13.2",
+    "pydantic": "2.13.5"
+  },
+  "method": {
+    "input": "Synthetic replication of retained multiple_guards records and referenced payloads with distinct frame IDs; not newly recorded application workloads.",
+    "imports": "Fresh worker process and empty content store per repetition. OS filesystem cache is not flushed; inputs are already generated locally.",
+    "memory": "Process high-water RSS includes the Python interpreter and libraries; macOS bytes/Linux KiB converted to bytes.",
+    "timing": "import_trace wall time excludes process startup, input generation, and upstream tlparse conversion. Parent process wall time is also retained.",
+    "comparison": "Repeated warm comparisons of the actual recorded edit pair; normalized data and snapshots are read and checked on each call."
+  },
+  "sizes": [
+    {
+      "target_bytes": 10485760,
+      "actual_bytes": 10547826,
+      "template_copies": 79,
+      "expected_completed": 237,
+      "expected_successful_recompilations": 158,
+      "payload_files": 633,
+      "metadata_bytes": 9791376,
+      "metadata_sha256": "a2371c35bfcaffd0bf502e398e65636a6c2982e7a93a790df51db1b26acd4049",
+      "median_import_seconds": 0.9485939159931149,
+      "max_peak_rss_bytes": 61423616,
+      "runs": [
+        {
+          "import_seconds": 0.9485939159931149,
+          "process_peak_rss_bytes": 60915712,
+          "normalized_capture_bytes": 715414,
+          "completed": 237,
+          "confirmed_successful_recompilations": 158,
+          "process_wall_seconds": 1.117781791021116
+        },
+        {
+          "import_seconds": 0.9684155829891097,
+          "process_peak_rss_bytes": 61423616,
+          "normalized_capture_bytes": 715414,
+          "completed": 237,
+          "confirmed_successful_recompilations": 158,
+          "process_wall_seconds": 1.1310180840082467
+        },
+        {
+          "import_seconds": 0.9480602499970701,
+          "process_peak_rss_bytes": 60964864,
+          "normalized_capture_bytes": 715414,
+          "completed": 237,
+          "confirmed_successful_recompilations": 158,
+          "process_wall_seconds": 1.1266841670149006
+        }
+      ]
+    },
+    {
+      "target_bytes": 104857600,
+      "actual_bytes": 104957295,
+      "template_copies": 786,
+      "expected_completed": 2358,
+      "expected_successful_recompilations": 1572,
+      "payload_files": 6289,
+      "metadata_bytes": 97432027,
+      "metadata_sha256": "32ac6903a31aefcc01c27617075909d4eb48d7860b685fd09eb3426348d8c084",
+      "median_import_seconds": 9.460102084005484,
+      "max_peak_rss_bytes": 267173888,
+      "runs": [
+        {
+          "import_seconds": 9.48408841699711,
+          "process_peak_rss_bytes": 267173888,
+          "normalized_capture_bytes": 7197887,
+          "completed": 2358,
+          "confirmed_successful_recompilations": 1572,
+          "process_wall_seconds": 9.6737185420061
+        },
+        {
+          "import_seconds": 9.029080209002132,
+          "process_peak_rss_bytes": 267124736,
+          "normalized_capture_bytes": 7197887,
+          "completed": 2358,
+          "confirmed_successful_recompilations": 1572,
+          "process_wall_seconds": 9.194765166990692
+        },
+        {
+          "import_seconds": 9.460102084005484,
+          "process_peak_rss_bytes": 266420224,
+          "normalized_capture_bytes": 7197887,
+          "completed": 2358,
+          "confirmed_successful_recompilations": 1572,
+          "process_wall_seconds": 9.62914412500686
+        }
+      ]
+    }
+  ],
+  "upstream_conversion": {
+    "measured_here": false,
+    "reason": "Saved exports are supplied; this benchmark does not run tlparse."
+  },
+  "comparison": {
+    "fixture_pair": [
+      "edit_before",
+      "edit_after"
+    ],
+    "warmup_calls": 1,
+    "repetitions": 20,
+    "seconds": [
+      0.0014299580070655793,
+      0.001274749985896051,
+      0.0011915000213775784,
+      0.001185000000987202,
+      0.0012887079792562872,
+      0.0012554580171126872,
+      0.001183541986392811,
+      0.0011518340033944696,
+      0.0011510000040289015,
+      0.0012435829848982394,
+      0.0016677500098012388,
+      0.0011816670012194663,
+      0.0011392909800633788,
+      0.0016107080155052245,
+      0.001292625005589798,
+      0.0011461249960120767,
+      0.001240457990206778,
+      0.0014917500084266067,
+      0.0011948749888688326,
+      0.00145179100218229
+    ],
+    "median_seconds": 0.0012420204875525087,
+    "p95_seconds": 0.0016107080155052245,
+    "full_json_chars": 8033,
+    "full_json_utf8_bytes": 8033,
+    "initial_mcp_json_chars": 7258,
+    "functions": 2
+  }
+}

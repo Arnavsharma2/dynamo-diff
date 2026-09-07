@@ -1,0 +1,21 @@
+{
+  "id": "q09-dynamo-r2",
+  "question_id": "q09",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"additional_frame_compilations\": 2,\n    \"completed\": 3,\n    \"numeric_ids_alone_prove_recompilation\": false,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"Capture A has 2 additional frame compilations, 3 completed compilations, and no confirmed successful recompilations. Increasing frame-compile numbers alone do not establish recompilation, as recompilation requires explicit evidence of a new compilation identity and successful reexecution.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"additional_frame_compilations\": 2,\n      \"completed\": 3,\n      \"confirmed_recompilation_identities\": 0,\n      \"confirmed_successful_recompilations\": 0\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2781,
+  "output_tokens": 275,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 976,
+  "model_total_duration_ns": 21790424459,
+  "model_load_duration_ns": 16581959,
+  "token_counters_available": true,
+  "wall_seconds": 22.780460874986602
+}

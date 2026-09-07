@@ -1,0 +1,467 @@
+{
+  "$defs": {
+    "CaptureValidity": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_structure": {
+          "default": "valid",
+          "enum": [
+            "valid",
+            "partial"
+          ],
+          "title": "Artifact Structure",
+          "type": "string"
+        },
+        "workload_completion": {
+          "default": "unknown",
+          "enum": [
+            "declared_completed",
+            "declared_failed",
+            "unknown"
+          ],
+          "title": "Workload Completion",
+          "type": "string"
+        },
+        "provenance": {
+          "default": "absent",
+          "enum": [
+            "hash_verified",
+            "unverified",
+            "absent"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "title": "CaptureValidity",
+      "type": "object"
+    },
+    "Counts": {
+      "additionalProperties": false,
+      "properties": {
+        "observed_compilation_identities": {
+          "default": 0,
+          "title": "Observed Compilation Identities",
+          "type": "integer"
+        },
+        "observed_attempts": {
+          "default": 0,
+          "title": "Observed Attempts",
+          "type": "integer"
+        },
+        "completed": {
+          "default": 0,
+          "title": "Completed",
+          "type": "integer"
+        },
+        "failed": {
+          "default": 0,
+          "title": "Failed",
+          "type": "integer"
+        },
+        "no_graph_observed": {
+          "default": 0,
+          "title": "No Graph Observed",
+          "type": "integer"
+        },
+        "unknown_outcomes": {
+          "default": 0,
+          "title": "Unknown Outcomes",
+          "type": "integer"
+        },
+        "confirmed_recompilation_identities": {
+          "default": 0,
+          "title": "Confirmed Recompilation Identities",
+          "type": "integer"
+        },
+        "confirmed_successful_recompilations": {
+          "default": 0,
+          "title": "Confirmed Successful Recompilations",
+          "type": "integer"
+        },
+        "additional_frame_compilations": {
+          "default": 0,
+          "title": "Additional Frame Compilations",
+          "type": "integer"
+        },
+        "guard_reason_entries": {
+          "default": 0,
+          "title": "Guard Reason Entries",
+          "type": "integer"
+        },
+        "graph_break_records": {
+          "default": 0,
+          "title": "Graph Break Records",
+          "type": "integer"
+        },
+        "unique_graph_break_sites": {
+          "default": 0,
+          "title": "Unique Graph Break Sites",
+          "type": "integer"
+        },
+        "compiler_limit_events": {
+          "default": 0,
+          "title": "Compiler Limit Events",
+          "type": "integer"
+        },
+        "fallback_reports": {
+          "default": 0,
+          "title": "Fallback Reports",
+          "type": "integer"
+        }
+      },
+      "title": "Counts",
+      "type": "object"
+    },
+    "FunctionComparison": {
+      "additionalProperties": false,
+      "properties": {
+        "match_status": {
+          "enum": [
+            "matched",
+            "ambiguous",
+            "unmatched"
+          ],
+          "title": "Match Status",
+          "type": "string"
+        },
+        "match_method": {
+          "title": "Match Method",
+          "type": "string"
+        },
+        "baseline": {
+          "items": {
+            "$ref": "#/$defs/FunctionGroup"
+          },
+          "title": "Baseline",
+          "type": "array"
+        },
+        "candidate": {
+          "items": {
+            "$ref": "#/$defs/FunctionGroup"
+          },
+          "title": "Candidate",
+          "type": "array"
+        },
+        "baseline_counts": {
+          "$ref": "#/$defs/Counts"
+        },
+        "candidate_counts": {
+          "$ref": "#/$defs/Counts"
+        },
+        "delta": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Delta",
+          "type": "object"
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "match_status",
+        "match_method",
+        "baseline",
+        "candidate",
+        "baseline_counts",
+        "candidate_counts",
+        "delta",
+        "interpretation"
+      ],
+      "title": "FunctionComparison",
+      "type": "object"
+    },
+    "FunctionGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "compilation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Compilation Ids",
+          "type": "array"
+        },
+        "counts": {
+          "$ref": "#/$defs/Counts"
+        },
+        "guard_categories": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Guard Categories",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "graph_break_sites": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Graph Break Sites",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "compilation_ids",
+        "counts",
+        "guard_categories",
+        "evidence_ids"
+      ],
+      "title": "FunctionGroup",
+      "type": "object"
+    },
+    "Notice": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "Notice",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "captured_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Captured Path"
+        },
+        "relative_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relative Path"
+        },
+        "function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Function"
+        },
+        "qualified_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Qualified Name"
+        },
+        "first_line": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Line"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot"
+        },
+        "snapshot_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot Sha256"
+        },
+        "function_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Function Sha256"
+        },
+        "generated_resume": {
+          "default": false,
+          "title": "Generated Resume",
+          "type": "boolean"
+        },
+        "attribution": {
+          "default": "unknown",
+          "enum": [
+            "trace",
+            "same_run_frame",
+            "unknown"
+          ],
+          "title": "Attribution",
+          "type": "string"
+        }
+      },
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "adapter_version": {
+      "default": "tlparse-0.4.3-torch-2.14-log3-v4",
+      "title": "Adapter Version",
+      "type": "string"
+    },
+    "comparison_version": {
+      "default": "4",
+      "title": "Comparison Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "baseline_id": {
+      "title": "Baseline Id",
+      "type": "string"
+    },
+    "candidate_id": {
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "capture_validity": {
+      "additionalProperties": {
+        "$ref": "#/$defs/CaptureValidity"
+      },
+      "title": "Capture Validity",
+      "type": "object"
+    },
+    "workload_comparability": {
+      "enum": [
+        "manifest_consistent",
+        "confounded",
+        "unknown"
+      ],
+      "title": "Workload Comparability",
+      "type": "string"
+    },
+    "comparability_differences": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Comparability Differences",
+      "type": "array"
+    },
+    "baseline_counts": {
+      "$ref": "#/$defs/Counts"
+    },
+    "candidate_counts": {
+      "$ref": "#/$defs/Counts"
+    },
+    "functions": {
+      "items": {
+        "$ref": "#/$defs/FunctionComparison"
+      },
+      "title": "Functions",
+      "type": "array"
+    },
+    "notices": {
+      "items": {
+        "$ref": "#/$defs/Notice"
+      },
+      "title": "Notices",
+      "type": "array"
+    },
+    "performance_conclusion": {
+      "const": "not_measured",
+      "default": "not_measured",
+      "title": "Performance Conclusion",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "baseline_id",
+    "candidate_id",
+    "capture_validity",
+    "workload_comparability",
+    "baseline_counts",
+    "candidate_counts",
+    "functions"
+  ],
+  "title": "Comparison",
+  "type": "object"
+}

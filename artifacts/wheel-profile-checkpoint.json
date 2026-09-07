@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-09-07T05:10:26.316911+00:00",
+  "status": "wheel_and_approved_profile_checkpoint",
+  "files": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "f6ec5d58e76647bea69dbd933f37c8800c3f57d9c405407c50c7536c64012320",
+      "bytes": 31124
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "8f8bbe5f73b30e8e0933471b46153ddfbb706e43a5b8249b8c597339a3f28d6a",
+      "bytes": 9736
+    },
+    "artifacts/python-tests.xml": {
+      "sha256": "95059fcc69f28e3bc72ca9a72074ae51d9913b909c68e89b35cdc18c8707c548",
+      "bytes": 11980
+    },
+    "artifacts/wheel-tests.xml": {
+      "sha256": "b9d408140c00b3f719c15423f4431c07123f0cd3beb13dfed0f024a9c61a4f1c",
+      "bytes": 11980
+    }
+  },
+  "python_source_files": {
+    "src/dynamo_diff/__init__.py": "4d06ff020c19557ca32519e3ffbd3bdc537aed9f6881193c29f147150f45dedf",
+    "src/dynamo_diff/adapters/__init__.py": "e19233796b9794d4773c311b7a8fcc45e035e90f3b26a4aa3d076cf8c610000d",
+    "src/dynamo_diff/adapters/tlparse.py": "827ee13fe91f81d9283d41a4723fd1ec2c25930187ca1fda160c4deb9b4787ae",
+    "src/dynamo_diff/cli.py": "744d2e9ebd3a48de1294e888ad5b0a59fa7beab8aa359a06cb0bc79eb7b87013",
+    "src/dynamo_diff/compare.py": "e6529f6293eea15f0ff4fea97ffb094b45ac112f4bfac7bd0a5b80055ece0532",
+    "src/dynamo_diff/errors.py": "c7fa5b0760ff462601e39b2a2b14a82113226d590c32aa57cad1ba4169f7427c",
+    "src/dynamo_diff/io.py": "5323a3ac1c0a335f3cd799608709819c10654e87990bbfe6ec58b02768990689",
+    "src/dynamo_diff/manifest.py": "a77247be0139d0c9022c182836a5776f145a086a8287803b6a4e1ca58e1a27c9",
+    "src/dynamo_diff/mcp_server.py": "8e3aea8f915a7aba3e31a688a8764498e9bc75146bc5921a3f1a5aa77ff84e61",
+    "src/dynamo_diff/model.py": "0fccd8a583a1edd5797635d92b5fcf70ee48bbec7e86911b9719150ba42af0f6",
+    "src/dynamo_diff/render.py": "3fd82b9ee2957a6bd6a5ffc8570020a7e3afde5ccfa39d3473d9d2b9d90c958b",
+    "src/dynamo_diff/store.py": "27d2ee4f9812a742a2f2f396a648b504abe7714bc74013c6d4b4ef6c50dc8ee0"
+  },
+  "source_tests_passed": 91,
+  "installed_wheel_tests_passed": 91,
+  "offline_demonstrations_passed": [
+    "authored_edit",
+    "transformers_static_cache"
+  ],
+  "torch_and_transformers_absent_in_wheel_environment": true,
+  "demo_profile": {
+    "name": "Dynamo Diff Demo",
+    "extension": "dynamo-diff.dynamo-diff@0.1.0",
+    "installation_verified": true,
+    "visual_flow": "pending",
+    "native_automation_issues": [
+      "stale accessibility state",
+      "noWindowsAvailable",
+      "elementHasNoFrame",
+      "ScreenCaptureKit stream failure"
+    ]
+  },
+  "sdist": "Earlier artifact remains stale; rebuild after the frozen live pilot ends.",
+  "release_complete": false
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamo-diff"
+version = "0.1.0"
+description = "Evidence-backed comparison of PyTorch Dynamo compilation traces"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["pydantic>=2.13,<3"]
+
+[project.optional-dependencies]
+mcp = ["mcp==2.1.1"]
+fixtures = ["torch==2.14.0", "tlparse==0.4.3"]
+case-study = ["torch==2.14.0", "tlparse==0.4.3", "transformers==5.10.1"]
+dev = ["pytest>=9,<10", "build>=1.6,<2", "setuptools>=77"]
+
+[project.scripts]
+dynamo-diff = "dynamo_diff.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

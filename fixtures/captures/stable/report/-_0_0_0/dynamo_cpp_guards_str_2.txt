@@ -1,0 +1,18 @@
+
+TREE_GUARD_MANAGER:
++- RootGuardManager
+| +- LAMBDA_GUARD: torch._functorch.aot_autograd.utils.top_saved_tensors_hooks ids == None  # _dynamo/output_graph.py:1194 in init_ambient_guards
+| +- GLOBAL_STATE: ___check_global_state() against {"allow_bf16_reduce":0,"allow_fp16_reduce":0,"allow_tf32":false,"autocast_state":{"cached_enabled":true,"dtype":[15,5,5,15,5,5,15,15,5,5],"enabled":[false,false,false,false,false,false,false,false,false,false]},"default_dtype":6,"deterministic_algorithms":false,"deterministic_algorithms_warn_only":false,"grad_mode":true,"num_threads":1,"torch_function":true,"torch_function_all_disabled":false}
+| +- TORCH_FUNCTION_MODE_STACK: ___check_torch_function_mode_stack()
+| +- DEFAULT_DEVICE: utils_device.CURRENT_DEVICE == None                           # _dynamo/output_graph.py:1181 in init_ambient_guards
+| +- GuardManager: source=L['x'], accessed_by=FrameLocalsGuardAccessor(key='x', framelocals_idx=0), type=<class 'torch.Tensor'>, tag_safe=(False, False)
+| | +- TENSOR_MATCH: check_tensor(L['x'], Tensor, DispatchKeySet(CPU, BackendSelect, ADInplaceOrView, AutogradCPU), torch.float32, device=None, requires_grad=False, size=[4], stride=[1])  # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| | +- DIMENSION_DYNAMIC_MARKING_GUARD: hasattr(L['x'], '_dynamo_dynamic_indices') == False           # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| | +- DIMENSION_DYNAMIC_MARKING_GUARD: hasattr(L['x'], '_dynamo_weak_dynamic_indices') == False      # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| | +- DIMENSION_DYNAMIC_MARKING_GUARD: hasattr(L['x'], '_dynamo_unbacked_indices') == False          # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| | +- DIMENSION_DYNAMIC_MARKING_GUARD: hasattr(L['x'], '_dynamo_strict_unbacked_indices') == False   # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| | +- DIMENSION_DYNAMIC_MARKING_GUARD: hasattr(L['x'], '_dynamo_static_indices') == False            # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+| +- GuardManager: source=L['scale'], accessed_by=FrameLocalsGuardAccessor(key='scale', framelocals_idx=1), type=<class 'int'>, tag_safe=(False, False)
+| | +- EQUALS_MATCH: L['scale'] == 2                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+
+Guard latency = 19.08 us

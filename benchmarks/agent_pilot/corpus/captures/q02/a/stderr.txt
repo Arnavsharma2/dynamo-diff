@@ -1,0 +1,16 @@
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: argument == -3                                           # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:35.300000 14278 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     return x.cos() * argument + x.tanh()
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: argument == 5                                            # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.cos() * argument + x.tanh()
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: argument == -3                                           # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:35.321000 14278 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.cos() * argument + x.tanh()

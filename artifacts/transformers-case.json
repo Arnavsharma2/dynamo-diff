@@ -1,0 +1,243 @@
+{
+  "checks": [
+    "baseline: finalization, raw terminals, recompile artifacts, normalized events, backend totals and eager-output evidence",
+    "candidate: finalization, raw terminals, recompile artifacts, normalized events, backend totals and eager-output evidence",
+    "matched wrapper, one fewer completed recompile, cache-initialization reason removed, shape specialization retained, no speed verdict"
+  ],
+  "comparison": {
+    "schema_version": "1",
+    "adapter_version": "tlparse-0.4.3-torch-2.14-log3-v4",
+    "comparison_version": "4",
+    "id": "41f52743873e84f50c52268deeab9550d6f4602fb1aa3832654d27d38bfaaace",
+    "baseline_id": "a3565de1d4ba2fc011e78fa230985dd91a3fd5c6b9f692a2adb7ca16da1a0aca",
+    "candidate_id": "578fe1b631e48bbeeb5cd26339ed8e8fc4f0ef7610de3079ec6d617cb32123dc",
+    "capture_validity": {
+      "baseline": {
+        "artifact_structure": "valid",
+        "workload_completion": "declared_completed",
+        "provenance": "hash_verified"
+      },
+      "candidate": {
+        "artifact_structure": "valid",
+        "workload_completion": "declared_completed",
+        "provenance": "hash_verified"
+      }
+    },
+    "workload_comparability": "manifest_consistent",
+    "comparability_differences": [],
+    "baseline_counts": {
+      "observed_compilation_identities": 3,
+      "observed_attempts": 3,
+      "completed": 3,
+      "failed": 0,
+      "no_graph_observed": 0,
+      "unknown_outcomes": 0,
+      "confirmed_recompilation_identities": 2,
+      "confirmed_successful_recompilations": 2,
+      "additional_frame_compilations": 0,
+      "guard_reason_entries": 3,
+      "graph_break_records": 0,
+      "unique_graph_break_sites": 0,
+      "compiler_limit_events": 0,
+      "fallback_reports": 0
+    },
+    "candidate_counts": {
+      "observed_compilation_identities": 2,
+      "observed_attempts": 2,
+      "completed": 2,
+      "failed": 0,
+      "no_graph_observed": 0,
+      "unknown_outcomes": 0,
+      "confirmed_recompilation_identities": 1,
+      "confirmed_successful_recompilations": 1,
+      "additional_frame_compilations": 0,
+      "guard_reason_entries": 1,
+      "graph_break_records": 0,
+      "unique_graph_break_sites": 0,
+      "compiler_limit_events": 0,
+      "fallback_reports": 0
+    },
+    "functions": [
+      {
+        "match_status": "matched",
+        "match_method": "unique_function_structure",
+        "baseline": [
+          {
+            "id": "rank-unspecified:0",
+            "source": {
+              "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py",
+              "relative_path": "transformers/utils/generic.py",
+              "function": "wrapper",
+              "qualified_name": "can_return_tuple.wrapper",
+              "first_line": 897,
+              "snapshot": "sources/transformers/utils/generic.py",
+              "snapshot_sha256": "d863aa42d6952a41d7dfc27d2b794d5a6bcf6b2a4329ec8b7dcf0ef8517d19fb",
+              "function_sha256": "22dec12d87e2eb122ef240877faf8b8308b45876701488535e22ac56ed4ec4f4",
+              "generated_resume": false,
+              "attribution": "trace"
+            },
+            "compilation_ids": [
+              "rank-unspecified:0/0",
+              "rank-unspecified:0/1",
+              "rank-unspecified:0/2"
+            ],
+            "counts": {
+              "observed_compilation_identities": 3,
+              "observed_attempts": 3,
+              "completed": 3,
+              "failed": 0,
+              "no_graph_observed": 0,
+              "unknown_outcomes": 0,
+              "confirmed_recompilation_identities": 2,
+              "confirmed_successful_recompilations": 2,
+              "additional_frame_compilations": 0,
+              "guard_reason_entries": 3,
+              "graph_break_records": 0,
+              "unique_graph_break_sites": 0,
+              "compiler_limit_events": 0,
+              "fallback_reports": 0
+            },
+            "guard_categories": [
+              "python_scalar",
+              "tensor_shape_stride"
+            ],
+            "evidence_ids": [
+              "record-3",
+              "record-87",
+              "payload-87",
+              "record-88",
+              "payload-88",
+              "record-89",
+              "record-90",
+              "payload-90",
+              "record-91",
+              "record-186",
+              "payload-186",
+              "record-187",
+              "payload-187",
+              "record-188",
+              "record-189",
+              "payload-189",
+              "record-190",
+              "record-286",
+              "payload-286",
+              "record-287",
+              "payload-287",
+              "record-288"
+            ],
+            "graph_break_sites": []
+          }
+        ],
+        "candidate": [
+          {
+            "id": "rank-unspecified:0",
+            "source": {
+              "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py",
+              "relative_path": "transformers/utils/generic.py",
+              "function": "wrapper",
+              "qualified_name": "can_return_tuple.wrapper",
+              "first_line": 897,
+              "snapshot": "sources/transformers/utils/generic.py",
+              "snapshot_sha256": "d863aa42d6952a41d7dfc27d2b794d5a6bcf6b2a4329ec8b7dcf0ef8517d19fb",
+              "function_sha256": "22dec12d87e2eb122ef240877faf8b8308b45876701488535e22ac56ed4ec4f4",
+              "generated_resume": false,
+              "attribution": "trace"
+            },
+            "compilation_ids": [
+              "rank-unspecified:0/0",
+              "rank-unspecified:0/1"
+            ],
+            "counts": {
+              "observed_compilation_identities": 2,
+              "observed_attempts": 2,
+              "completed": 2,
+              "failed": 0,
+              "no_graph_observed": 0,
+              "unknown_outcomes": 0,
+              "confirmed_recompilation_identities": 1,
+              "confirmed_successful_recompilations": 1,
+              "additional_frame_compilations": 0,
+              "guard_reason_entries": 1,
+              "graph_break_records": 0,
+              "unique_graph_break_sites": 0,
+              "compiler_limit_events": 0,
+              "fallback_reports": 0
+            },
+            "guard_categories": [
+              "tensor_shape_stride"
+            ],
+            "evidence_ids": [
+              "record-3",
+              "record-99",
+              "payload-99",
+              "record-100",
+              "payload-100",
+              "record-101",
+              "record-102",
+              "payload-102",
+              "record-103",
+              "record-198",
+              "payload-198",
+              "record-199",
+              "payload-199",
+              "record-200"
+            ],
+            "graph_break_sites": []
+          }
+        ],
+        "baseline_counts": {
+          "observed_compilation_identities": 3,
+          "observed_attempts": 3,
+          "completed": 3,
+          "failed": 0,
+          "no_graph_observed": 0,
+          "unknown_outcomes": 0,
+          "confirmed_recompilation_identities": 2,
+          "confirmed_successful_recompilations": 2,
+          "additional_frame_compilations": 0,
+          "guard_reason_entries": 3,
+          "graph_break_records": 0,
+          "unique_graph_break_sites": 0,
+          "compiler_limit_events": 0,
+          "fallback_reports": 0
+        },
+        "candidate_counts": {
+          "observed_compilation_identities": 2,
+          "observed_attempts": 2,
+          "completed": 2,
+          "failed": 0,
+          "no_graph_observed": 0,
+          "unknown_outcomes": 0,
+          "confirmed_recompilation_identities": 1,
+          "confirmed_successful_recompilations": 1,
+          "additional_frame_compilations": 0,
+          "guard_reason_entries": 1,
+          "graph_break_records": 0,
+          "unique_graph_break_sites": 0,
+          "compiler_limit_events": 0,
+          "fallback_reports": 0
+        },
+        "delta": {
+          "observed_compilation_identities": -1,
+          "observed_attempts": -1,
+          "completed": -1,
+          "failed": 0,
+          "no_graph_observed": 0,
+          "unknown_outcomes": 0,
+          "confirmed_recompilation_identities": -1,
+          "confirmed_successful_recompilations": -1,
+          "additional_frame_compilations": 0,
+          "guard_reason_entries": -2,
+          "graph_break_records": 0,
+          "unique_graph_break_sites": 0,
+          "compiler_limit_events": 0,
+          "fallback_reports": 0
+        },
+        "interpretation": "Observed compiler-event difference; application performance was not measured."
+      }
+    ],
+    "notices": [],
+    "performance_conclusion": "not_measured"
+  },
+  "review_status": "human_review_pending"
+}

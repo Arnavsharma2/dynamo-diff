@@ -1,0 +1,105 @@
+{
+  "schema_version": "1",
+  "producer": {
+    "python": "3.13.2",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "tlparse": "0.4.3"
+  },
+  "source": {
+    "revision": null,
+    "files": [
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py",
+        "relative_path": "model.py",
+        "snapshot": "sources/model.py",
+        "sha256": "13afb53253f0bc5a2950383cd8b21b3474df95af60bbd9b69674249ca355234c"
+      }
+    ]
+  },
+  "workload": {
+    "calls": [
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float32",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      },
+      {
+        "shape": [
+          11
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float32",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      },
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float32",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      },
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float32",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      }
+    ],
+    "seed": 731,
+    "backend": "recording_eager",
+    "backend_options": {
+      "fullgraph": false
+    },
+    "dynamic": false,
+    "device": "cpu",
+    "warmup_calls": 0,
+    "cache_policy": "fresh_process_no_inductor",
+    "environment": {
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "capture": {
+    "workload_completed": true,
+    "process_exit_code": 0,
+    "converter_exit_code": 0,
+    "report_sha256": "3843de9e239e10534dc497d06b4207fa2e51a1178fd9da2e12a446603e0e1659",
+    "raw_traces": [
+      {
+        "path": "raw/trace.log",
+        "sha256": "19bab9c2e221fb490e3403775d86c2e0d3ca1218f1583ef6f2d5996be331ca1a"
+      }
+    ],
+    "result_sha256": "8e34d9fd9ff85fdb3bb4b7d59136cc97108504a4f32c62f9e95e883aa49b7094"
+  }
+}

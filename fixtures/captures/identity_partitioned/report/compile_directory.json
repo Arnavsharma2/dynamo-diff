@@ -1,0 +1,88 @@
+{
+  "[-/-]": {
+    "artifacts": [
+      {
+        "name": "torch_version_0.json",
+        "number": 0,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_-_-_-/torch_version_0.json"
+      }
+    ]
+  },
+  "[0/0]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_1.txt",
+        "number": 1,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_output_graph_1.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_2.txt",
+        "number": 2,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_cpp_guards_str_2.txt"
+      },
+      {
+        "name": "compilation_metrics_3.html",
+        "number": 3,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/compilation_metrics_3.html"
+      }
+    ]
+  },
+  "[0/1]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_4.txt",
+        "number": 4,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_output_graph_4.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_5.txt",
+        "number": 5,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_cpp_guards_str_5.txt"
+      },
+      {
+        "name": "compilation_metrics_6.html",
+        "number": 6,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/compilation_metrics_6.html"
+      }
+    ]
+  },
+  "[0/2]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_7.txt",
+        "number": 7,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/dynamo_output_graph_7.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_8.txt",
+        "number": 8,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/dynamo_cpp_guards_str_8.txt"
+      },
+      {
+        "name": "compilation_metrics_9.html",
+        "number": 9,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/compilation_metrics_9.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "q02-dynamo-r2",
+  "question_id": "q02",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 3,\n    \"guard_reason_entries\": 3,\n    \"last_recompile_reason_entries\": null,\n    \"successful_recompiles\": 2\n  },\n  \"explanation\": \"Capture A has 3 completed compilations, 3 guard-reason entries, and 2 successful recompilations. The number of reasons associated with the last recompilation is unknown. Rejected cached specializations do not count as new compilations unless they are explicitly recompiled.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 3,\n      \"guard_reason_entries\": 3,\n      \"confirmed_successful_recompilations\": 2\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2735,
+  "output_tokens": 223,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 955,
+  "model_total_duration_ns": 23706412333,
+  "model_load_duration_ns": 20197375,
+  "token_counters_available": true,
+  "wall_seconds": 24.70584254199639
+}

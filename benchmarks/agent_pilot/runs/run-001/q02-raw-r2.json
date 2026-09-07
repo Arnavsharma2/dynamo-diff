@@ -1,0 +1,43 @@
+{
+  "id": "q02-raw-r2",
+  "question_id": "q02",
+  "condition": "raw",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 1,\n    \"guard_reason_entries\": 0,\n    \"last_recompile_reason_entries\": 0,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The capture indicates one completed compilation. There are no guard reason entries or recompile reason entries recorded. The last recompile reason entries are zero, and there are no successful recompiles. Rejected cached specializations do not count as new compilations unless they result in a new compilation attempt.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"error_on_recompile\\\": false\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"recompile_limit\\\": 8\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 1,
+      "guard_reason_entries": 0,
+      "last_recompile_reason_entries": 0,
+      "successful_recompiles": 0
+    },
+    "explanation": "The capture indicates one completed compilation. There are no guard reason entries or recompile reason entries recorded. The last recompile reason entries are zero, and there are no successful recompiles. Rejected cached specializations do not count as new compilations unless they result in a new compilation attempt.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"error_on_recompile\": false"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"recompile_limit\": 8"
+      }
+    ]
+  },
+  "model_requests": 5,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 8636,
+  "output_tokens": 336,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 10270,
+  "model_total_duration_ns": 45453131458,
+  "model_load_duration_ns": 29698250,
+  "token_counters_available": true,
+  "wall_seconds": 45.48658279099618
+}

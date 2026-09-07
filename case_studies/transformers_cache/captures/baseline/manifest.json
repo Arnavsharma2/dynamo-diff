@@ -1,0 +1,296 @@
+{
+  "schema_version": "1",
+  "producer": {
+    "python": "3.13.2",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "tlparse": "0.4.3",
+    "transformers": "5.10.1"
+  },
+  "source": {
+    "revision": null,
+    "dirty_patch_sha256": null,
+    "files": [
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py",
+        "relative_path": "case_studies/transformers_cache/run.py",
+        "snapshot": "sources/run.py",
+        "sha256": "25a48468217367f492ea3271ed5122f9a319740fc44f1058856783d5eff7b6aa"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py",
+        "relative_path": "torch/_dynamo/convert_frame.py",
+        "snapshot": "sources/torch/_dynamo/convert_frame.py",
+        "sha256": "b453c9d88aae46cf94198d4a87acc1c58d3e115949879bd4a32f1b516778024f"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py",
+        "relative_path": "torch/_dynamo/eval_frame.py",
+        "snapshot": "sources/torch/_dynamo/eval_frame.py",
+        "sha256": "b4cfb1113a1681586470222b5dd71d7c6e3e06e1bda2e129c2abcadf75487e74"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py",
+        "relative_path": "torch/utils/_contextlib.py",
+        "snapshot": "sources/torch/utils/_contextlib.py",
+        "sha256": "87ddcd20996e0eef4d91c73a72bf943a49d4a76acc6f01174b101a599cc618ac"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py",
+        "relative_path": "transformers/cache_utils.py",
+        "snapshot": "sources/transformers/cache_utils.py",
+        "sha256": "7827cec593e6e6fa2ea123abce94eb422424d30a3391f15b38414684d0bbcd33"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py",
+        "relative_path": "transformers/generation/utils.py",
+        "snapshot": "sources/transformers/generation/utils.py",
+        "sha256": "a60af7100139ce49c4bc1b1b429f35bc1f2716f25aa2fe854de3102bd7e94fc5"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py",
+        "relative_path": "transformers/models/llama/modeling_llama.py",
+        "snapshot": "sources/transformers/models/llama/modeling_llama.py",
+        "sha256": "46d313ec0f1116bcc1bb7f2379467ab249c140415c64fb758e2d5915cd8b89a5"
+      },
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py",
+        "relative_path": "transformers/utils/generic.py",
+        "snapshot": "sources/transformers/utils/generic.py",
+        "sha256": "d863aa42d6952a41d7dfc27d2b794d5a6bcf6b2a4329ec8b7dcf0ef8517d19fb"
+      }
+    ],
+    "driver_sha256": "25a48468217367f492ea3271ed5122f9a319740fc44f1058856783d5eff7b6aa"
+  },
+  "workload": {
+    "calls": [
+      {
+        "request": 0,
+        "input_ids": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "shape": [
+          1,
+          8
+        ],
+        "strides": [
+          8,
+          1
+        ],
+        "dtype": "int64",
+        "device": "cpu",
+        "requires_grad": false,
+        "grad_enabled": false,
+        "model_training": false,
+        "attention_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "request": 1,
+        "input_ids": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "shape": [
+          1,
+          8
+        ],
+        "strides": [
+          8,
+          1
+        ],
+        "dtype": "int64",
+        "device": "cpu",
+        "requires_grad": false,
+        "grad_enabled": false,
+        "model_training": false,
+        "attention_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "request": 2,
+        "input_ids": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "shape": [
+          1,
+          8
+        ],
+        "strides": [
+          8,
+          1
+        ],
+        "dtype": "int64",
+        "device": "cpu",
+        "requires_grad": false,
+        "grad_enabled": false,
+        "model_training": false,
+        "attention_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "seed": 101,
+    "backend": "recording_eager",
+    "dynamic": false,
+    "backend_options": {
+      "fullgraph": true,
+      "mode": "default",
+      "compile_all_devices": true
+    },
+    "model_config": {
+      "transformers_version": "5.10.1",
+      "architectures": null,
+      "output_hidden_states": false,
+      "return_dict": true,
+      "dtype": null,
+      "chunk_size_feed_forward": 0,
+      "is_encoder_decoder": false,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "problem_type": null,
+      "vocab_size": 64,
+      "hidden_size": 32,
+      "intermediate_size": 64,
+      "num_hidden_layers": 2,
+      "num_attention_heads": 4,
+      "num_key_value_heads": 2,
+      "hidden_act": "silu",
+      "max_position_embeddings": 64,
+      "initializer_range": 0.02,
+      "rms_norm_eps": 1e-06,
+      "use_cache": true,
+      "pad_token_id": 0,
+      "bos_token_id": 1,
+      "eos_token_id": null,
+      "pretraining_tp": 1,
+      "tie_word_embeddings": false,
+      "rope_parameters": {
+        "rope_theta": 10000.0,
+        "rope_type": "default"
+      },
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "mlp_bias": false,
+      "head_dim": 8,
+      "_name_or_path": "",
+      "model_type": "llama",
+      "output_attentions": false
+    },
+    "parameter_hashes": {
+      "model.embed_tokens.weight": "ae3e79cd420826eaf433ecc9a8d542a2277577b336e749fa9948814295187304",
+      "model.layers.0.self_attn.q_proj.weight": "7e488da461727b9326c23608e821a58bdcb467b9a2f0df9445247fe2c4408b36",
+      "model.layers.0.self_attn.k_proj.weight": "0149026cb4f6c958ea4094b76ce96a2e3de56fdb515e0be32a5f4447806c7c05",
+      "model.layers.0.self_attn.v_proj.weight": "3a3b9e74e8c47567c4cf1dcd964c4e3fb64ce10ea06aea9cbf8d581c5dd21d8b",
+      "model.layers.0.self_attn.o_proj.weight": "9d8bb60d2ceb93bd2036d390a2aff258975fe469925f46f007601e476c9fd00c",
+      "model.layers.0.mlp.gate_proj.weight": "fe3d120f0bdcc3da9c90719d8c6076f7e56cfc8bb92228b9434b471d41f02b24",
+      "model.layers.0.mlp.up_proj.weight": "6761984d5e678fe3c96c964e277b1daeaf4f06eacb219aeabda88712519717a6",
+      "model.layers.0.mlp.down_proj.weight": "bdc0d57757b37a91a243834b997677537a8869520443bb8dd01c5e25a79bdaaa",
+      "model.layers.0.input_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "model.layers.0.post_attention_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "model.layers.1.self_attn.q_proj.weight": "f846cad7af87bac173eaaeca5481e407f30d3245f5037822b837f2c58d833d29",
+      "model.layers.1.self_attn.k_proj.weight": "310a061e52f8baded3a272425f1346c781913f12c030efe34b9061d4141f06be",
+      "model.layers.1.self_attn.v_proj.weight": "67928bd3e45360f68f1fd2057c7ea2a4b80c30853f6a0c1ba4e2f3c5cd3aa41d",
+      "model.layers.1.self_attn.o_proj.weight": "b3d7eb566bc702c80dd4fa150521353cdb418a15063ba7348d28aacc830fbebb",
+      "model.layers.1.mlp.gate_proj.weight": "d08a22cc780cc0b383453f173e6b7793a1f6f6d7827d7acc80919b4cd499e8d8",
+      "model.layers.1.mlp.up_proj.weight": "fdcf6f4fb5db4a5a521f06b859fca084dfa0e690326d2ea73094eec5a83e5ca7",
+      "model.layers.1.mlp.down_proj.weight": "e48608b11495cf19e63903aa8d977eacd50df59f0ce38b6f4bd0e1416013540c",
+      "model.layers.1.input_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "model.layers.1.post_attention_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "model.norm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "lm_head.weight": "e1a9c4a6aee599870c04e7c06caedc11f8b58b7dd340adcf426f544c5a36853f"
+    },
+    "device": "cpu",
+    "warmup_calls": 0,
+    "measurement_calls": null,
+    "cache_policy": "fresh_process_no_inductor_fresh_static_cache_reset_between_requests",
+    "cache_directories": [],
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "HF_HUB_OFFLINE": "1",
+      "HF_HUB_DISABLE_TELEMETRY": "1"
+    },
+    "generation": {
+      "max_new_tokens": 3,
+      "prefill_chunk_size": 8,
+      "do_sample": false,
+      "max_cache_len": 16,
+      "attention_implementation": "eager",
+      "requests": 3
+    }
+  },
+  "capture": {
+    "workload_completed": true,
+    "process_exit_code": 0,
+    "converter_exit_code": 0,
+    "report_sha256": "6124d1c013d40e5b06de14433a9761a020eda0e509ca27e5f2eff0db9622301c",
+    "raw_traces": [
+      {
+        "path": "raw/dedicated_log_torch_trace_dl7bdncq.log",
+        "sha256": "a778375f7cc6debbdfe11f98285e6eb0c731e96e0297ff723bc6e013e095482d"
+      }
+    ],
+    "result_sha256": "9cb038c394d6433f40e5246645693a00e8cdcb3b0fdc3adb190c6fe2bb737ef2"
+  }
+}

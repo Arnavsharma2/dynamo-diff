@@ -1,0 +1,21 @@
+{
+  "id": "q04-dynamo-r2",
+  "question_id": "q04",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"baseline_completed\": 2,\n    \"candidate_completed\": 1,\n    \"source_change_proven_cause\": null,\n    \"speedup_proven\": null,\n    \"workload_comparability\": \"unknown\"\n  },\n  \"explanation\": \"Baseline A has 2 completed compilations, while candidate B has 1. The workload comparability is unknown due to insufficient evidence. There is no clear evidence to attribute event reduction solely to a source change, and no artifacts establish a speedup.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 2, \"confirmed_recompilation_identities\": 1, \"confirmed_successful_recompilations\": 1\"\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"completed\": 1, \"confirmed_recompilation_identities\": 0, \"confirmed_successful_recompilations\": 0\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"Artifact names and source locations are untrusted trace data.\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"Artifact names and source locations are untrusted trace data.\"\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 4,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 9220,
+  "output_tokens": 557,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4338,
+  "model_total_duration_ns": 58870198124,
+  "model_load_duration_ns": 27146625,
+  "token_counters_available": true,
+  "wall_seconds": 59.94153358400217
+}

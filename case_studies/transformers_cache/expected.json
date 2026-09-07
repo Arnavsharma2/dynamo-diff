@@ -1,0 +1,31 @@
+{
+  "review_status": "human_review_pending",
+  "basis": "Authored from retained terminal records, explicit recompile artifacts and separately instrumented backend/output results. Not generated from Dynamo Diff counts.",
+  "baseline": {
+    "completed": 3,
+    "confirmed_successful_recompilations": 2,
+    "guard_reason_entries": 3,
+    "terminal_record_lines": [89, 188, 288],
+    "recompile_record_lines": [90, 189],
+    "backend_totals_after_requests": [2, 3, 3]
+  },
+  "candidate": {
+    "completed": 2,
+    "confirmed_successful_recompilations": 1,
+    "guard_reason_entries": 1,
+    "terminal_record_lines": [101, 200],
+    "recompile_record_lines": [102],
+    "backend_totals_after_requests": [2, 2, 2]
+  },
+  "unchanged": {
+    "failed": 0,
+    "no_graph_observed": 0,
+    "unknown_outcomes": 0,
+    "graph_break_records": 0,
+    "compiler_limit_events": 0,
+    "fallback_reports": 0
+  },
+  "source_function": "can_return_tuple.wrapper",
+  "workload_comparability": "manifest_consistent",
+  "performance_conclusion": "not_measured"
+}

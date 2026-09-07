@@ -1,0 +1,21 @@
+{
+  "id": "q03-raw-r2",
+  "question_id": "q03",
+  "condition": "raw",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"baseline_completed\": null,\n    \"candidate_completed\": null,\n    \"matched\": null,\n    \"source_body_changed\": null,\n    \"speedup_proven\": false,\n    \"workload_comparability\": \"unknown\"\n  },\n  \"explanation\": \"The manifest files for both A and B do not contain explicit information about completed compilations. The source body change and workload comparability could not be determined from the provided data. There is no evidence of a speedup as the compilation status and workload details are unknown.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"Only these files are readable. HTML files are returned as readable text.\"\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"matches\": [], \"next_offset\": null, \"offset\": 0, \"query\": \"completed compilations\", \"total_matches\": 0, \"truncated\": false\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"matches\": [], \"next_offset\": null, \"offset\": 0, \"query\": \"completed compilations\", \"total_matches\": 0, \"truncated\": false\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 4,
+  "tool_calls_requested": 3,
+  "tool_calls_executed": 3,
+  "input_tokens": 3775,
+  "output_tokens": 346,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 557,
+  "model_total_duration_ns": 26623099042,
+  "model_load_duration_ns": 19005209,
+  "token_counters_available": true,
+  "wall_seconds": 26.64424449999933
+}

@@ -1,0 +1,10 @@
+class GraphModule(torch.nn.Module):
+    def forward(self, L_x_: "f32[6][1]cpu"):
+        l_x_ = L_x_
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:8 in f, code: return x.cos() * argument + x.tanh()
+        cos: "f32[6][1]cpu" = l_x_.cos()
+        mul: "f32[6][1]cpu" = cos * 10;  cos = None
+        tanh: "f32[6][1]cpu" = l_x_.tanh();  l_x_ = None
+        add: "f32[6][1]cpu" = mul + tanh;  mul = tanh = None
+        return (add,)

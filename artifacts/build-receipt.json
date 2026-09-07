@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-09-07T04:16:27.141839+00:00",
+  "status": "development_checkpoint",
+  "python_source_sha256": "e5d621de955868a826b5c638e1e5dcadde6baa0e67e86e8f82f048840ee4e1aa",
+  "artifacts": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "40413eaf06d34814ca0aa1e4c335bcf104442fe88c66a81e99f287c30ad4106e",
+      "bytes": 30560
+    },
+    "dist/dynamo_diff-0.1.0.tar.gz": {
+      "sha256": "7563622c31519d2b74863afe0741a01e642ce55e53f47c779122c345dedbb1ce",
+      "bytes": 2297266
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "8f8bbe5f73b30e8e0933471b46153ddfbb706e43a5b8249b8c597339a3f28d6a",
+      "bytes": 9736
+    },
+    "requirements-test.lock": {
+      "sha256": "3058df5e83303c6c2af81f6aa8f92f9b066011391ebd84648629a00780f68fbd",
+      "bytes": 39951
+    },
+    "requirements-dev.lock": {
+      "sha256": "f8e93aa541a9e4a1b3b7e9e73f8a12dfc74fb71c3e76f5b2b7f3feaa54de3d0e",
+      "bytes": 51893
+    },
+    "requirements-case-study.lock": {
+      "sha256": "fa477e5b1d78c7fc2bc452a5c51eaad37195f9e100fd823831650db3d545c207",
+      "bytes": 82783
+    }
+  },
+  "wheel_tests_passed": 90,
+  "torch_present_in_wheel_test_environment": false,
+  "transformers_present_in_wheel_test_environment": false,
+  "editor_checks_passed": 9,
+  "installed_editor_checks_passed": 10,
+  "release_complete": false
+}

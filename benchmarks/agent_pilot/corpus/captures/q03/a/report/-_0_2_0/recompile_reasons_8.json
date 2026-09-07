@@ -1,0 +1,4 @@
+[
+  "0/1: argument == 'north'                                      # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py\", line 8, in f\n    if argument in ('east', 'north'):",
+  "0/0: argument == 'east'                                       # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py\", line 8, in f\n    if argument in ('east', 'north'):"
+]

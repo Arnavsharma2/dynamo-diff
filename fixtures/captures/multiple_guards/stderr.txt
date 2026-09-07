@@ -1,0 +1,18 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: scale == 1                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:29:55.075000 76664 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     return x.sin() * scale
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: scale == 2                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() * scale
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: scale == 1                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:29:55.094000 76664 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() * scale

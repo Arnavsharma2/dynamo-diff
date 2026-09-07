@@ -1,0 +1,85 @@
+{
+  "torch": "2.14.0",
+  "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "calls": [
+    {
+      "call": 0,
+      "backend_calls_before": 0,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        1.3996151685714722,
+        2.7642929553985596,
+        3.722891092300415,
+        4.117641925811768,
+        3.8383920192718506,
+        2.9228034019470215
+      ],
+      "error": null,
+      "backend_calls_after": 1
+    },
+    {
+      "call": 1,
+      "backend_calls_before": 1,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        3.020522117614746,
+        5.240299701690674,
+        6.663090705871582,
+        7.0578413009643555,
+        6.314399242401123,
+        4.543710708618164
+      ],
+      "error": null,
+      "backend_calls_after": 2
+    },
+    {
+      "call": 2,
+      "backend_calls_before": 2,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        4.6414289474487305,
+        7.716306209564209,
+        9.603290557861328,
+        9.998041152954102,
+        8.7904052734375,
+        6.164617538452148
+      ],
+      "error": null,
+      "backend_calls_after": 3
+    },
+    {
+      "call": 3,
+      "backend_calls_before": 3,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        1.3996151685714722,
+        2.7642929553985596,
+        3.722891092300415,
+        4.117641925811768,
+        3.8383920192718506,
+        2.9228034019470215
+      ],
+      "error": null,
+      "backend_calls_after": 3
+    }
+  ],
+  "backend_calls": [
+    {
+      "graph_sha256": "20d8e3caf662b247ff7db8367dbe29de273bf64e283c3f1f23bd248351cac76d",
+      "graph_nodes": 6
+    },
+    {
+      "graph_sha256": "bedf90022075877e5abfba071629b9574e916e7a978ce211ae0f9db404c80e23",
+      "graph_nodes": 6
+    },
+    {
+      "graph_sha256": "58c4b0f399f9758f19c47c84860630aebf938ae0ffee781b50e1335d40ff7b42",
+      "graph_nodes": 6
+    }
+  ],
+  "all_calls_attempted": true
+}

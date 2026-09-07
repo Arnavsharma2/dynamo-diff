@@ -1,0 +1,4 @@
+0/0: argument == -3                                           # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f
+User stack trace:
+  File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+    return x.cos() * argument + x.tanh()

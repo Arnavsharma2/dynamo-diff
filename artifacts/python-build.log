@@ -1,0 +1,571 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src/dynamo_diff.egg-info/PKG-INFO
+writing dependency_links to src/dynamo_diff.egg-info/dependency_links.txt
+writing entry points to src/dynamo_diff.egg-info/entry_points.txt
+writing requirements to src/dynamo_diff.egg-info/requires.txt
+writing top-level names to src/dynamo_diff.egg-info/top_level.txt
+reading manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src/dynamo_diff.egg-info/PKG-INFO
+writing dependency_links to src/dynamo_diff.egg-info/dependency_links.txt
+writing entry points to src/dynamo_diff.egg-info/entry_points.txt
+writing requirements to src/dynamo_diff.egg-info/requires.txt
+writing top-level names to src/dynamo_diff.egg-info/top_level.txt
+reading manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+running check
+creating dynamo_diff-0.1.0
+creating dynamo_diff-0.1.0/docs
+creating dynamo_diff-0.1.0/fixtures
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure/raw
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/backend_failure/sources
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/raw
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/dynamic/sources
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/raw
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_1_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/edit_after/sources
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/raw
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_2_0
+creating dynamo_diff-0.1.0/fixtures/captures/edit_before/sources
+creating dynamo_diff-0.1.0/fixtures/captures/grad
+creating dynamo_diff-0.1.0/fixtures/captures/grad/raw
+creating dynamo_diff-0.1.0/fixtures/captures/grad/report
+creating dynamo_diff-0.1.0/fixtures/captures/grad/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/grad/sources
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/raw
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_1
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/graph_break/sources
+creating dynamo_diff-0.1.0/fixtures/captures/identity
+creating dynamo_diff-0.1.0/fixtures/captures/identity/raw
+creating dynamo_diff-0.1.0/fixtures/captures/identity/report
+creating dynamo_diff-0.1.0/fixtures/captures/identity/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_2_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity/sources
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/raw
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_2_0
+creating dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/sources
+creating dynamo_diff-0.1.0/fixtures/captures/limit
+creating dynamo_diff-0.1.0/fixtures/captures/limit/raw
+creating dynamo_diff-0.1.0/fixtures/captures/limit/report
+creating dynamo_diff-0.1.0/fixtures/captures/limit/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_2_0
+creating dynamo_diff-0.1.0/fixtures/captures/limit/sources
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/raw
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_2_0
+creating dynamo_diff-0.1.0/fixtures/captures/multiple_guards/sources
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph/raw
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/no_graph/sources
+creating dynamo_diff-0.1.0/fixtures/captures/scalar
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/raw
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/report
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/scalar/sources
+creating dynamo_diff-0.1.0/fixtures/captures/shape
+creating dynamo_diff-0.1.0/fixtures/captures/shape/raw
+creating dynamo_diff-0.1.0/fixtures/captures/shape/report
+creating dynamo_diff-0.1.0/fixtures/captures/shape/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_1_0
+creating dynamo_diff-0.1.0/fixtures/captures/shape/sources
+creating dynamo_diff-0.1.0/fixtures/captures/stable
+creating dynamo_diff-0.1.0/fixtures/captures/stable/raw
+creating dynamo_diff-0.1.0/fixtures/captures/stable/report
+creating dynamo_diff-0.1.0/fixtures/captures/stable/report/-_-_-_-
+creating dynamo_diff-0.1.0/fixtures/captures/stable/report/-_0_0_0
+creating dynamo_diff-0.1.0/fixtures/captures/stable/sources
+creating dynamo_diff-0.1.0/fixtures/workloads
+creating dynamo_diff-0.1.0/src/dynamo_diff
+creating dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+creating dynamo_diff-0.1.0/src/dynamo_diff/adapters
+creating dynamo_diff-0.1.0/tests
+creating dynamo_diff-0.1.0/tools
+copying files to dynamo_diff-0.1.0...
+copying LICENSE -> dynamo_diff-0.1.0
+copying MANIFEST.in -> dynamo_diff-0.1.0
+copying README.md -> dynamo_diff-0.1.0
+copying pyproject.toml -> dynamo_diff-0.1.0
+copying requirements-dev.lock -> dynamo_diff-0.1.0
+copying requirements-test.lock -> dynamo_diff-0.1.0
+copying docs/ARCHITECTURE.md -> dynamo_diff-0.1.0/docs
+copying docs/CAPTURING.md -> dynamo_diff-0.1.0/docs
+copying docs/COMPATIBILITY.md -> dynamo_diff-0.1.0/docs
+copying docs/FEASIBILITY.md -> dynamo_diff-0.1.0/docs
+copying docs/INTEGRATIONS.md -> dynamo_diff-0.1.0/docs
+copying docs/PROJECT_SCOPE.md -> dynamo_diff-0.1.0/docs
+copying docs/RELEASING.md -> dynamo_diff-0.1.0/docs
+copying docs/SEMANTICS.md -> dynamo_diff-0.1.0/docs
+copying docs/STATUS.md -> dynamo_diff-0.1.0/docs
+copying docs/manifest.template.json -> dynamo_diff-0.1.0/docs
+copying fixtures/expected.json -> dynamo_diff-0.1.0/fixtures
+copying fixtures/captures/backend_failure/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/backend_failure
+copying fixtures/captures/backend_failure/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/backend_failure
+copying fixtures/captures/backend_failure/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/backend_failure
+copying fixtures/captures/backend_failure/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/backend_failure
+copying fixtures/captures/backend_failure/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/backend_failure
+copying fixtures/captures/backend_failure/raw/dedicated_log_torch_trace_dhx_vygs.log -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/raw
+copying fixtures/captures/backend_failure/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report
+copying fixtures/captures/backend_failure/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_-_-_-
+copying fixtures/captures/backend_failure/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_0_0_0
+copying fixtures/captures/backend_failure/report/-_0_0_0/dynamo_error_2.txt -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_0_0_0
+copying fixtures/captures/backend_failure/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/report/-_0_0_0
+copying fixtures/captures/backend_failure/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/backend_failure/sources
+copying fixtures/captures/dynamic/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic
+copying fixtures/captures/dynamic/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic
+copying fixtures/captures/dynamic/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic
+copying fixtures/captures/dynamic/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic
+copying fixtures/captures/dynamic/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic
+copying fixtures/captures/dynamic/raw/dedicated_log_torch_trace_2_0mlr_o.log -> dynamo_diff-0.1.0/fixtures/captures/dynamic/raw
+copying fixtures/captures/dynamic/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report
+copying fixtures/captures/dynamic/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_-_-_-
+copying fixtures/captures/dynamic/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_0_0
+copying fixtures/captures/dynamic/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_0_0
+copying fixtures/captures/dynamic/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_0_0
+copying fixtures/captures/dynamic/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_1_0
+copying fixtures/captures/dynamic/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_1_0
+copying fixtures/captures/dynamic/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_1_0
+copying fixtures/captures/dynamic/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/dynamic/report/-_0_1_0
+copying fixtures/captures/dynamic/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/dynamic/sources
+copying fixtures/captures/edit_after/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after
+copying fixtures/captures/edit_after/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/edit_after
+copying fixtures/captures/edit_after/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after
+copying fixtures/captures/edit_after/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after
+copying fixtures/captures/edit_after/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/edit_after
+copying fixtures/captures/edit_after/raw/dedicated_log_torch_trace_u550j1sl.log -> dynamo_diff-0.1.0/fixtures/captures/edit_after/raw
+copying fixtures/captures/edit_after/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report
+copying fixtures/captures/edit_after/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_-_-_-
+copying fixtures/captures/edit_after/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_0_0_0
+copying fixtures/captures/edit_after/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_0_0_0
+copying fixtures/captures/edit_after/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_0_0_0
+copying fixtures/captures/edit_after/report/-_1_0_0/compilation_metrics_6.html -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_1_0_0
+copying fixtures/captures/edit_after/report/-_1_0_0/dynamo_cpp_guards_str_5.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_1_0_0
+copying fixtures/captures/edit_after/report/-_1_0_0/dynamo_output_graph_4.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_after/report/-_1_0_0
+copying fixtures/captures/edit_after/sources/model.py -> dynamo_diff-0.1.0/fixtures/captures/edit_after/sources
+copying fixtures/captures/edit_before/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before
+copying fixtures/captures/edit_before/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before
+copying fixtures/captures/edit_before/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before
+copying fixtures/captures/edit_before/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before
+copying fixtures/captures/edit_before/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before
+copying fixtures/captures/edit_before/raw/dedicated_log_torch_trace_oy3d846h.log -> dynamo_diff-0.1.0/fixtures/captures/edit_before/raw
+copying fixtures/captures/edit_before/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report
+copying fixtures/captures/edit_before/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_-_-_-
+copying fixtures/captures/edit_before/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_0_0
+copying fixtures/captures/edit_before/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_0_0
+copying fixtures/captures/edit_before/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_0_0
+copying fixtures/captures/edit_before/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_1_0
+copying fixtures/captures/edit_before/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_1_0
+copying fixtures/captures/edit_before/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_1_0
+copying fixtures/captures/edit_before/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_1_0
+copying fixtures/captures/edit_before/report/-_0_2_0/compilation_metrics_11.html -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_2_0
+copying fixtures/captures/edit_before/report/-_0_2_0/dynamo_cpp_guards_str_10.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_2_0
+copying fixtures/captures/edit_before/report/-_0_2_0/dynamo_output_graph_9.txt -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_2_0
+copying fixtures/captures/edit_before/report/-_0_2_0/recompile_reasons_8.json -> dynamo_diff-0.1.0/fixtures/captures/edit_before/report/-_0_2_0
+copying fixtures/captures/edit_before/sources/model.py -> dynamo_diff-0.1.0/fixtures/captures/edit_before/sources
+copying fixtures/captures/grad/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/grad
+copying fixtures/captures/grad/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/grad
+copying fixtures/captures/grad/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/grad
+copying fixtures/captures/grad/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/grad
+copying fixtures/captures/grad/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/grad
+copying fixtures/captures/grad/raw/dedicated_log_torch_trace_cgjupozt.log -> dynamo_diff-0.1.0/fixtures/captures/grad/raw
+copying fixtures/captures/grad/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/grad/report
+copying fixtures/captures/grad/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_-_-_-
+copying fixtures/captures/grad/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_0_0
+copying fixtures/captures/grad/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_0_0
+copying fixtures/captures/grad/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_0_0
+copying fixtures/captures/grad/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_1_0
+copying fixtures/captures/grad/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_1_0
+copying fixtures/captures/grad/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_1_0
+copying fixtures/captures/grad/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/grad/report/-_0_1_0
+copying fixtures/captures/grad/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/grad/sources
+copying fixtures/captures/graph_break/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break
+copying fixtures/captures/graph_break/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/graph_break
+copying fixtures/captures/graph_break/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break
+copying fixtures/captures/graph_break/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break
+copying fixtures/captures/graph_break/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/graph_break
+copying fixtures/captures/graph_break/raw/dedicated_log_torch_trace_sam21mqs.log -> dynamo_diff-0.1.0/fixtures/captures/graph_break/raw
+copying fixtures/captures/graph_break/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report
+copying fixtures/captures/graph_break/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_-_-_-
+copying fixtures/captures/graph_break/report/-_0_0_0/dynamo_graph_break_reason_1.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_0
+copying fixtures/captures/graph_break/report/-_0_0_1/compilation_metrics_4.html -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_1
+copying fixtures/captures/graph_break/report/-_0_0_1/dynamo_cpp_guards_str_3.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_1
+copying fixtures/captures/graph_break/report/-_0_0_1/dynamo_output_graph_2.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_0_0_1
+copying fixtures/captures/graph_break/report/-_1_0_0/compilation_metrics_9.html -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+copying fixtures/captures/graph_break/report/-_1_0_0/dynamo_cpp_guards_str_8.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+copying fixtures/captures/graph_break/report/-_1_0_0/dynamo_output_graph_6.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+copying fixtures/captures/graph_break/report/-_1_0_0/torch_dynamo_resume_in_graph_break_compute_at_22_MODIFIED_BYTECODE_7.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+copying fixtures/captures/graph_break/report/-_1_0_0/torch_dynamo_resume_in_graph_break_compute_at_22_ORIGINAL_BYTECODE_5.txt -> dynamo_diff-0.1.0/fixtures/captures/graph_break/report/-_1_0_0
+copying fixtures/captures/graph_break/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/graph_break/sources
+copying fixtures/captures/identity/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/identity
+copying fixtures/captures/identity/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/identity
+copying fixtures/captures/identity/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/identity
+copying fixtures/captures/identity/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/identity
+copying fixtures/captures/identity/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/identity
+copying fixtures/captures/identity/raw/dedicated_log_torch_trace_ddfbqjww.log -> dynamo_diff-0.1.0/fixtures/captures/identity/raw
+copying fixtures/captures/identity/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/identity/report
+copying fixtures/captures/identity/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_-_-_-
+copying fixtures/captures/identity/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_0_0
+copying fixtures/captures/identity/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_0_0
+copying fixtures/captures/identity/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_0_0
+copying fixtures/captures/identity/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_1_0
+copying fixtures/captures/identity/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_1_0
+copying fixtures/captures/identity/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_1_0
+copying fixtures/captures/identity/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_1_0
+copying fixtures/captures/identity/report/-_0_2_0/compilation_metrics_11.html -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_2_0
+copying fixtures/captures/identity/report/-_0_2_0/dynamo_cpp_guards_str_10.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_2_0
+copying fixtures/captures/identity/report/-_0_2_0/dynamo_output_graph_9.txt -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_2_0
+copying fixtures/captures/identity/report/-_0_2_0/recompile_reasons_8.json -> dynamo_diff-0.1.0/fixtures/captures/identity/report/-_0_2_0
+copying fixtures/captures/identity/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/identity/sources
+copying fixtures/captures/identity_partitioned/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+copying fixtures/captures/identity_partitioned/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+copying fixtures/captures/identity_partitioned/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+copying fixtures/captures/identity_partitioned/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+copying fixtures/captures/identity_partitioned/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned
+copying fixtures/captures/identity_partitioned/raw/dedicated_log_torch_trace_y2569el1.log -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/raw
+copying fixtures/captures/identity_partitioned/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report
+copying fixtures/captures/identity_partitioned/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_-_-_-
+copying fixtures/captures/identity_partitioned/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_0_0
+copying fixtures/captures/identity_partitioned/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_0_0
+copying fixtures/captures/identity_partitioned/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_0_0
+copying fixtures/captures/identity_partitioned/report/-_0_1_0/compilation_metrics_6.html -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_1_0
+copying fixtures/captures/identity_partitioned/report/-_0_1_0/dynamo_cpp_guards_str_5.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_1_0
+copying fixtures/captures/identity_partitioned/report/-_0_1_0/dynamo_output_graph_4.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_1_0
+copying fixtures/captures/identity_partitioned/report/-_0_2_0/compilation_metrics_9.html -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_2_0
+copying fixtures/captures/identity_partitioned/report/-_0_2_0/dynamo_cpp_guards_str_8.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_2_0
+copying fixtures/captures/identity_partitioned/report/-_0_2_0/dynamo_output_graph_7.txt -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/report/-_0_2_0
+copying fixtures/captures/identity_partitioned/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/identity_partitioned/sources
+copying fixtures/captures/limit/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/limit
+copying fixtures/captures/limit/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/limit
+copying fixtures/captures/limit/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/limit
+copying fixtures/captures/limit/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/limit
+copying fixtures/captures/limit/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/limit
+copying fixtures/captures/limit/raw/dedicated_log_torch_trace_j2999d7f.log -> dynamo_diff-0.1.0/fixtures/captures/limit/raw
+copying fixtures/captures/limit/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/limit/report
+copying fixtures/captures/limit/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_-_-_-
+copying fixtures/captures/limit/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_0_0
+copying fixtures/captures/limit/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_0_0
+copying fixtures/captures/limit/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_0_0
+copying fixtures/captures/limit/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_1_0
+copying fixtures/captures/limit/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_1_0
+copying fixtures/captures/limit/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_1_0
+copying fixtures/captures/limit/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_1_0
+copying fixtures/captures/limit/report/-_0_2_0/compilation_metrics_9.html -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_2_0
+copying fixtures/captures/limit/report/-_0_2_0/recompile_reasons_8.json -> dynamo_diff-0.1.0/fixtures/captures/limit/report/-_0_2_0
+copying fixtures/captures/limit/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/limit/sources
+copying fixtures/captures/multiple_guards/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+copying fixtures/captures/multiple_guards/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+copying fixtures/captures/multiple_guards/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+copying fixtures/captures/multiple_guards/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+copying fixtures/captures/multiple_guards/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards
+copying fixtures/captures/multiple_guards/raw/dedicated_log_torch_trace_pdh9d9y2.log -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/raw
+copying fixtures/captures/multiple_guards/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report
+copying fixtures/captures/multiple_guards/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_-_-_-
+copying fixtures/captures/multiple_guards/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_0_0
+copying fixtures/captures/multiple_guards/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_0_0
+copying fixtures/captures/multiple_guards/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_0_0
+copying fixtures/captures/multiple_guards/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_1_0
+copying fixtures/captures/multiple_guards/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_1_0
+copying fixtures/captures/multiple_guards/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_1_0
+copying fixtures/captures/multiple_guards/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_1_0
+copying fixtures/captures/multiple_guards/report/-_0_2_0/compilation_metrics_11.html -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_2_0
+copying fixtures/captures/multiple_guards/report/-_0_2_0/dynamo_cpp_guards_str_10.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_2_0
+copying fixtures/captures/multiple_guards/report/-_0_2_0/dynamo_output_graph_9.txt -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_2_0
+copying fixtures/captures/multiple_guards/report/-_0_2_0/recompile_reasons_8.json -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/report/-_0_2_0
+copying fixtures/captures/multiple_guards/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/multiple_guards/sources
+copying fixtures/captures/no_graph/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/no_graph
+copying fixtures/captures/no_graph/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/no_graph
+copying fixtures/captures/no_graph/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/no_graph
+copying fixtures/captures/no_graph/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/no_graph
+copying fixtures/captures/no_graph/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/no_graph
+copying fixtures/captures/no_graph/raw/dedicated_log_torch_trace_rilshkzg.log -> dynamo_diff-0.1.0/fixtures/captures/no_graph/raw
+copying fixtures/captures/no_graph/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report
+copying fixtures/captures/no_graph/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report/-_-_-_-
+copying fixtures/captures/no_graph/report/-_0_0_0/compilation_metrics_1.html -> dynamo_diff-0.1.0/fixtures/captures/no_graph/report/-_0_0_0
+copying fixtures/captures/no_graph/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/no_graph/sources
+copying fixtures/captures/scalar/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar
+copying fixtures/captures/scalar/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/scalar
+copying fixtures/captures/scalar/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar
+copying fixtures/captures/scalar/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar
+copying fixtures/captures/scalar/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/scalar
+copying fixtures/captures/scalar/raw/dedicated_log_torch_trace_sxtxxr97.log -> dynamo_diff-0.1.0/fixtures/captures/scalar/raw
+copying fixtures/captures/scalar/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/scalar/report
+copying fixtures/captures/scalar/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_-_-_-
+copying fixtures/captures/scalar/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_0_0
+copying fixtures/captures/scalar/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_0_0
+copying fixtures/captures/scalar/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_0_0
+copying fixtures/captures/scalar/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_1_0
+copying fixtures/captures/scalar/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_1_0
+copying fixtures/captures/scalar/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_1_0
+copying fixtures/captures/scalar/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/scalar/report/-_0_1_0
+copying fixtures/captures/scalar/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/scalar/sources
+copying fixtures/captures/shape/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/shape
+copying fixtures/captures/shape/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/shape
+copying fixtures/captures/shape/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/shape
+copying fixtures/captures/shape/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/shape
+copying fixtures/captures/shape/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/shape
+copying fixtures/captures/shape/raw/dedicated_log_torch_trace_df2kmuni.log -> dynamo_diff-0.1.0/fixtures/captures/shape/raw
+copying fixtures/captures/shape/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/shape/report
+copying fixtures/captures/shape/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_-_-_-
+copying fixtures/captures/shape/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_0_0
+copying fixtures/captures/shape/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_0_0
+copying fixtures/captures/shape/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_0_0
+copying fixtures/captures/shape/report/-_0_1_0/compilation_metrics_7.html -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_1_0
+copying fixtures/captures/shape/report/-_0_1_0/dynamo_cpp_guards_str_6.txt -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_1_0
+copying fixtures/captures/shape/report/-_0_1_0/dynamo_output_graph_5.txt -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_1_0
+copying fixtures/captures/shape/report/-_0_1_0/recompile_reasons_4.json -> dynamo_diff-0.1.0/fixtures/captures/shape/report/-_0_1_0
+copying fixtures/captures/shape/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/shape/sources
+copying fixtures/captures/stable/conversion.txt -> dynamo_diff-0.1.0/fixtures/captures/stable
+copying fixtures/captures/stable/manifest.json -> dynamo_diff-0.1.0/fixtures/captures/stable
+copying fixtures/captures/stable/stderr.txt -> dynamo_diff-0.1.0/fixtures/captures/stable
+copying fixtures/captures/stable/stdout.txt -> dynamo_diff-0.1.0/fixtures/captures/stable
+copying fixtures/captures/stable/workload-result.json -> dynamo_diff-0.1.0/fixtures/captures/stable
+copying fixtures/captures/stable/raw/dedicated_log_torch_trace_y15iqe9y.log -> dynamo_diff-0.1.0/fixtures/captures/stable/raw
+copying fixtures/captures/stable/report/chromium_events.json -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/compile_directory.json -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/failures_and_restarts.html -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/index.html -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/raw.jsonl -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/raw.log -> dynamo_diff-0.1.0/fixtures/captures/stable/report
+copying fixtures/captures/stable/report/-_-_-_-/torch_version_0.json -> dynamo_diff-0.1.0/fixtures/captures/stable/report/-_-_-_-
+copying fixtures/captures/stable/report/-_0_0_0/compilation_metrics_3.html -> dynamo_diff-0.1.0/fixtures/captures/stable/report/-_0_0_0
+copying fixtures/captures/stable/report/-_0_0_0/dynamo_cpp_guards_str_2.txt -> dynamo_diff-0.1.0/fixtures/captures/stable/report/-_0_0_0
+copying fixtures/captures/stable/report/-_0_0_0/dynamo_output_graph_1.txt -> dynamo_diff-0.1.0/fixtures/captures/stable/report/-_0_0_0
+copying fixtures/captures/stable/sources/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/captures/stable/sources
+copying fixtures/workloads/compiler_cases.py -> dynamo_diff-0.1.0/fixtures/workloads
+copying src/dynamo_diff/__init__.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/cli.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/compare.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/errors.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/io.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/mcp_server.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/model.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/render.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff/store.py -> dynamo_diff-0.1.0/src/dynamo_diff
+copying src/dynamo_diff.egg-info/PKG-INFO -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff.egg-info/SOURCES.txt -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff.egg-info/dependency_links.txt -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff.egg-info/entry_points.txt -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff.egg-info/requires.txt -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff.egg-info/top_level.txt -> dynamo_diff-0.1.0/src/dynamo_diff.egg-info
+copying src/dynamo_diff/adapters/__init__.py -> dynamo_diff-0.1.0/src/dynamo_diff/adapters
+copying src/dynamo_diff/adapters/tlparse.py -> dynamo_diff-0.1.0/src/dynamo_diff/adapters
+copying tests/test_compare_cli.py -> dynamo_diff-0.1.0/tests
+copying tests/test_malformed_captures.py -> dynamo_diff-0.1.0/tests
+copying tests/test_mcp.py -> dynamo_diff-0.1.0/tests
+copying tests/test_real_captures.py -> dynamo_diff-0.1.0/tests
+copying tests/test_store.py -> dynamo_diff-0.1.0/tests
+copying tests/test_validation.py -> dynamo_diff-0.1.0/tests
+copying tools/demo.py -> dynamo_diff-0.1.0/tools
+copying tools/generate_edit_pair.py -> dynamo_diff-0.1.0/tools
+copying tools/generate_fixtures.py -> dynamo_diff-0.1.0/tools
+Writing dynamo_diff-0.1.0/setup.cfg
+Creating tar archive
+removing 'dynamo_diff-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src/dynamo_diff.egg-info/PKG-INFO
+writing dependency_links to src/dynamo_diff.egg-info/dependency_links.txt
+writing entry points to src/dynamo_diff.egg-info/entry_points.txt
+writing requirements to src/dynamo_diff.egg-info/requires.txt
+writing top-level names to src/dynamo_diff.egg-info/top_level.txt
+reading manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/dynamo_diff
+copying src/dynamo_diff/store.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/render.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/io.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/__init__.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/model.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/cli.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/errors.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/compare.py -> build/lib/dynamo_diff
+copying src/dynamo_diff/mcp_server.py -> build/lib/dynamo_diff
+creating build/lib/dynamo_diff/adapters
+copying src/dynamo_diff/adapters/tlparse.py -> build/lib/dynamo_diff/adapters
+copying src/dynamo_diff/adapters/__init__.py -> build/lib/dynamo_diff/adapters
+running egg_info
+writing src/dynamo_diff.egg-info/PKG-INFO
+writing dependency_links to src/dynamo_diff.egg-info/dependency_links.txt
+writing entry points to src/dynamo_diff.egg-info/entry_points.txt
+writing requirements to src/dynamo_diff.egg-info/requires.txt
+writing top-level names to src/dynamo_diff.egg-info/top_level.txt
+reading manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/dynamo_diff.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-14.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-14.0-arm64/wheel
+creating build/bdist.macosx-14.0-arm64/wheel/dynamo_diff
+copying build/lib/dynamo_diff/store.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/render.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/io.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/__init__.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/model.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+creating build/bdist.macosx-14.0-arm64/wheel/dynamo_diff/adapters
+copying build/lib/dynamo_diff/adapters/tlparse.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff/adapters
+copying build/lib/dynamo_diff/adapters/__init__.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff/adapters
+copying build/lib/dynamo_diff/cli.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/errors.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/compare.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+copying build/lib/dynamo_diff/mcp_server.py -> build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff
+running install_egg_info
+Copying src/dynamo_diff.egg-info to build/bdist.macosx-14.0-arm64/wheel/./dynamo_diff-0.1.0-py3.13.egg-info
+running install_scripts
+creating build/bdist.macosx-14.0-arm64/wheel/dynamo_diff-0.1.0.dist-info/WHEEL
+creating '/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/dist/.tmp-oknkb82x/dynamo_diff-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-14.0-arm64/wheel' to it
+adding 'dynamo_diff/__init__.py'
+adding 'dynamo_diff/cli.py'
+adding 'dynamo_diff/compare.py'
+adding 'dynamo_diff/errors.py'
+adding 'dynamo_diff/io.py'
+adding 'dynamo_diff/mcp_server.py'
+adding 'dynamo_diff/model.py'
+adding 'dynamo_diff/render.py'
+adding 'dynamo_diff/store.py'
+adding 'dynamo_diff/adapters/__init__.py'
+adding 'dynamo_diff/adapters/tlparse.py'
+adding 'dynamo_diff-0.1.0.dist-info/licenses/LICENSE'
+adding 'dynamo_diff-0.1.0.dist-info/METADATA'
+adding 'dynamo_diff-0.1.0.dist-info/WHEEL'
+adding 'dynamo_diff-0.1.0.dist-info/entry_points.txt'
+adding 'dynamo_diff-0.1.0.dist-info/top_level.txt'
+adding 'dynamo_diff-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-14.0-arm64/wheel
+Successfully built dynamo_diff-0.1.0.tar.gz and dynamo_diff-0.1.0-py3-none-any.whl

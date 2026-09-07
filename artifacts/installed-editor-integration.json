@@ -1,0 +1,19 @@
+{
+  "vscode": "1.132.1",
+  "platform": "darwin",
+  "installation": "vsix",
+  "vsix_sha256": "8f8bbe5f73b30e8e0933471b46153ddfbb706e43a5b8249b8c597339a3f28d6a",
+  "checks": [
+    "activation from the isolated VSIX install; installed JavaScript matches the build",
+    "activation",
+    "import, duplicate import, store and workspace paths containing spaces",
+    "CLI/editor full JSON parity and native results tree",
+    "separate immutable baseline/candidate source, line navigation and read-only editing",
+    "bounded evidence with artifact provenance and JSON report navigation",
+    "baseline/candidate Markdown table with escaped untrusted labels",
+    "actionable errors and last successful report preserved",
+    "in-flight cancellation terminates the actual child process",
+    "pre-cancelled operation"
+  ],
+  "passed": 10
+}

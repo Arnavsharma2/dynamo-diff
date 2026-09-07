@@ -1,0 +1,21 @@
+{
+  "id": "q01-tlparse-r2",
+  "question_id": "q01",
+  "condition": "tlparse",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 4,\n    \"guard_category\": \"tensor_shape_stride\",\n    \"last_call_new_compile\": true,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"Capture A's workload has 4 completed compilation identities. The final repeated call created a new compilation (last_call_new_compile: true). The guard category is tensor_shape_stride, which explains the recorded specialization based on shape and stride information.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload\\\": {\\\"calls\\\": [ ... ]}\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"files\": [\"a/manifest.json\", \"a/report/-_-_-_-/torch_version_0.json\", \"a/report/-_0_0_0/compilation_metrics_3.html\", \"a/report/-_0_0_0/dynamo_cpp_guards_str_2.txt\", \"a/report/-_0_0_0/dynamo_output_graph_1.txt\", \"a/report/-_0_1_0/compilation_metrics_7.html\", \"a/report/-_0_1_0/dynamo_cpp_guards_str_6.txt\", \"a/report/-_0_1_0/dynamo_output_graph_5.txt\", \"a/report/-_0_1_0/recompile_reasons_4.json\", \"a/report/chromium_events.json\", \"a/report/compile_directory.json\", \"a/report/failures_and_restarts.html\", \"a/report/index.html\", \"a/report/raw.jsonl\", \"a/report/raw.log\", \"a/sources/model.py\"]\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 9,
+  "tool_calls_requested": 8,
+  "tool_calls_executed": 8,
+  "input_tokens": 17051,
+  "output_tokens": 633,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4004,
+  "model_total_duration_ns": 60467028958,
+  "model_load_duration_ns": 42014582,
+  "token_counters_available": true,
+  "wall_seconds": 60.492208208015654
+}

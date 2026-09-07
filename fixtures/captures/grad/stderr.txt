@@ -1,0 +1,5 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:29:59.582000 76679 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16
+V0906 21:29:59.582000 76679 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:29:59.582000 76679 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: tensor 'x' requires_grad mismatch. expected requires_grad=0

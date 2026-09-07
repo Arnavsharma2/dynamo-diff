@@ -1,0 +1,4 @@
+0/0: ___check_obj_id(self, 4553074944), type=<class '__main__.IdentityModule'>  # return x.sin() + id(self)  # fixtures/workloads/compiler_cases.py:32 in forward
+User stack trace:
+  File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 32, in forward
+    return x.sin() + id(self)

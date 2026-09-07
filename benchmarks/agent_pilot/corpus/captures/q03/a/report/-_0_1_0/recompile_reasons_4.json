@@ -1,0 +1,4 @@
+0/0: argument == 'east'                                       # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f
+User stack trace:
+  File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+    if argument in ('east', 'north'):

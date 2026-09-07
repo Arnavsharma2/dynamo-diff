@@ -1,0 +1,39 @@
+{
+  "id": "q01-tlparse-r1",
+  "question_id": "q01",
+  "condition": "tlparse",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 1,\n    \"guard_category\": \"tensor_shape_stride\",\n    \"last_call_new_compile\": true,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"Capture A's workload has one completed compilation identity. The final call created a new compilation, indicated by the presence of a new guard category related to tensor shape and stride. There were no confirmed successful recompilations.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r6\",\n      \"quote\": \"TENSOR_MATCH: check_tensor(L['x'], Tensor, DispatchKeySet(CPU, BackendSelect, ADInplaceOrView, AutogradCPU), torch.float32, device=None, requires_grad=False, size=[11], stride=[1])\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 1,
+      "guard_category": "tensor_shape_stride",
+      "last_call_new_compile": true,
+      "successful_recompiles": 0
+    },
+    "explanation": "Capture A's workload has one completed compilation identity. The final call created a new compilation, indicated by the presence of a new guard category related to tensor shape and stride. There were no confirmed successful recompilations.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r6",
+        "quote": "TENSOR_MATCH: check_tensor(L['x'], Tensor, DispatchKeySet(CPU, BackendSelect, ADInplaceOrView, AutogradCPU), torch.float32, device=None, requires_grad=False, size=[11], stride=[1])"
+      }
+    ]
+  },
+  "model_requests": 7,
+  "tool_calls_requested": 6,
+  "tool_calls_executed": 6,
+  "input_tokens": 12701,
+  "output_tokens": 451,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 5423,
+  "model_total_duration_ns": 46287726750,
+  "model_load_duration_ns": 39614166,
+  "token_counters_available": true,
+  "wall_seconds": 46.32366458297474
+}

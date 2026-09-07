@@ -1,0 +1,651 @@
+{
+  "$defs": {
+    "CaptureValidity": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_structure": {
+          "default": "valid",
+          "enum": [
+            "valid",
+            "partial"
+          ],
+          "title": "Artifact Structure",
+          "type": "string"
+        },
+        "workload_completion": {
+          "default": "unknown",
+          "enum": [
+            "declared_completed",
+            "declared_failed",
+            "unknown"
+          ],
+          "title": "Workload Completion",
+          "type": "string"
+        },
+        "provenance": {
+          "default": "absent",
+          "enum": [
+            "hash_verified",
+            "unverified",
+            "absent"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "title": "CaptureValidity",
+      "type": "object"
+    },
+    "Compilation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "frame_id": {
+          "title": "Frame Id",
+          "type": "integer"
+        },
+        "frame_compile_id": {
+          "title": "Frame Compile Id",
+          "type": "integer"
+        },
+        "rank": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rank"
+        },
+        "attempts": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Attempts",
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "outcome": {
+          "default": "unknown",
+          "enum": [
+            "completed",
+            "failed",
+            "no_graph_observed",
+            "unknown"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "recompilation": {
+          "default": "unknown",
+          "enum": [
+            "confirmed",
+            "not_reported",
+            "unknown"
+          ],
+          "title": "Recompilation",
+          "type": "string"
+        },
+        "classification": {
+          "default": "unknown",
+          "enum": [
+            "confirmed_recompilation",
+            "first_observed_compilation",
+            "additional_frame_compilation",
+            "unknown"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "$ref": "#/$defs/GuardReason"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "graph_breaks": {
+          "items": {
+            "$ref": "#/$defs/GraphBreak"
+          },
+          "title": "Graph Breaks",
+          "type": "array"
+        },
+        "limit_reported": {
+          "default": false,
+          "title": "Limit Reported",
+          "type": "boolean"
+        },
+        "fallback_reported": {
+          "default": false,
+          "title": "Fallback Reported",
+          "type": "boolean"
+        },
+        "error_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Type"
+        },
+        "duration_us": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration Us"
+        },
+        "duration_metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration Metric"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "terminal_evidence_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Terminal Evidence Id"
+        },
+        "notices": {
+          "items": {
+            "$ref": "#/$defs/Notice"
+          },
+          "title": "Notices",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "frame_id",
+        "frame_compile_id"
+      ],
+      "title": "Compilation",
+      "type": "object"
+    },
+    "Counts": {
+      "additionalProperties": false,
+      "properties": {
+        "observed_compilation_identities": {
+          "default": 0,
+          "title": "Observed Compilation Identities",
+          "type": "integer"
+        },
+        "observed_attempts": {
+          "default": 0,
+          "title": "Observed Attempts",
+          "type": "integer"
+        },
+        "completed": {
+          "default": 0,
+          "title": "Completed",
+          "type": "integer"
+        },
+        "failed": {
+          "default": 0,
+          "title": "Failed",
+          "type": "integer"
+        },
+        "no_graph_observed": {
+          "default": 0,
+          "title": "No Graph Observed",
+          "type": "integer"
+        },
+        "unknown_outcomes": {
+          "default": 0,
+          "title": "Unknown Outcomes",
+          "type": "integer"
+        },
+        "confirmed_recompilation_identities": {
+          "default": 0,
+          "title": "Confirmed Recompilation Identities",
+          "type": "integer"
+        },
+        "confirmed_successful_recompilations": {
+          "default": 0,
+          "title": "Confirmed Successful Recompilations",
+          "type": "integer"
+        },
+        "additional_frame_compilations": {
+          "default": 0,
+          "title": "Additional Frame Compilations",
+          "type": "integer"
+        },
+        "guard_reason_entries": {
+          "default": 0,
+          "title": "Guard Reason Entries",
+          "type": "integer"
+        },
+        "graph_break_records": {
+          "default": 0,
+          "title": "Graph Break Records",
+          "type": "integer"
+        },
+        "unique_graph_break_sites": {
+          "default": 0,
+          "title": "Unique Graph Break Sites",
+          "type": "integer"
+        },
+        "compiler_limit_events": {
+          "default": 0,
+          "title": "Compiler Limit Events",
+          "type": "integer"
+        },
+        "fallback_reports": {
+          "default": 0,
+          "title": "Fallback Reports",
+          "type": "integer"
+        }
+      },
+      "title": "Counts",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "artifact": {
+          "title": "Artifact",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "byte_offset": {
+          "default": 0,
+          "title": "Byte Offset",
+          "type": "integer"
+        },
+        "byte_length": {
+          "title": "Byte Length",
+          "type": "integer"
+        },
+        "record_line": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Line"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "payload_index": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payload Index"
+        }
+      },
+      "required": [
+        "id",
+        "artifact",
+        "sha256",
+        "byte_length",
+        "kind"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "GraphBreak": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "site": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Site"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "fallback_reported": {
+          "default": false,
+          "title": "Fallback Reported",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "summary"
+      ],
+      "title": "GraphBreak",
+      "type": "object"
+    },
+    "GuardReason": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Categories",
+          "type": "array"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "summary",
+        "evidence_id"
+      ],
+      "title": "GuardReason",
+      "type": "object"
+    },
+    "Notice": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "Notice",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "captured_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Captured Path"
+        },
+        "relative_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relative Path"
+        },
+        "function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Function"
+        },
+        "qualified_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Qualified Name"
+        },
+        "first_line": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Line"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot"
+        },
+        "snapshot_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot Sha256"
+        },
+        "function_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Function Sha256"
+        },
+        "generated_resume": {
+          "default": false,
+          "title": "Generated Resume",
+          "type": "boolean"
+        },
+        "attribution": {
+          "default": "unknown",
+          "enum": [
+            "trace",
+            "same_run_frame",
+            "unknown"
+          ],
+          "title": "Attribution",
+          "type": "string"
+        }
+      },
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "adapter_version": {
+      "default": "tlparse-0.4.3-torch-2.14-log3-v4",
+      "title": "Adapter Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "producer": {
+      "additionalProperties": true,
+      "title": "Producer",
+      "type": "object"
+    },
+    "validity": {
+      "$ref": "#/$defs/CaptureValidity"
+    },
+    "counts": {
+      "$ref": "#/$defs/Counts"
+    },
+    "compilations": {
+      "items": {
+        "$ref": "#/$defs/Compilation"
+      },
+      "title": "Compilations",
+      "type": "array"
+    },
+    "evidence": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "object"
+    },
+    "notices": {
+      "items": {
+        "$ref": "#/$defs/Notice"
+      },
+      "title": "Notices",
+      "type": "array"
+    },
+    "manifest": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Manifest"
+    },
+    "metadata_sha256": {
+      "title": "Metadata Sha256",
+      "type": "string"
+    },
+    "records_read": {
+      "default": 0,
+      "title": "Records Read",
+      "type": "integer"
+    },
+    "unknown_record_types": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unknown Record Types",
+      "type": "array"
+    },
+    "observed_configurations": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Observed Configurations",
+      "type": "object"
+    },
+    "performance_conclusion": {
+      "const": "not_measured",
+      "default": "not_measured",
+      "title": "Performance Conclusion",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "metadata_sha256"
+  ],
+  "title": "Capture",
+  "type": "object"
+}

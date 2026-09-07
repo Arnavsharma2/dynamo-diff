@@ -1,0 +1,82 @@
+{
+  "schema_version": "1",
+  "producer": {
+    "python": "3.13.2",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "tlparse": "0.4.3"
+  },
+  "source": {
+    "revision": null,
+    "files": [
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py",
+        "relative_path": "fixtures/workloads/compiler_cases.py",
+        "snapshot": "sources/compiler_cases.py",
+        "sha256": "7037904f203ead13f03c12fa107f589b1acb165a63b2599b9d6bb6ed58493ff0"
+      }
+    ]
+  },
+  "workload": {
+    "calls": [
+      {
+        "shape": [
+          4
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 1
+      },
+      {
+        "shape": [
+          4
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 2
+      },
+      {
+        "shape": [
+          4
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 3
+      },
+      {
+        "shape": [
+          4
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 4
+      }
+    ],
+    "seed": 2026,
+    "backend": "recording_eager",
+    "dynamic": false,
+    "device": "cpu",
+    "warmup_calls": 0,
+    "cache_policy": "fresh_process_no_inductor",
+    "environment": {
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "capture": {
+    "workload_completed": true,
+    "process_exit_code": 0,
+    "raw_traces": [
+      {
+        "path": "raw/dedicated_log_torch_trace_j2999d7f.log",
+        "sha256": "7f87813b4dada020c0a5bc7d62eb5d36c474e0fb4ad80688c328d6806469fc7a"
+      }
+    ],
+    "result_sha256": "bb43283ac487ea4efd48dc50113659dde2bd1e0c3daab6681f9f31b9d45bc213",
+    "converter_exit_code": 0,
+    "report_sha256": "dad14bae3a88f5219c16e2c46336ae6719668ddbe5ed8ad96854fa192432522d"
+  }
+}

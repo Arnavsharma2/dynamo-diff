@@ -1,0 +1,123 @@
+{
+  "[-/-]": {
+    "artifacts": [
+      {
+        "name": "torch_version_0.json",
+        "number": 0,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_-_-_-/torch_version_0.json"
+      }
+    ]
+  },
+  "[0/0]": {
+    "artifacts": [
+      {
+        "name": "dynamo_side_effects_1.txt",
+        "number": 1,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_side_effects_1.txt"
+      },
+      {
+        "name": "dynamo_output_graph_2.txt",
+        "number": 2,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_output_graph_2.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_3.txt",
+        "number": 3,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_cpp_guards_str_3.txt"
+      },
+      {
+        "name": "compilation_metrics_4.html",
+        "number": 4,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/compilation_metrics_4.html"
+      }
+    ]
+  },
+  "[0/1]": {
+    "artifacts": [
+      {
+        "name": "recompile_reasons_5.json",
+        "number": 5,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/recompile_reasons_5.json"
+      },
+      {
+        "name": "dynamo_side_effects_6.txt",
+        "number": 6,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_side_effects_6.txt"
+      },
+      {
+        "name": "dynamo_output_graph_7.txt",
+        "number": 7,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_output_graph_7.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_8.txt",
+        "number": 8,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_cpp_guards_str_8.txt"
+      },
+      {
+        "name": "compilation_metrics_9.html",
+        "number": 9,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/compilation_metrics_9.html"
+      }
+    ]
+  },
+  "[0/2]": {
+    "artifacts": [
+      {
+        "name": "recompile_reasons_10.json",
+        "number": 10,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/recompile_reasons_10.json"
+      },
+      {
+        "name": "dynamo_side_effects_11.txt",
+        "number": 11,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/dynamo_side_effects_11.txt"
+      },
+      {
+        "name": "dynamo_output_graph_12.txt",
+        "number": 12,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/dynamo_output_graph_12.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_13.txt",
+        "number": 13,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/dynamo_cpp_guards_str_13.txt"
+      },
+      {
+        "name": "compilation_metrics_14.html",
+        "number": 14,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_2_0/compilation_metrics_14.html"
+      }
+    ]
+  }
+}

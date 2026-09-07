@@ -1,0 +1,91 @@
+{
+  "schema_version": "1",
+  "producer": {
+    "python": "3.13.2",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "tlparse": "0.4.3"
+  },
+  "source": {
+    "revision": null,
+    "files": [
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py",
+        "relative_path": "model.py",
+        "snapshot": "sources/model.py",
+        "sha256": "13afb53253f0bc5a2950383cd8b21b3474df95af60bbd9b69674249ca355234c"
+      }
+    ]
+  },
+  "workload": {
+    "calls": [
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float32",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      },
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float64",
+        "requires_grad": false,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      },
+      {
+        "shape": [
+          6
+        ],
+        "strides": [
+          1
+        ],
+        "dtype": "float64",
+        "requires_grad": true,
+        "device": "cpu",
+        "grad_enabled": true,
+        "argument": 2,
+        "module_index": null
+      }
+    ],
+    "seed": 731,
+    "backend": "recording_eager",
+    "backend_options": {
+      "fullgraph": false
+    },
+    "dynamic": false,
+    "device": "cpu",
+    "warmup_calls": 0,
+    "cache_policy": "fresh_process_no_inductor",
+    "environment": {
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "capture": {
+    "workload_completed": true,
+    "process_exit_code": 0,
+    "converter_exit_code": 0,
+    "report_sha256": "34775ac7270330d6ca4bd4b466958936abc310cc9a948e4557df5a7b5c07a7c3",
+    "raw_traces": [
+      {
+        "path": "raw/trace.log",
+        "sha256": "ffdf4121e2e4ae307ace1241342824feeb5d70db29d699f756d15765376d8469"
+      }
+    ],
+    "result_sha256": "e92864e11fcb61b8e83081e218e5adcf69f040db2825d68a21bab014ace0c973"
+  }
+}

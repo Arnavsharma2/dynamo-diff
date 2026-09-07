@@ -1,0 +1,73 @@
+{
+  "schema_version": "1",
+  "producer": {
+    "python": "3.13.2",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "tlparse": "0.4.3"
+  },
+  "source": {
+    "revision": null,
+    "files": [
+      {
+        "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py",
+        "relative_path": "fixtures/workloads/compiler_cases.py",
+        "snapshot": "sources/compiler_cases.py",
+        "sha256": "7f17515ad3fd3936b2028aed45a196aa2cad9b5f65d238d9ce2e13def9e1a63c"
+      }
+    ]
+  },
+  "workload": {
+    "calls": [
+      {
+        "shape": [
+          4
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 2
+      },
+      {
+        "shape": [
+          8
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 2
+      },
+      {
+        "shape": [
+          16
+        ],
+        "dtype": "float32",
+        "device": "cpu",
+        "requires_grad": false,
+        "scale": 2
+      }
+    ],
+    "seed": 2026,
+    "backend": "recording_eager",
+    "dynamic": null,
+    "device": "cpu",
+    "warmup_calls": 0,
+    "cache_policy": "fresh_process_no_inductor",
+    "environment": {
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "capture": {
+    "workload_completed": true,
+    "process_exit_code": 0,
+    "raw_traces": [
+      {
+        "path": "raw/dedicated_log_torch_trace_2_0mlr_o.log",
+        "sha256": "051910afe4f59e50b0a83f3291b0f8bec3e34251d728fa40ad6f6f77c2f5c8e7"
+      }
+    ],
+    "result_sha256": "e66fb630b24bd150e0d1f819b28d0097127b0b5246e55456af0ea2cee127dc33",
+    "converter_exit_code": 0,
+    "report_sha256": "47efb79b66a6760d5cc136dbb682030fdcb51d29b73939b38a8ea04c92619ca6"
+  }
+}

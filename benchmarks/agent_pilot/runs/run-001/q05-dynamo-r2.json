@@ -1,0 +1,21 @@
+{
+  "id": "q05-dynamo-r2",
+  "question_id": "q05",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"candidate_completed\": 0,\n    \"candidate_failed\": 1,\n    \"graph_emission_proves_completed\": false,\n    \"speedup_proven\": false\n  },\n  \"explanation\": \"Candidate B did not complete compilation, as indicated by the 'completed': 0 and 'failed': 1 in its capture counts. The graph artifact does not prove completion since the 'workload_completion' is 'declared_completed' but no graph emission evidence is provided. There is no evidence of a speedup as the candidate failed to complete compilation.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"counts\": {\"additional_frame_compilations\": 0, \"compiler_limit_events\": 0, \"completed\": 0, \"confirmed_recompilation_identities\": 0, \"confirmed_successful_recompilations\": 0, \"failed\": 1, \"fallback_reports\": 0, \"graph_break_records\": 0, \"guard_reason_entries\": 0, \"no_graph_observed\": 0, \"observed_attempts\": 1, \"observed_compilation_identities\": 1, \"unique_graph_break_sites\": 0, \"unknown_outcomes\": 0}\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"counts\": {\"additional_frame_compilations\": 0, \"compiler_limit_events\": 0, \"completed\": 1, \"confirmed_recompilation_identities\": 0, \"confirmed_successful_recompilations\": 0, \"failed\": 0, \"fallback_reports\": 0, \"graph_break_records\": 0, \"guard_reason_entries\": 0, \"no_graph_observed\": 0, \"observed_attempts\": 1, \"observed_compilation_identities\": 1, \"unique_graph_break_sites\": 0, \"unknown_outcomes\": 0}\"\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 2,
+  "tool_calls_executed": 2,
+  "input_tokens": 3417,
+  "output_tokens": 603,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1952,
+  "model_total_duration_ns": 54821286125,
+  "model_load_duration_ns": 14464166,
+  "token_counters_available": true,
+  "wall_seconds": 55.75619308400201
+}

@@ -1,0 +1,55 @@
+{
+  "id": "q08-raw-r2",
+  "question_id": "q08",
+  "condition": "raw",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"attempts\": 2,\n    \"completed\": 2,\n    \"graph_break_records\": 11,\n    \"successful_recompiles\": 1\n  },\n  \"explanation\": \"Capture A shows two completed compilation identities: the first with compile_id '0/0' and the second with compile_id '1/0'. The first compilation had 11 graph-break records, indicating the number of times the graph was broken during compilation. The second compilation, which is a recompile, had 9 graph-break records. The recompile was successful, as evidenced by the 'compile_id' change and the presence of a new frame_key. The original frame was traced and resumed execution, leading to the resumed execution frame_key 'torch_dynamo_resume_in_f_at_9'.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/0\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"compile_id\\\": \\\"1/0\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"guard_count\\\": 11\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"guard_count\\\": 9\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"error_on_recompile\\\": false\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "attempts": 2,
+      "completed": 2,
+      "graph_break_records": 11,
+      "successful_recompiles": 1
+    },
+    "explanation": "Capture A shows two completed compilation identities: the first with compile_id '0/0' and the second with compile_id '1/0'. The first compilation had 11 graph-break records, indicating the number of times the graph was broken during compilation. The second compilation, which is a recompile, had 9 graph-break records. The recompile was successful, as evidenced by the 'compile_id' change and the presence of a new frame_key. The original frame was traced and resumed execution, leading to the resumed execution frame_key 'torch_dynamo_resume_in_f_at_9'.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"compile_id\": \"0/0\""
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"compile_id\": \"1/0\""
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"guard_count\": 11"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"guard_count\": 9"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"error_on_recompile\": false"
+      }
+    ]
+  },
+  "model_requests": 6,
+  "tool_calls_requested": 5,
+  "tool_calls_executed": 5,
+  "input_tokens": 10072,
+  "output_tokens": 518,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 8655,
+  "model_total_duration_ns": 65778922917,
+  "model_load_duration_ns": 3175351417,
+  "token_counters_available": true,
+  "wall_seconds": 65.82065170799615
+}

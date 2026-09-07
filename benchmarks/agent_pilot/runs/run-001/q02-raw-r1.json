@@ -1,0 +1,51 @@
+{
+  "id": "q02-raw-r1",
+  "question_id": "q02",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 3,\n    \"guard_reason_entries\": 9,\n    \"last_recompile_reason_entries\": 9,\n    \"successful_recompiles\": 2\n  },\n  \"explanation\": \"The capture A's trace log indicates three completed compilations with compile IDs 0/0, 0/1, and 0/2. Each compilation has 9 guard reason entries. The last recompilation (compile ID 0/2) is associated with 9 reasons. Each rejected cached specialization should not count as a new compilation unless there is explicit recompilation evidence.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/0\\\", \\\"guard_count\\\": 9\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/1\\\", \\\"guard_count\\\": 9\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/2\\\", \\\"guard_count\\\": 9\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"error_on_recompile\\\": false\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 3,
+      "guard_reason_entries": 9,
+      "last_recompile_reason_entries": 9,
+      "successful_recompiles": 2
+    },
+    "explanation": "The capture A's trace log indicates three completed compilations with compile IDs 0/0, 0/1, and 0/2. Each compilation has 9 guard reason entries. The last recompilation (compile ID 0/2) is associated with 9 reasons. Each rejected cached specialization should not count as a new compilation unless there is explicit recompilation evidence.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/0\", \"guard_count\": 9"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/1\", \"guard_count\": 9"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/2\", \"guard_count\": 9"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"error_on_recompile\": false"
+      }
+    ]
+  },
+  "model_requests": 5,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 8836,
+  "output_tokens": 434,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 10344,
+  "model_total_duration_ns": 62900143959,
+  "model_load_duration_ns": 26048209,
+  "token_counters_available": true,
+  "wall_seconds": 62.918784834007965
+}

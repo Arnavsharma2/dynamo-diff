@@ -1,0 +1,88 @@
+{
+  "[-/-]": {
+    "artifacts": [
+      {
+        "name": "torch_version_0.json",
+        "number": 0,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_-_-_-/torch_version_0.json"
+      }
+    ]
+  },
+  "[0/0]": {
+    "artifacts": [
+      {
+        "name": "dynamo_graph_break_reason_1.txt",
+        "number": 1,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_graph_break_reason_1.txt"
+      }
+    ]
+  },
+  "[0/0_1]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_2.txt",
+        "number": 2,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_1/dynamo_output_graph_2.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_3.txt",
+        "number": 3,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_1/dynamo_cpp_guards_str_3.txt"
+      },
+      {
+        "name": "compilation_metrics_4.html",
+        "number": 4,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_1/compilation_metrics_4.html"
+      }
+    ]
+  },
+  "[1/0]": {
+    "artifacts": [
+      {
+        "name": "torch_dynamo_resume_in_f_at_9_ORIGINAL_BYTECODE_5.txt",
+        "number": 5,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_1_0_0/torch_dynamo_resume_in_f_at_9_ORIGINAL_BYTECODE_5.txt"
+      },
+      {
+        "name": "dynamo_output_graph_6.txt",
+        "number": 6,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_1_0_0/dynamo_output_graph_6.txt"
+      },
+      {
+        "name": "torch_dynamo_resume_in_f_at_9_MODIFIED_BYTECODE_7.txt",
+        "number": 7,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_1_0_0/torch_dynamo_resume_in_f_at_9_MODIFIED_BYTECODE_7.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_8.txt",
+        "number": 8,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_1_0_0/dynamo_cpp_guards_str_8.txt"
+      },
+      {
+        "name": "compilation_metrics_9.html",
+        "number": 9,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_1_0_0/compilation_metrics_9.html"
+      }
+    ]
+  }
+}

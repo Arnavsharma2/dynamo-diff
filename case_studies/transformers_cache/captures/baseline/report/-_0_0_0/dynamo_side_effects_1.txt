@@ -1,0 +1,1426 @@
+Mutating object of type dict (source name: L['kwargs'])
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 900, in wrapper
+        return_dict_passed = kwargs.pop("return_dict", return_dict)
+
+
+========================================
+
+Mutating object of type CompileableContextVar (source name: G['__import_transformers_dot_utils_dot_output_capturing']._active_collector)
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+        output_token = _active_collector.set(collected_outputs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 82, in set
+        self.global_var = value
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+        output_token = _active_collector.set(collected_outputs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 83, in set
+        self.compiling = True
+        ^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 255, in wrapper
+        _active_collector.reset(output_token)
+        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 90, in reset
+        self.global_var = None
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 255, in wrapper
+        _active_collector.reset(output_token)
+        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 91, in reset
+        self.compiling = False
+        ^^^^^^^^^^^^^^
+
+
+========================================
+
+Mutating object of type StaticLayer (source name: L['kwargs']['past_key_values'].layers[0])
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 310, in lazy_initialization
+        self.dtype, self.device = key_states.dtype, key_states.device
+        ^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 310, in lazy_initialization
+        self.dtype, self.device = key_states.dtype, key_states.device
+                    ^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 311, in lazy_initialization
+        self.max_batch_size, self.num_heads = key_states.shape[:2]
+        ^^^^^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 311, in lazy_initialization
+        self.max_batch_size, self.num_heads = key_states.shape[:2]
+                             ^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 312, in lazy_initialization
+        self.v_head_dim = value_states.shape[-1]
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 313, in lazy_initialization
+        self.k_head_dim = key_states.shape[-1]
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 315, in lazy_initialization
+        self.keys = torch.zeros(
+        ^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 320, in lazy_initialization
+        self.values = torch.zeros(
+        ^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 325, in lazy_initialization
+        self.cumulative_length = self.cumulative_length.to(self.device)
+        ^^^^^^^^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 336, in lazy_initialization
+        self.is_initialized = True
+        ^^^^^^^^^^^^^^^^^^^
+
+
+========================================
+
+Mutating object of type StaticLayer (source name: L['kwargs']['past_key_values'].layers[1])
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 310, in lazy_initialization
+        self.dtype, self.device = key_states.dtype, key_states.device
+        ^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 310, in lazy_initialization
+        self.dtype, self.device = key_states.dtype, key_states.device
+                    ^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 311, in lazy_initialization
+        self.max_batch_size, self.num_heads = key_states.shape[:2]
+        ^^^^^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 311, in lazy_initialization
+        self.max_batch_size, self.num_heads = key_states.shape[:2]
+                             ^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 312, in lazy_initialization
+        self.v_head_dim = value_states.shape[-1]
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 313, in lazy_initialization
+        self.k_head_dim = key_states.shape[-1]
+        ^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 315, in lazy_initialization
+        self.keys = torch.zeros(
+        ^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 320, in lazy_initialization
+        self.values = torch.zeros(
+        ^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 325, in lazy_initialization
+        self.cumulative_length = self.cumulative_length.to(self.device)
+        ^^^^^^^^^^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+        outputs: BaseModelOutputWithPast = self.model(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+        outputs = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+        hidden_states = decoder_layer(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+        return super().__call__(*args, **kwargs)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+        key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 353, in update
+        self.lazy_initialization(key_states, value_states)
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 336, in lazy_initialization
+        self.is_initialized = True
+        ^^^^^^^^^^^^^^^^^^^
+
+
+========================================
+
+Mutating object of type OrderedDict (no source)
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 4, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 496, in __setattr__
+        super().__setitem__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 5, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 496, in __setattr__
+        super().__setitem__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 8, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 471, in __post_init__
+        self[field.name] = v
+        ~~~~^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 501, in __setitem__
+        super().__setitem__(key, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+
+
+========================================
+
+Mutating object of type CausalLMOutputWithPast (source: created in torch.compile region)
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 3, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 497, in __setattr__
+        super().__setattr__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 4, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 497, in __setattr__
+        super().__setattr__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 5, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 497, in __setattr__
+        super().__setattr__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 6, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 497, in __setattr__
+        super().__setattr__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 7, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 497, in __setattr__
+        super().__setattr__(name, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+
+    ********
+
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py", line 67, in <module>
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+        return func(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2582, in generate
+        result = decoding_method(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 2782, in _sample
+        outputs = self._prefill(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py", line 3859, in _prefill
+        outputs = model_forward(**model_inputs, return_dict=True)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+        return self._call_impl(*args, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+        return forward_call(*args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+        output = func(self, *args, **kwargs)
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 493, in forward
+        return CausalLMOutputWithPast(
+    
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_dynamo/polyfills/__init__.py", line 378, in instantiate_user_defined_class_object
+        obj.__init__(*args, **kwargs)
+        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "<string>", line 8, in __init__
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 471, in __post_init__
+        self[field.name] = v
+        ~~~~^^^^^^^^^^^^
+      File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 503, in __setitem__
+        super().__setattr__(key, value)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^

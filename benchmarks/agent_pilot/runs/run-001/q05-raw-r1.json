@@ -1,0 +1,39 @@
+{
+  "id": "q05-raw-r1",
+  "question_id": "q05",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\"answer\": {\"candidate_completed\": 1, \"candidate_failed\": 0, \"graph_emission_proves_completed\": true, \"speedup_proven\": false}, \"explanation\": \"Candidate B has a graph artifact and completed compilation as indicated by workload_completed: true. However, there is no evidence of a speedup since the baseline and candidate have identical workload configurations.\", \"evidence\": [{\"retrieval_id\": \"r3\", \"quote\": \"workload_completed\\\": true\"}, {\"retrieval_id\": \"r2\", \"quote\": \"workload_completed\\\": true\"}]}",
+  "final": {
+    "answer": {
+      "candidate_completed": 1,
+      "candidate_failed": 0,
+      "graph_emission_proves_completed": true,
+      "speedup_proven": false
+    },
+    "explanation": "Candidate B has a graph artifact and completed compilation as indicated by workload_completed: true. However, there is no evidence of a speedup since the baseline and candidate have identical workload configurations.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r2",
+        "quote": "workload_completed\": true"
+      }
+    ]
+  },
+  "model_requests": 4,
+  "tool_calls_requested": 3,
+  "tool_calls_executed": 3,
+  "input_tokens": 5874,
+  "output_tokens": 214,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4039,
+  "model_total_duration_ns": 29867997459,
+  "model_load_duration_ns": 17718417,
+  "token_counters_available": true,
+  "wall_seconds": 29.88479720801115
+}

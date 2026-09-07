@@ -1,0 +1,50 @@
+{
+  "id": "q10-tlparse-r1",
+  "question_id": "q10",
+  "condition": "tlparse",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 3,\n    \"guard_categories\": [\"dtype_device\", \"grad_mode\"],\n    \"shape_change_recorded\": false,\n    \"successful_recompiles\": 2\n  },\n  \"explanation\": \"The capture A's manifest indicates 3 completed compilations. The guard categories recorded are dtype_device and grad_mode. There is no indication of a shape change recorded as the cause for any recompilation. Successful recompiles are counted as 2.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload\\\": {\\\"calls\\\": [ ... ], \\\"dynamic\\\": false, \\\"device\\\": \\\"cpu\\\", \\\"warmup_calls\\\": 0, \\\"cache_policy\\\": \\\"fresh_process_no_inductor\\\"}\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"a/report/-_0_0_0/recompile_reasons_4.json\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"a/report/-_0_1_0/recompile_reasons_8.json\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"a/report/-_0_2_0/recompile_reasons_8.json\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 3,
+      "guard_categories": [
+        "dtype_device",
+        "grad_mode"
+      ],
+      "shape_change_recorded": false,
+      "successful_recompiles": 2
+    },
+    "explanation": "The capture A's manifest indicates 3 completed compilations. The guard categories recorded are dtype_device and grad_mode. There is no indication of a shape change recorded as the cause for any recompilation. Successful recompiles are counted as 2.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload\": {\"calls\": [ ... ], \"dynamic\": false, \"device\": \"cpu\", \"warmup_calls\": 0, \"cache_policy\": \"fresh_process_no_inductor\"}"
+      },
+      {
+        "retrieval_id": "r1",
+        "quote": "a/report/-_0_0_0/recompile_reasons_4.json"
+      },
+      {
+        "retrieval_id": "r1",
+        "quote": "a/report/-_0_1_0/recompile_reasons_8.json"
+      },
+      {
+        "retrieval_id": "r1",
+        "quote": "a/report/-_0_2_0/recompile_reasons_8.json"
+      }
+    ]
+  },
+  "model_requests": 11,
+  "tool_calls_requested": 10,
+  "tool_calls_executed": 10,
+  "input_tokens": 22507,
+  "output_tokens": 666,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4047,
+  "model_total_duration_ns": 64637257625,
+  "model_load_duration_ns": 52218415,
+  "token_counters_available": true,
+  "wall_seconds": 64.68061020801542
+}

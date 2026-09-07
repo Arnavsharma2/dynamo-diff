@@ -1,0 +1,52 @@
+import hashlib
+import json
+from pathlib import Path
+import sys
+import torch
+
+def f(x, argument):
+    return x.cos() * argument + x.tanh()
+
+
+settings = json.loads(Path(sys.argv[1]).read_text())
+torch.manual_seed(settings["seed"])
+torch.set_num_threads(1)
+if settings.get("recompile_limit") is not None:
+    torch._dynamo.config.recompile_limit = settings["recompile_limit"]
+backend_calls = []
+
+
+def recording_backend(graph, inputs):
+    backend_calls.append({"graph_sha256": hashlib.sha256(graph.code.encode()).hexdigest(),
+        "graph_nodes": len(list(graph.graph.nodes))})
+    if settings.get("backend_raises"):
+        raise RuntimeError("Backend stopped before returning an executable graph")
+    return graph.forward
+
+
+modules = [M() for _ in settings["calls"]] if settings.get("modules") else []
+for module in modules:
+    module.torchdynamo_force_dynamic = False
+targets = modules or [f]
+compiled = [torch.compile(target, backend=recording_backend, dynamic=False) for target in targets]
+observations = []
+for index, call in enumerate(settings["calls"]):
+    x = torch.linspace(-1, 1, call["shape"][0], dtype=getattr(torch, call["dtype"]),
+        requires_grad=call["requires_grad"])
+    position = index if modules else 0
+    before = len(backend_calls)
+    observed = {"call": index, "backend_calls_before": before}
+    try:
+        actual = compiled[position](x, call["argument"])
+        expected = targets[position](x, call["argument"])
+        torch.testing.assert_close(actual, expected, rtol=1e-5, atol=1e-6)
+        observed.update(output_correct=True, maximum_error=float((actual-expected).abs().max().detach()),
+            output=actual.detach().tolist(), error=None)
+    except torch._dynamo.exc.BackendCompilerFailed as error:
+        if not settings.get("backend_raises"):
+            raise
+        observed.update(output_correct=None, maximum_error=None, error=type(error).__name__)
+    observed["backend_calls_after"] = len(backend_calls)
+    observations.append(observed)
+Path(sys.argv[2]).write_text(json.dumps({"torch": torch.__version__, "torch_git": torch.version.git_version,
+    "calls": observations, "backend_calls": backend_calls, "all_calls_attempted": True}, indent=2) + "\n")

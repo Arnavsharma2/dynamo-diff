@@ -1,0 +1,17 @@
+{
+  "review_status": "Manually inspected by Codex against raw records and the instrumented backend; human review pending",
+  "cases": {
+    "stable": {"observed_compilation_identities": 1, "observed_attempts": 1, "completed": 1, "confirmed_successful_recompilations": 0, "guard_reason_entries": 0},
+    "shape": {"observed_compilation_identities": 2, "observed_attempts": 2, "completed": 2, "confirmed_successful_recompilations": 1, "guard_reason_entries": 1},
+    "scalar": {"observed_compilation_identities": 2, "observed_attempts": 2, "completed": 2, "confirmed_successful_recompilations": 1, "guard_reason_entries": 1},
+    "multiple_guards": {"observed_compilation_identities": 3, "observed_attempts": 3, "completed": 3, "confirmed_successful_recompilations": 2, "guard_reason_entries": 3},
+    "dynamic": {"observed_compilation_identities": 2, "observed_attempts": 2, "completed": 2, "confirmed_successful_recompilations": 1, "guard_reason_entries": 1},
+    "grad": {"observed_compilation_identities": 2, "observed_attempts": 2, "completed": 2, "confirmed_successful_recompilations": 1, "guard_reason_entries": 1},
+    "graph_break": {"observed_compilation_identities": 2, "observed_attempts": 3, "completed": 2, "confirmed_successful_recompilations": 0, "graph_break_records": 1, "unique_graph_break_sites": 1},
+    "backend_failure": {"observed_compilation_identities": 1, "completed": 0, "failed": 1, "confirmed_successful_recompilations": 0},
+    "no_graph": {"observed_compilation_identities": 1, "completed": 0, "no_graph_observed": 1, "confirmed_successful_recompilations": 0},
+    "limit": {"observed_compilation_identities": 3, "completed": 2, "failed": 1, "confirmed_recompilation_identities": 2, "confirmed_successful_recompilations": 1, "compiler_limit_events": 1},
+    "identity": {"observed_compilation_identities": 3, "completed": 3, "confirmed_successful_recompilations": 2, "guard_reason_entries": 3},
+    "identity_partitioned": {"observed_compilation_identities": 3, "completed": 3, "confirmed_successful_recompilations": 0, "additional_frame_compilations": 2, "guard_reason_entries": 0}
+  }
+}

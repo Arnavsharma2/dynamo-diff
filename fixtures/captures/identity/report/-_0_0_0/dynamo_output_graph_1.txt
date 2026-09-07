@@ -1,0 +1,8 @@
+class GraphModule(torch.nn.Module):
+    def forward(self, L_x_: "f32[4][1]cpu"):
+        l_x_ = L_x_
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:32 in forward, code: return x.sin() + id(self)
+        sin: "f32[4][1]cpu" = l_x_.sin();  l_x_ = None
+        add: "f32[4][1]cpu" = sin + 4553074944;  sin = None
+        return (add,)

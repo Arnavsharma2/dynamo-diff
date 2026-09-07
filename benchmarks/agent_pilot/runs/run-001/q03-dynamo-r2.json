@@ -1,0 +1,21 @@
+{
+  "id": "q03-dynamo-r2",
+  "question_id": "q03",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"baseline_completed\": 3,\n    \"candidate_completed\": 1,\n    \"matched\": null,\n    \"source_body_changed\": null,\n    \"speedup_proven\": false,\n    \"workload_comparability\": \"unknown\"\n  },\n  \"explanation\": \"Baseline A has 3 completed compilations, while candidate B has 1. There is no evidence of matching or source body changes. Workload comparability is unknown due to insufficient data. Speedup cannot be proven without further analysis.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 3, \"confirmed_recompilation_identities\": 2, \"confirmed_successful_recompilations\": 2, \"guard_reason_entries\": 3\"\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"completed\": 1, \"observed_attempts\": 1, \"observed_compilation_identities\": 1, \"guard_reason_entries\": 0\"\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 2,
+  "tool_calls_executed": 2,
+  "input_tokens": 3393,
+  "output_tokens": 346,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1910,
+  "model_total_duration_ns": 32422060750,
+  "model_load_duration_ns": 10814583,
+  "token_counters_available": true,
+  "wall_seconds": 33.321525500010466
+}

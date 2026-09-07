@@ -1,0 +1,18 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function forward in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:31
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: ___check_obj_id(self, 4553074944), type=<class '__main__.IdentityModule'>  # return x.sin() + id(self)  # fixtures/workloads/compiler_cases.py:32 in forward
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 32, in forward
+V0906 21:31:46.151000 77144 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     return x.sin() + id(self)
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function forward in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:31
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: ___check_obj_id(self, 4553039760), type=<class '__main__.IdentityModule'>  # return x.sin() + id(self)  # fixtures/workloads/compiler_cases.py:32 in forward
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 32, in forward
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() + id(self)
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: ___check_obj_id(self, 4553074944), type=<class '__main__.IdentityModule'>  # return x.sin() + id(self)  # fixtures/workloads/compiler_cases.py:32 in forward
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 32, in forward
+V0906 21:31:46.172000 77144 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() + id(self)

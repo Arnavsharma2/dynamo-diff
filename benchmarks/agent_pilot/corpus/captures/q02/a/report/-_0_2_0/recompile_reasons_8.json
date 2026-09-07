@@ -1,0 +1,4 @@
+[
+  "0/1: argument == 5                                            # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py\", line 8, in f\n    return x.cos() * argument + x.tanh()",
+  "0/0: argument == -3                                           # return x.cos() * argument + x.tanh()  # .cache/pilot-worker/model.py:8 in f\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py\", line 8, in f\n    return x.cos() * argument + x.tanh()"
+]

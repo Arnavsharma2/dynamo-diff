@@ -1,0 +1,24 @@
+ 22           RESUME                   0
+              LOAD_CONST               1 (True)
+              STORE_FAST               6 (__is_tracing_resume_prologue)
+              LOAD_FAST                2 (___stack0)
+              LOAD_CONST               2 (False)
+              STORE_FAST               6 (__is_tracing_resume_prologue)
+              JUMP_FORWARD            48 (to L1)
+              RESUME                   0
+              LOAD_FAST                5 (x)
+              LOAD_ATTR                0 (sin)
+              PUSH_NULL
+              CALL                     0
+              STORE_FAST               4 (y)
+              LOAD_GLOBAL              2 (torch)
+              LOAD_ATTR                4 (_dynamo)
+              LOAD_ATTR                6 (graph_break)
+              PUSH_NULL
+              CALL                     0
+      L1:     POP_TOP
+
+ 23           LOAD_FAST                4 (y)
+              LOAD_FAST                3 (scale)
+              BINARY_OP                5 (*)
+              RETURN_VALUE

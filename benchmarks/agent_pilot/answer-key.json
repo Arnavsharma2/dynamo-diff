@@ -1,0 +1,16 @@
+{
+  "review_status": "human_review_pending",
+  "basis": "Author inspection of raw terminal records, explicit recompile payloads, source/workload declarations and separately recorded backend/output observations. Authored before model trials; not emitted by the analyzer under evaluation.",
+  "answers": {
+    "q01": {"completed": 2, "successful_recompiles": 1, "last_call_new_compile": false, "guard_category": "tensor_shape_stride"},
+    "q02": {"completed": 3, "successful_recompiles": 2, "guard_reason_entries": 3, "last_recompile_reason_entries": 2},
+    "q03": {"baseline_completed": 3, "candidate_completed": 1, "matched": true, "source_body_changed": true, "workload_comparability": "manifest_consistent", "speedup_proven": false},
+    "q04": {"baseline_completed": 2, "candidate_completed": 1, "workload_comparability": "confounded", "source_change_proven_cause": false, "speedup_proven": false},
+    "q05": {"candidate_completed": 0, "candidate_failed": 1, "graph_emission_proves_completed": false, "speedup_proven": false},
+    "q06": {"candidate_completed": 2, "candidate_failed": 1, "candidate_limit_events": 1, "successful_recompiles": 1, "speedup_proven": false},
+    "q07": {"observed_completed": 1, "workload_completion": "unknown", "whole_workload_recompiles_known": false},
+    "q08": {"completed": 2, "attempts": 3, "successful_recompiles": 0, "graph_break_records": 1},
+    "q09": {"completed": 3, "successful_recompiles": 0, "additional_frame_compilations": 2, "numeric_ids_alone_prove_recompilation": false},
+    "q10": {"completed": 3, "successful_recompiles": 2, "guard_categories": ["dtype_device", "grad_mode"], "shape_change_recorded": false}
+  }
+}

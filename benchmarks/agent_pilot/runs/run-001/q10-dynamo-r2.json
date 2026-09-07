@@ -1,0 +1,21 @@
+{
+  "id": "q10-dynamo-r2",
+  "question_id": "q10",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 3,\n    \"guard_categories\": [\"tensor_shape_stride\", \"dtype_device\", \"grad_mode\"],\n    \"shape_change_recorded\": true,\n    \"successful_recompiles\": 2\n  },\n  \"explanation\": \"Capture A has 3 completed compilations and 2 successful recompiles. The distinct guard categories are tensor_shape_stride, dtype_device, and grad_mode. A shape change is recorded as the cause.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"guard_reason_entries\": 3\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"shape_change_recorded\": true\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"confirmed_successful_recompilations\": 2\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 3\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2751,
+  "output_tokens": 312,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 976,
+  "model_total_duration_ns": 22346583750,
+  "model_load_duration_ns": 24387750,
+  "token_counters_available": true,
+  "wall_seconds": 23.271209166996414
+}

@@ -1,0 +1,47 @@
+{
+  "id": "q09-raw-r2",
+  "question_id": "q09",
+  "condition": "raw",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"additional_frame_compilations\": 3,\n    \"completed\": 3,\n    \"numeric_ids_alone_prove_recompilation\": false,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"Capture A shows three completed compilations with increasing frame-compile numbers (0/0, 0/1, 0/2). However, increasing frame-compile numbers alone do not prove recompilation without explicit recompile evidence. The trace log does not provide evidence of successful recompiles, so the count remains 0.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/0\\\", \\\"frame_key\\\": \\\"1\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/1\\\", \\\"frame_key\\\": \\\"2\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/2\\\", \\\"frame_key\\\": \\\"3\\\"\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "additional_frame_compilations": 3,
+      "completed": 3,
+      "numeric_ids_alone_prove_recompilation": false,
+      "successful_recompiles": 0
+    },
+    "explanation": "Capture A shows three completed compilations with increasing frame-compile numbers (0/0, 0/1, 0/2). However, increasing frame-compile numbers alone do not prove recompilation without explicit recompile evidence. The trace log does not provide evidence of successful recompiles, so the count remains 0.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/0\", \"frame_key\": \"1\""
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/1\", \"frame_key\": \"2\""
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/2\", \"frame_key\": \"3\""
+      }
+    ]
+  },
+  "model_requests": 5,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 8849,
+  "output_tokens": 404,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 10331,
+  "model_total_duration_ns": 50682680709,
+  "model_load_duration_ns": 23395374,
+  "token_counters_available": true,
+  "wall_seconds": 50.71167649998097
+}

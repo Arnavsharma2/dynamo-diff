@@ -1,0 +1,311 @@
+{
+  "torch": "2.14.0",
+  "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "transformers": "5.10.1",
+  "calls": [
+    {
+      "request": 0,
+      "input_ids": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        8
+      ],
+      "strides": [
+        8,
+        1
+      ],
+      "dtype": "int64",
+      "device": "cpu",
+      "requires_grad": false,
+      "grad_enabled": false,
+      "model_training": false,
+      "attention_mask": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "output_tokens": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          59,
+          49,
+          56
+        ]
+      ],
+      "output_logits_sha256": [
+        "a138761ca3cacfd3226292bc42c31ce05e26143d6696c191e8af96524284a297",
+        "7032ccf81a3703319ac4561c0bad0bcc7b6a0274f86b7b77470dff25ab667f8a",
+        "6e80a04c2e8dd2acbe1c20fe09ab540d5f8763629d3368ab184649bcc1d3e37a"
+      ],
+      "output_correct": true,
+      "maximum_logit_error": 0.0,
+      "backend_calls_before": 0,
+      "backend_calls_after": 2
+    },
+    {
+      "request": 1,
+      "input_ids": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        8
+      ],
+      "strides": [
+        8,
+        1
+      ],
+      "dtype": "int64",
+      "device": "cpu",
+      "requires_grad": false,
+      "grad_enabled": false,
+      "model_training": false,
+      "attention_mask": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "output_tokens": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          59,
+          49,
+          56
+        ]
+      ],
+      "output_logits_sha256": [
+        "a138761ca3cacfd3226292bc42c31ce05e26143d6696c191e8af96524284a297",
+        "7032ccf81a3703319ac4561c0bad0bcc7b6a0274f86b7b77470dff25ab667f8a",
+        "6e80a04c2e8dd2acbe1c20fe09ab540d5f8763629d3368ab184649bcc1d3e37a"
+      ],
+      "output_correct": true,
+      "maximum_logit_error": 0.0,
+      "backend_calls_before": 2,
+      "backend_calls_after": 2
+    },
+    {
+      "request": 2,
+      "input_ids": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        8
+      ],
+      "strides": [
+        8,
+        1
+      ],
+      "dtype": "int64",
+      "device": "cpu",
+      "requires_grad": false,
+      "grad_enabled": false,
+      "model_training": false,
+      "attention_mask": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "output_tokens": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          59,
+          49,
+          56
+        ]
+      ],
+      "output_logits_sha256": [
+        "a138761ca3cacfd3226292bc42c31ce05e26143d6696c191e8af96524284a297",
+        "7032ccf81a3703319ac4561c0bad0bcc7b6a0274f86b7b77470dff25ab667f8a",
+        "6e80a04c2e8dd2acbe1c20fe09ab540d5f8763629d3368ab184649bcc1d3e37a"
+      ],
+      "output_correct": true,
+      "maximum_logit_error": 0.0,
+      "backend_calls_before": 2,
+      "backend_calls_after": 2
+    }
+  ],
+  "backend_calls": [
+    {
+      "graph_nodes": 205,
+      "graph_code_sha256": "4d0dcace82f16afe351d9ac66fcd7d8d833d1cff424ebf59f0ed5beda11bbf63"
+    },
+    {
+      "graph_nodes": 205,
+      "graph_code_sha256": "1225b7d9c229010cda8132f3609976ae80de06af9490325625a52cda58567177"
+    }
+  ],
+  "parameter_count": 22688,
+  "parameter_hashes": {
+    "model.embed_tokens.weight": "ae3e79cd420826eaf433ecc9a8d542a2277577b336e749fa9948814295187304",
+    "model.layers.0.self_attn.q_proj.weight": "7e488da461727b9326c23608e821a58bdcb467b9a2f0df9445247fe2c4408b36",
+    "model.layers.0.self_attn.k_proj.weight": "0149026cb4f6c958ea4094b76ce96a2e3de56fdb515e0be32a5f4447806c7c05",
+    "model.layers.0.self_attn.v_proj.weight": "3a3b9e74e8c47567c4cf1dcd964c4e3fb64ce10ea06aea9cbf8d581c5dd21d8b",
+    "model.layers.0.self_attn.o_proj.weight": "9d8bb60d2ceb93bd2036d390a2aff258975fe469925f46f007601e476c9fd00c",
+    "model.layers.0.mlp.gate_proj.weight": "fe3d120f0bdcc3da9c90719d8c6076f7e56cfc8bb92228b9434b471d41f02b24",
+    "model.layers.0.mlp.up_proj.weight": "6761984d5e678fe3c96c964e277b1daeaf4f06eacb219aeabda88712519717a6",
+    "model.layers.0.mlp.down_proj.weight": "bdc0d57757b37a91a243834b997677537a8869520443bb8dd01c5e25a79bdaaa",
+    "model.layers.0.input_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+    "model.layers.0.post_attention_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+    "model.layers.1.self_attn.q_proj.weight": "f846cad7af87bac173eaaeca5481e407f30d3245f5037822b837f2c58d833d29",
+    "model.layers.1.self_attn.k_proj.weight": "310a061e52f8baded3a272425f1346c781913f12c030efe34b9061d4141f06be",
+    "model.layers.1.self_attn.v_proj.weight": "67928bd3e45360f68f1fd2057c7ea2a4b80c30853f6a0c1ba4e2f3c5cd3aa41d",
+    "model.layers.1.self_attn.o_proj.weight": "b3d7eb566bc702c80dd4fa150521353cdb418a15063ba7348d28aacc830fbebb",
+    "model.layers.1.mlp.gate_proj.weight": "d08a22cc780cc0b383453f173e6b7793a1f6f6d7827d7acc80919b4cd499e8d8",
+    "model.layers.1.mlp.up_proj.weight": "fdcf6f4fb5db4a5a521f06b859fca084dfa0e690326d2ea73094eec5a83e5ca7",
+    "model.layers.1.mlp.down_proj.weight": "e48608b11495cf19e63903aa8d977eacd50df59f0ce38b6f4bd0e1416013540c",
+    "model.layers.1.input_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+    "model.layers.1.post_attention_layernorm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+    "model.norm.weight": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+    "lm_head.weight": "e1a9c4a6aee599870c04e7c06caedc11f8b58b7dd340adcf426f544c5a36853f"
+  },
+  "model_config": {
+    "transformers_version": "5.10.1",
+    "architectures": null,
+    "output_hidden_states": false,
+    "return_dict": true,
+    "dtype": null,
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "problem_type": null,
+    "vocab_size": 64,
+    "hidden_size": 32,
+    "intermediate_size": 64,
+    "num_hidden_layers": 2,
+    "num_attention_heads": 4,
+    "num_key_value_heads": 2,
+    "hidden_act": "silu",
+    "max_position_embeddings": 64,
+    "initializer_range": 0.02,
+    "rms_norm_eps": 1e-06,
+    "use_cache": true,
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": null,
+    "pretraining_tp": 1,
+    "tie_word_embeddings": false,
+    "rope_parameters": {
+      "rope_theta": 10000.0,
+      "rope_type": "default"
+    },
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "mlp_bias": false,
+    "head_dim": 8,
+    "_name_or_path": "",
+    "model_type": "llama",
+    "output_attentions": false
+  },
+  "source_paths": [
+    "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/transformers-case-worker/run.py",
+    "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py",
+    "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/generation/utils.py",
+    "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py",
+    "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py"
+  ],
+  "oracle": {
+    "method": "separate uncompiled model with identical state_dict; exact tokens and per-step logits",
+    "rtol": 1e-05,
+    "atol": 1e-06,
+    "output_tokens": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        59,
+        49,
+        56
+      ]
+    ],
+    "output_logits_sha256": [
+      "a138761ca3cacfd3226292bc42c31ce05e26143d6696c191e8af96524284a297",
+      "7032ccf81a3703319ac4561c0bad0bcc7b6a0274f86b7b77470dff25ab667f8a",
+      "6e80a04c2e8dd2acbe1c20fe09ab540d5f8763629d3368ab184649bcc1d3e37a"
+    ]
+  },
+  "application_timing": "not_measured"
+}

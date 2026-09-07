@@ -1,0 +1,175 @@
+[
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "dynamo",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035364163.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0",
+      "fn_name": "_compile.compile_inner"
+    },
+    "cat": "dynamo_timed",
+    "name": "entire_frame_compile",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035366013.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "compile_attempt_0",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035368065.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "bytecode_tracing",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035383660.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0",
+      "create_proxy_time_s": 0.007363,
+      "get_fake_value_time_s": 0.002631,
+      "variable_builder_call_time_s": 0.008742,
+      "wrap_to_fake_tensor_and_record_time_s": 0.002196
+    },
+    "cat": "dynamo_timed",
+    "name": "bytecode_tracing",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035397998.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "insert_deferred_runtime_asserts",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035398840.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "insert_deferred_runtime_asserts",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035400087.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0",
+      "fn_name": "OutputGraph.call_user_compiler"
+    },
+    "cat": "dynamo_timed",
+    "name": "backend_compile",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035402027.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0",
+      "fn_name": "OutputGraph.call_user_compiler"
+    },
+    "cat": "dynamo_timed",
+    "name": "backend_compile",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035403030.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "compile_attempt_0",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035404170.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "build_guards",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035404475.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "build_guards",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035412203.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "gc",
+    "ph": "B",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035417182.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0"
+    },
+    "cat": "dynamo_timed",
+    "name": "gc",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035419413.0
+  },
+  {
+    "args": {
+      "compile_id": "0/0",
+      "fn_name": "_compile.compile_inner"
+    },
+    "cat": "dynamo_timed",
+    "name": "entire_frame_compile",
+    "ph": "E",
+    "pid": 0,
+    "tid": 0,
+    "ts": 1788755035419874.0
+  }
+]

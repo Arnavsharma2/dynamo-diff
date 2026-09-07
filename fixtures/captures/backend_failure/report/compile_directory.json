@@ -1,0 +1,38 @@
+{
+  "[-/-]": {
+    "artifacts": [
+      {
+        "name": "torch_version_0.json",
+        "number": 0,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_-_-_-/torch_version_0.json"
+      }
+    ]
+  },
+  "[0/0]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_1.txt",
+        "number": 1,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_output_graph_1.txt"
+      },
+      {
+        "name": "dynamo_error_2.txt",
+        "number": 2,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_error_2.txt"
+      },
+      {
+        "name": "compilation_metrics_3.html",
+        "number": 3,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/compilation_metrics_3.html"
+      }
+    ]
+  }
+}

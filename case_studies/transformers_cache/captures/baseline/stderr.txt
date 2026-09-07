@@ -1,0 +1,32 @@
+V0906 22:49:44.423000 98165 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function wrapper in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py:897
+V0906 22:49:44.423000 98165 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 22:49:44.423000 98165 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: tensor 'kwargs['input_ids']' size mismatch at index 1. expected 8, actual 1
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function wrapper in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py:897
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: tensor 'kwargs['input_ids']' size mismatch at index 1. expected 1, actual 8
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: kwargs['past_key_values'].layers[0].is_initialized == False  # if not self.is_initialized:  # transformers/cache_utils.py:352 in update
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     output = func(self, *args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 474, in forward
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     outputs: BaseModelOutputWithPast = self.model(
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 1032, in wrapper
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     output = func(self, *args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     outputs = func(self, *args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 411, in forward
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     hidden_states = decoder_layer(
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return super().__call__(*args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return self._call_impl(*args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return forward_call(*args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 316, in forward
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     hidden_states, _ = self.self_attn(
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py", line 270, in forward
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 993, in update
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     keys, values = self.layers[layer_idx].update(key_states, value_states, *args, **kwargs)
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py", line 352, in update
+V0906 22:49:44.932000 98165 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     if not self.is_initialized:

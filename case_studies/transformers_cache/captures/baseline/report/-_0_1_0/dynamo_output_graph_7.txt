@@ -1,0 +1,411 @@
+class GraphModule(torch.nn.Module):
+    def forward(self, L_kwargs_input_ids_: "i64[1, 1][1, 1]cpu", L_self_modules_model_modules_embed_tokens_parameters_weight_: "f32[64, 32][32, 1]cpu", L_kwargs_position_ids_: "i64[1, 1][1, 1]cpu", L_kwargs_attention_mask_: "f32[1, 1, 1, 16][16, 16, 16, 1]cpu", L_self_modules_model_modules_rotary_emb_buffers_inv_freq_: "f32[4][1]cpu", L_self_modules_model_modules_layers_modules_0_modules_input_layernorm_parameters_weight_: "f32[32][1]cpu", L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_q_proj_parameters_weight_: "f32[32, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_k_proj_parameters_weight_: "f32[16, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_v_proj_parameters_weight_: "f32[16, 32][32, 1]cpu", L_kwargs_past_key_values_layers_0_cumulative_length: "i64[1][1]cpu", L_kwargs_past_key_values_layers_0_keys: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu", L_kwargs_past_key_values_layers_0_values: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_o_proj_parameters_weight_: "f32[32, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_post_attention_layernorm_parameters_weight_: "f32[32][1]cpu", L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_gate_proj_parameters_weight_: "f32[64, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_up_proj_parameters_weight_: "f32[64, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_down_proj_parameters_weight_: "f32[32, 64][64, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_input_layernorm_parameters_weight_: "f32[32][1]cpu", L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_q_proj_parameters_weight_: "f32[32, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_k_proj_parameters_weight_: "f32[16, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_v_proj_parameters_weight_: "f32[16, 32][32, 1]cpu", L_kwargs_past_key_values_layers_1_cumulative_length: "i64[1][1]cpu", L_kwargs_past_key_values_layers_1_keys: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu", L_kwargs_past_key_values_layers_1_values: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_o_proj_parameters_weight_: "f32[32, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_post_attention_layernorm_parameters_weight_: "f32[32][1]cpu", L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_gate_proj_parameters_weight_: "f32[64, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_up_proj_parameters_weight_: "f32[64, 32][32, 1]cpu", L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_down_proj_parameters_weight_: "f32[32, 64][64, 1]cpu", L_self_modules_model_modules_norm_parameters_weight_: "f32[32][1]cpu", L_self_modules_lm_head_parameters_weight_: "f32[64, 32][32, 1]cpu"):
+        l_kwargs_input_ids_ = L_kwargs_input_ids_
+        l_self_modules_model_modules_embed_tokens_parameters_weight_ = L_self_modules_model_modules_embed_tokens_parameters_weight_
+        l_kwargs_position_ids_ = L_kwargs_position_ids_
+        l_kwargs_attention_mask_ = L_kwargs_attention_mask_
+        l_self_modules_model_modules_rotary_emb_buffers_inv_freq_ = L_self_modules_model_modules_rotary_emb_buffers_inv_freq_
+        l_self_modules_model_modules_layers_modules_0_modules_input_layernorm_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_input_layernorm_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_q_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_q_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_k_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_k_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_v_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_v_proj_parameters_weight_
+        l_kwargs_past_key_values_layers_0_cumulative_length = L_kwargs_past_key_values_layers_0_cumulative_length
+        l_kwargs_past_key_values_layers_0_keys = L_kwargs_past_key_values_layers_0_keys
+        l_kwargs_past_key_values_layers_0_values = L_kwargs_past_key_values_layers_0_values
+        l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_o_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_o_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_post_attention_layernorm_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_post_attention_layernorm_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_gate_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_gate_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_up_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_up_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_down_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_0_modules_mlp_modules_down_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_input_layernorm_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_input_layernorm_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_q_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_q_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_k_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_k_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_v_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_v_proj_parameters_weight_
+        l_kwargs_past_key_values_layers_1_cumulative_length = L_kwargs_past_key_values_layers_1_cumulative_length
+        l_kwargs_past_key_values_layers_1_keys = L_kwargs_past_key_values_layers_1_keys
+        l_kwargs_past_key_values_layers_1_values = L_kwargs_past_key_values_layers_1_values
+        l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_o_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_o_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_post_attention_layernorm_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_post_attention_layernorm_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_gate_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_gate_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_up_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_up_proj_parameters_weight_
+        l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_down_proj_parameters_weight_ = L_self_modules_model_modules_layers_modules_1_modules_mlp_modules_down_proj_parameters_weight_
+        l_self_modules_model_modules_norm_parameters_weight_ = L_self_modules_model_modules_norm_parameters_weight_
+        l_self_modules_lm_head_parameters_weight_ = L_self_modules_lm_head_parameters_weight_
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:389 in forward, code: inputs_embeds: torch.Tensor = self.embed_tokens(input_ids)
+        inputs_embeds: "f32[1, 1, 32][32, 32, 1]cpu" = torch.nn.functional.embedding(l_kwargs_input_ids_, l_self_modules_model_modules_embed_tokens_parameters_weight_, 0, None, 2.0, False, False);  l_kwargs_input_ids_ = l_self_modules_model_modules_embed_tokens_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:125 in forward, code: inv_freq_expanded = self.inv_freq[None, :, None].float().expand(position_ids.shape[0], -1, 1).to(x.device)
+        getitem: "f32[1, 4, 1][4, 1, 1]cpu" = l_self_modules_model_modules_rotary_emb_buffers_inv_freq_[(None, slice(None, None, None), None)];  l_self_modules_model_modules_rotary_emb_buffers_inv_freq_ = None
+        float_1: "f32[1, 4, 1][4, 1, 1]cpu" = getitem.float();  getitem = None
+        expand: "f32[1, 4, 1][4, 1, 1]cpu" = float_1.expand(1, -1, 1);  float_1 = None
+        inv_freq_expanded: "f32[1, 4, 1][4, 1, 1]cpu" = expand.to(device(type='cpu'));  expand = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:126 in forward, code: position_ids_expanded = position_ids[:, None, :].float()
+        getitem_1: "i64[1, 1, 1][1, 1, 1]cpu" = l_kwargs_position_ids_[(slice(None, None, None), None, slice(None, None, None))];  l_kwargs_position_ids_ = None
+        position_ids_expanded: "f32[1, 1, 1][1, 1, 1]cpu" = getitem_1.float();  getitem_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:130 in forward, code: freqs = (inv_freq_expanded.float() @ position_ids_expanded.float()).transpose(1, 2)
+        float_3: "f32[1, 4, 1][4, 1, 1]cpu" = inv_freq_expanded.float();  inv_freq_expanded = None
+        float_4: "f32[1, 1, 1][1, 1, 1]cpu" = position_ids_expanded.float();  position_ids_expanded = None
+        matmul: "f32[1, 4, 1][4, 1, 1]cpu" = float_3 @ float_4;  float_3 = float_4 = None
+        freqs: "f32[1, 1, 4][4, 1, 1]cpu" = matmul.transpose(1, 2);  matmul = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:131 in forward, code: emb = torch.cat((freqs, freqs), dim=-1)
+        emb: "f32[1, 1, 8][8, 8, 1]cpu" = torch.cat((freqs, freqs), dim = -1);  freqs = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:132 in forward, code: cos = emb.cos() * self.attention_scaling
+        cos: "f32[1, 1, 8][8, 8, 1]cpu" = emb.cos()
+        cos_1: "f32[1, 1, 8][8, 8, 1]cpu" = cos * 1.0;  cos = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:133 in forward, code: sin = emb.sin() * self.attention_scaling
+        sin: "f32[1, 1, 8][8, 8, 1]cpu" = emb.sin();  emb = None
+        sin_1: "f32[1, 1, 8][8, 8, 1]cpu" = sin * 1.0;  sin = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:135 in forward, code: return cos.to(dtype=x.dtype), sin.to(dtype=x.dtype)
+        cos_2: "f32[1, 1, 8][8, 8, 1]cpu" = cos_1.to(dtype = torch.float32);  cos_1 = None
+        sin_2: "f32[1, 1, 8][8, 8, 1]cpu" = sin_1.to(dtype = torch.float32);  sin_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:410 in forward, code: for decoder_layer in self.layers[: self.config.num_hidden_layers]:
+        _log_api_usage_once = torch._C._log_api_usage_once('python.nn_module');  _log_api_usage_once = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:64 in forward, code: hidden_states = hidden_states.to(torch.float32)
+        hidden_states: "f32[1, 1, 32][32, 32, 1]cpu" = inputs_embeds.to(torch.float32)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:65 in forward, code: variance = hidden_states.pow(2).mean(-1, keepdim=True)
+        pow_1: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states.pow(2)
+        variance: "f32[1, 1, 1][1, 1, 1]cpu" = pow_1.mean(-1, keepdim = True);  pow_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:66 in forward, code: hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+        add: "f32[1, 1, 1][1, 1, 1]cpu" = variance + 1e-06;  variance = None
+        rsqrt: "f32[1, 1, 1][1, 1, 1]cpu" = torch.rsqrt(add);  add = None
+        hidden_states_1: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states * rsqrt;  hidden_states = rsqrt = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:67 in forward, code: return self.weight * hidden_states.to(input_dtype)
+        to_4: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_1.to(torch.float32);  hidden_states_1 = None
+        hidden_states_2: "f32[1, 1, 32][32, 32, 1]cpu" = l_self_modules_model_modules_layers_modules_0_modules_input_layernorm_parameters_weight_ * to_4;  l_self_modules_model_modules_layers_modules_0_modules_input_layernorm_parameters_weight_ = to_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:262 in forward, code: query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(hidden_states_2, l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_q_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_q_proj_parameters_weight_ = None
+        view: "f32[1, 1, 4, 8][32, 32, 8, 1]cpu" = linear.view((1, 1, -1, 8));  linear = None
+        query_states: "f32[1, 4, 1, 8][32, 8, 32, 1]cpu" = view.transpose(1, 2);  view = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:263 in forward, code: key_states = self.k_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear_1: "f32[1, 1, 16][16, 16, 1]cpu" = torch._C._nn.linear(hidden_states_2, l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_k_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_k_proj_parameters_weight_ = None
+        view_1: "f32[1, 1, 2, 8][16, 16, 8, 1]cpu" = linear_1.view((1, 1, -1, 8));  linear_1 = None
+        key_states: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = view_1.transpose(1, 2);  view_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:264 in forward, code: value_states = self.v_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear_2: "f32[1, 1, 16][16, 16, 1]cpu" = torch._C._nn.linear(hidden_states_2, l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_v_proj_parameters_weight_, None);  hidden_states_2 = l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_v_proj_parameters_weight_ = None
+        view_2: "f32[1, 1, 2, 8][16, 16, 8, 1]cpu" = linear_2.view((1, 1, -1, 8));  linear_2 = None
+        value_states: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = view_2.transpose(1, 2);  view_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:164 in apply_rotary_pos_emb, code: cos = cos.unsqueeze(unsqueeze_dim)
+        cos_3: "f32[1, 1, 1, 8][8, 8, 8, 1]cpu" = cos_2.unsqueeze(1)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:165 in apply_rotary_pos_emb, code: sin = sin.unsqueeze(unsqueeze_dim)
+        sin_3: "f32[1, 1, 1, 8][8, 8, 8, 1]cpu" = sin_2.unsqueeze(1)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:166 in apply_rotary_pos_emb, code: q_embed = (q * cos) + (rotate_half(q) * sin)
+        mul_4: "f32[1, 4, 1, 8][32, 8, 32, 1]cpu" = query_states * cos_3
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:140 in rotate_half, code: x1 = x[..., : x.shape[-1] // 2]
+        x1: "f32[1, 4, 1, 4][32, 8, 32, 1]cpu" = query_states[(Ellipsis, slice(None, 4, None))]
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:141 in rotate_half, code: x2 = x[..., x.shape[-1] // 2 :]
+        x2: "f32[1, 4, 1, 4][32, 8, 32, 1]cpu" = query_states[(Ellipsis, slice(4, None, None))];  query_states = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:142 in rotate_half, code: return torch.cat((-x2, x1), dim=-1)
+        neg: "f32[1, 4, 1, 4][16, 4, 16, 1]cpu" = -x2;  x2 = None
+        cat_1: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = torch.cat((neg, x1), dim = -1);  neg = x1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:166 in apply_rotary_pos_emb, code: q_embed = (q * cos) + (rotate_half(q) * sin)
+        mul_5: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = cat_1 * sin_3;  cat_1 = None
+        q_embed: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = mul_4 + mul_5;  mul_4 = mul_5 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:167 in apply_rotary_pos_emb, code: k_embed = (k * cos) + (rotate_half(k) * sin)
+        mul_6: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = key_states * cos_3;  cos_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:140 in rotate_half, code: x1 = x[..., : x.shape[-1] // 2]
+        x1_1: "f32[1, 2, 1, 4][16, 8, 16, 1]cpu" = key_states[(Ellipsis, slice(None, 4, None))]
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:141 in rotate_half, code: x2 = x[..., x.shape[-1] // 2 :]
+        x2_1: "f32[1, 2, 1, 4][16, 8, 16, 1]cpu" = key_states[(Ellipsis, slice(4, None, None))];  key_states = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:142 in rotate_half, code: return torch.cat((-x2, x1), dim=-1)
+        neg_1: "f32[1, 2, 1, 4][8, 4, 8, 1]cpu" = -x2_1;  x2_1 = None
+        cat_2: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = torch.cat((neg_1, x1_1), dim = -1);  neg_1 = x1_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:167 in apply_rotary_pos_emb, code: k_embed = (k * cos) + (rotate_half(k) * sin)
+        mul_7: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = cat_2 * sin_3;  cat_2 = sin_3 = None
+        k_embed: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = mul_6 + mul_7;  mul_6 = mul_7 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:357 in update, code: cache_position = torch.arange(kv_length, device=self.device) + self.cumulative_length
+        arange: "i64[1][1]cpu" = torch.arange(1, device = device(type='cpu'))
+        cache_position: "i64[1][1]cpu" = arange + l_kwargs_past_key_values_layers_0_cumulative_length;  arange = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:359 in update, code: self.cumulative_length.add_(kv_length)
+        add_: "i64[1][1]cpu" = l_kwargs_past_key_values_layers_0_cumulative_length.add_(1);  l_kwargs_past_key_values_layers_0_cumulative_length = add_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:363 in update, code: self.keys.index_copy_(2, cache_position, key_states)
+        index_copy_: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_0_keys.index_copy_(2, cache_position, k_embed);  k_embed = index_copy_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:364 in update, code: self.values.index_copy_(2, cache_position, value_states)
+        index_copy__1: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_0_values.index_copy_(2, cache_position, value_states);  cache_position = value_states = index_copy__1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:195 in repeat_kv, code: hidden_states = hidden_states[:, :, None, :, :].expand(batch, num_key_value_heads, n_rep, slen, head_dim)
+        getitem_6: "f32[1, 2, 1, 16, 8][256, 128, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_0_keys[(slice(None, None, None), slice(None, None, None), None, slice(None, None, None), slice(None, None, None))];  l_kwargs_past_key_values_layers_0_keys = None
+        hidden_states_3: "f32[1, 2, 2, 16, 8][256, 128, 0, 8, 1]cpu" = getitem_6.expand(1, 2, 2, 16, 8);  getitem_6 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:196 in repeat_kv, code: return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
+        key_states_1: "f32[1, 4, 16, 8][512, 128, 8, 1]cpu" = hidden_states_3.reshape(1, 4, 16, 8);  hidden_states_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:195 in repeat_kv, code: hidden_states = hidden_states[:, :, None, :, :].expand(batch, num_key_value_heads, n_rep, slen, head_dim)
+        getitem_7: "f32[1, 2, 1, 16, 8][256, 128, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_0_values[(slice(None, None, None), slice(None, None, None), None, slice(None, None, None), slice(None, None, None))];  l_kwargs_past_key_values_layers_0_values = None
+        hidden_states_4: "f32[1, 2, 2, 16, 8][256, 128, 0, 8, 1]cpu" = getitem_7.expand(1, 2, 2, 16, 8);  getitem_7 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:196 in repeat_kv, code: return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
+        value_states_1: "f32[1, 4, 16, 8][512, 128, 8, 1]cpu" = hidden_states_4.reshape(1, 4, 16, 8);  hidden_states_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:212 in eager_attention_forward, code: attn_weights = torch.matmul(query, key_states.transpose(2, 3)) * scaling
+        transpose_4: "f32[1, 4, 8, 16][512, 128, 1, 8]cpu" = key_states_1.transpose(2, 3);  key_states_1 = None
+        matmul_1: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.matmul(q_embed, transpose_4);  q_embed = transpose_4 = None
+        attn_weights: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = matmul_1 * 0.3535533905932738;  matmul_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:214 in eager_attention_forward, code: attn_weights = attn_weights + attention_mask
+        attn_weights_1: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = attn_weights + l_kwargs_attention_mask_;  attn_weights = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:216 in eager_attention_forward, code: attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query.dtype)
+        softmax: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.nn.functional.softmax(attn_weights_1, dim = -1, dtype = torch.float32);  attn_weights_1 = None
+        attn_weights_2: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = softmax.to(torch.float32);  softmax = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:217 in eager_attention_forward, code: attn_weights = nn.functional.dropout(attn_weights, p=dropout, training=module.training)
+        attn_weights_3: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.nn.functional.dropout(attn_weights_2, p = 0.0, training = False);  attn_weights_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:218 in eager_attention_forward, code: attn_output = torch.matmul(attn_weights, value_states)
+        attn_output: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = torch.matmul(attn_weights_3, value_states_1);  attn_weights_3 = value_states_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:219 in eager_attention_forward, code: attn_output = attn_output.transpose(1, 2).contiguous()
+        transpose_5: "f32[1, 1, 4, 8][32, 8, 8, 1]cpu" = attn_output.transpose(1, 2);  attn_output = None
+        attn_output_1: "f32[1, 1, 4, 8][32, 8, 8, 1]cpu" = transpose_5.contiguous();  transpose_5 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:287 in forward, code: attn_output = attn_output.reshape(*input_shape, -1).contiguous()
+        reshape_2: "f32[1, 1, 32][32, 8, 1]cpu" = attn_output_1.reshape(1, 1, -1);  attn_output_1 = None
+        attn_output_2: "f32[1, 1, 32][32, 8, 1]cpu" = reshape_2.contiguous();  reshape_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:288 in forward, code: attn_output = self.o_proj(attn_output)
+        attn_output_3: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(attn_output_2, l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_o_proj_parameters_weight_, None);  attn_output_2 = l_self_modules_model_modules_layers_modules_0_modules_self_attn_modules_o_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:325 in forward, code: hidden_states = residual + hidden_states
+        hidden_states_5: "f32[1, 1, 32][32, 32, 1]cpu" = inputs_embeds + attn_output_3;  inputs_embeds = attn_output_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:64 in forward, code: hidden_states = hidden_states.to(torch.float32)
+        hidden_states_6: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_5.to(torch.float32)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:65 in forward, code: variance = hidden_states.pow(2).mean(-1, keepdim=True)
+        pow_2: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_6.pow(2)
+        variance_1: "f32[1, 1, 1][1, 1, 1]cpu" = pow_2.mean(-1, keepdim = True);  pow_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:66 in forward, code: hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+        add_6: "f32[1, 1, 1][1, 1, 1]cpu" = variance_1 + 1e-06;  variance_1 = None
+        rsqrt_1: "f32[1, 1, 1][1, 1, 1]cpu" = torch.rsqrt(add_6);  add_6 = None
+        hidden_states_7: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_6 * rsqrt_1;  hidden_states_6 = rsqrt_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:67 in forward, code: return self.weight * hidden_states.to(input_dtype)
+        to_7: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_7.to(torch.float32);  hidden_states_7 = None
+        hidden_states_8: "f32[1, 1, 32][32, 32, 1]cpu" = l_self_modules_model_modules_layers_modules_0_modules_post_attention_layernorm_parameters_weight_ * to_7;  l_self_modules_model_modules_layers_modules_0_modules_post_attention_layernorm_parameters_weight_ = to_7 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:183 in forward, code: down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+        linear_4: "f32[1, 1, 64][64, 64, 1]cpu" = torch._C._nn.linear(hidden_states_8, l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_gate_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_gate_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/activations.py:103 in forward, code: return nn.functional.silu(input)
+        silu: "f32[1, 1, 64][64, 64, 1]cpu" = torch.nn.functional.silu(linear_4);  linear_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:183 in forward, code: down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+        linear_5: "f32[1, 1, 64][64, 64, 1]cpu" = torch._C._nn.linear(hidden_states_8, l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_up_proj_parameters_weight_, None);  hidden_states_8 = l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_up_proj_parameters_weight_ = None
+        mul_11: "f32[1, 1, 64][64, 64, 1]cpu" = silu * linear_5;  silu = linear_5 = None
+        down_proj: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(mul_11, l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_down_proj_parameters_weight_, None);  mul_11 = l_self_modules_model_modules_layers_modules_0_modules_mlp_modules_down_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:331 in forward, code: hidden_states = residual + hidden_states
+        hidden_states_9: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_5 + down_proj;  hidden_states_5 = down_proj = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:64 in forward, code: hidden_states = hidden_states.to(torch.float32)
+        hidden_states_10: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_9.to(torch.float32)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:65 in forward, code: variance = hidden_states.pow(2).mean(-1, keepdim=True)
+        pow_3: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_10.pow(2)
+        variance_2: "f32[1, 1, 1][1, 1, 1]cpu" = pow_3.mean(-1, keepdim = True);  pow_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:66 in forward, code: hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+        add_8: "f32[1, 1, 1][1, 1, 1]cpu" = variance_2 + 1e-06;  variance_2 = None
+        rsqrt_2: "f32[1, 1, 1][1, 1, 1]cpu" = torch.rsqrt(add_8);  add_8 = None
+        hidden_states_11: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_10 * rsqrt_2;  hidden_states_10 = rsqrt_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:67 in forward, code: return self.weight * hidden_states.to(input_dtype)
+        to_9: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_11.to(torch.float32);  hidden_states_11 = None
+        hidden_states_12: "f32[1, 1, 32][32, 32, 1]cpu" = l_self_modules_model_modules_layers_modules_1_modules_input_layernorm_parameters_weight_ * to_9;  l_self_modules_model_modules_layers_modules_1_modules_input_layernorm_parameters_weight_ = to_9 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:262 in forward, code: query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear_7: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(hidden_states_12, l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_q_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_q_proj_parameters_weight_ = None
+        view_3: "f32[1, 1, 4, 8][32, 32, 8, 1]cpu" = linear_7.view((1, 1, -1, 8));  linear_7 = None
+        query_states_1: "f32[1, 4, 1, 8][32, 8, 32, 1]cpu" = view_3.transpose(1, 2);  view_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:263 in forward, code: key_states = self.k_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear_8: "f32[1, 1, 16][16, 16, 1]cpu" = torch._C._nn.linear(hidden_states_12, l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_k_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_k_proj_parameters_weight_ = None
+        view_4: "f32[1, 1, 2, 8][16, 16, 8, 1]cpu" = linear_8.view((1, 1, -1, 8));  linear_8 = None
+        key_states_2: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = view_4.transpose(1, 2);  view_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:264 in forward, code: value_states = self.v_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        linear_9: "f32[1, 1, 16][16, 16, 1]cpu" = torch._C._nn.linear(hidden_states_12, l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_v_proj_parameters_weight_, None);  hidden_states_12 = l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_v_proj_parameters_weight_ = None
+        view_5: "f32[1, 1, 2, 8][16, 16, 8, 1]cpu" = linear_9.view((1, 1, -1, 8));  linear_9 = None
+        value_states_2: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = view_5.transpose(1, 2);  view_5 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:164 in apply_rotary_pos_emb, code: cos = cos.unsqueeze(unsqueeze_dim)
+        cos_4: "f32[1, 1, 1, 8][8, 8, 8, 1]cpu" = cos_2.unsqueeze(1);  cos_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:165 in apply_rotary_pos_emb, code: sin = sin.unsqueeze(unsqueeze_dim)
+        sin_4: "f32[1, 1, 1, 8][8, 8, 8, 1]cpu" = sin_2.unsqueeze(1);  sin_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:166 in apply_rotary_pos_emb, code: q_embed = (q * cos) + (rotate_half(q) * sin)
+        mul_14: "f32[1, 4, 1, 8][32, 8, 32, 1]cpu" = query_states_1 * cos_4
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:140 in rotate_half, code: x1 = x[..., : x.shape[-1] // 2]
+        x1_2: "f32[1, 4, 1, 4][32, 8, 32, 1]cpu" = query_states_1[(Ellipsis, slice(None, 4, None))]
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:141 in rotate_half, code: x2 = x[..., x.shape[-1] // 2 :]
+        x2_2: "f32[1, 4, 1, 4][32, 8, 32, 1]cpu" = query_states_1[(Ellipsis, slice(4, None, None))];  query_states_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:142 in rotate_half, code: return torch.cat((-x2, x1), dim=-1)
+        neg_2: "f32[1, 4, 1, 4][16, 4, 16, 1]cpu" = -x2_2;  x2_2 = None
+        cat_3: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = torch.cat((neg_2, x1_2), dim = -1);  neg_2 = x1_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:166 in apply_rotary_pos_emb, code: q_embed = (q * cos) + (rotate_half(q) * sin)
+        mul_15: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = cat_3 * sin_4;  cat_3 = None
+        q_embed_1: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = mul_14 + mul_15;  mul_14 = mul_15 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:167 in apply_rotary_pos_emb, code: k_embed = (k * cos) + (rotate_half(k) * sin)
+        mul_16: "f32[1, 2, 1, 8][16, 8, 16, 1]cpu" = key_states_2 * cos_4;  cos_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:140 in rotate_half, code: x1 = x[..., : x.shape[-1] // 2]
+        x1_3: "f32[1, 2, 1, 4][16, 8, 16, 1]cpu" = key_states_2[(Ellipsis, slice(None, 4, None))]
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:141 in rotate_half, code: x2 = x[..., x.shape[-1] // 2 :]
+        x2_3: "f32[1, 2, 1, 4][16, 8, 16, 1]cpu" = key_states_2[(Ellipsis, slice(4, None, None))];  key_states_2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:142 in rotate_half, code: return torch.cat((-x2, x1), dim=-1)
+        neg_3: "f32[1, 2, 1, 4][8, 4, 8, 1]cpu" = -x2_3;  x2_3 = None
+        cat_4: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = torch.cat((neg_3, x1_3), dim = -1);  neg_3 = x1_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:167 in apply_rotary_pos_emb, code: k_embed = (k * cos) + (rotate_half(k) * sin)
+        mul_17: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = cat_4 * sin_4;  cat_4 = sin_4 = None
+        k_embed_1: "f32[1, 2, 1, 8][16, 8, 8, 1]cpu" = mul_16 + mul_17;  mul_16 = mul_17 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:357 in update, code: cache_position = torch.arange(kv_length, device=self.device) + self.cumulative_length
+        arange_1: "i64[1][1]cpu" = torch.arange(1, device = device(type='cpu'))
+        cache_position_1: "i64[1][1]cpu" = arange_1 + l_kwargs_past_key_values_layers_1_cumulative_length;  arange_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:359 in update, code: self.cumulative_length.add_(kv_length)
+        add__1: "i64[1][1]cpu" = l_kwargs_past_key_values_layers_1_cumulative_length.add_(1);  l_kwargs_past_key_values_layers_1_cumulative_length = add__1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:363 in update, code: self.keys.index_copy_(2, cache_position, key_states)
+        index_copy__2: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_1_keys.index_copy_(2, cache_position_1, k_embed_1);  k_embed_1 = index_copy__2 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/cache_utils.py:364 in update, code: self.values.index_copy_(2, cache_position, value_states)
+        index_copy__3: "f32[1, 2, 16, 8][256, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_1_values.index_copy_(2, cache_position_1, value_states_2);  cache_position_1 = value_states_2 = index_copy__3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:195 in repeat_kv, code: hidden_states = hidden_states[:, :, None, :, :].expand(batch, num_key_value_heads, n_rep, slen, head_dim)
+        getitem_12: "f32[1, 2, 1, 16, 8][256, 128, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_1_keys[(slice(None, None, None), slice(None, None, None), None, slice(None, None, None), slice(None, None, None))];  l_kwargs_past_key_values_layers_1_keys = None
+        hidden_states_13: "f32[1, 2, 2, 16, 8][256, 128, 0, 8, 1]cpu" = getitem_12.expand(1, 2, 2, 16, 8);  getitem_12 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:196 in repeat_kv, code: return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
+        key_states_3: "f32[1, 4, 16, 8][512, 128, 8, 1]cpu" = hidden_states_13.reshape(1, 4, 16, 8);  hidden_states_13 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:195 in repeat_kv, code: hidden_states = hidden_states[:, :, None, :, :].expand(batch, num_key_value_heads, n_rep, slen, head_dim)
+        getitem_13: "f32[1, 2, 1, 16, 8][256, 128, 128, 8, 1]cpu" = l_kwargs_past_key_values_layers_1_values[(slice(None, None, None), slice(None, None, None), None, slice(None, None, None), slice(None, None, None))];  l_kwargs_past_key_values_layers_1_values = None
+        hidden_states_14: "f32[1, 2, 2, 16, 8][256, 128, 0, 8, 1]cpu" = getitem_13.expand(1, 2, 2, 16, 8);  getitem_13 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:196 in repeat_kv, code: return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
+        value_states_3: "f32[1, 4, 16, 8][512, 128, 8, 1]cpu" = hidden_states_14.reshape(1, 4, 16, 8);  hidden_states_14 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:212 in eager_attention_forward, code: attn_weights = torch.matmul(query, key_states.transpose(2, 3)) * scaling
+        transpose_9: "f32[1, 4, 8, 16][512, 128, 1, 8]cpu" = key_states_3.transpose(2, 3);  key_states_3 = None
+        matmul_3: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.matmul(q_embed_1, transpose_9);  q_embed_1 = transpose_9 = None
+        attn_weights_4: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = matmul_3 * 0.3535533905932738;  matmul_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:214 in eager_attention_forward, code: attn_weights = attn_weights + attention_mask
+        attn_weights_5: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = attn_weights_4 + l_kwargs_attention_mask_;  attn_weights_4 = l_kwargs_attention_mask_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:216 in eager_attention_forward, code: attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query.dtype)
+        softmax_1: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.nn.functional.softmax(attn_weights_5, dim = -1, dtype = torch.float32);  attn_weights_5 = None
+        attn_weights_6: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = softmax_1.to(torch.float32);  softmax_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:217 in eager_attention_forward, code: attn_weights = nn.functional.dropout(attn_weights, p=dropout, training=module.training)
+        attn_weights_7: "f32[1, 4, 1, 16][64, 16, 16, 1]cpu" = torch.nn.functional.dropout(attn_weights_6, p = 0.0, training = False);  attn_weights_6 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:218 in eager_attention_forward, code: attn_output = torch.matmul(attn_weights, value_states)
+        attn_output_4: "f32[1, 4, 1, 8][32, 8, 8, 1]cpu" = torch.matmul(attn_weights_7, value_states_3);  attn_weights_7 = value_states_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:219 in eager_attention_forward, code: attn_output = attn_output.transpose(1, 2).contiguous()
+        transpose_10: "f32[1, 1, 4, 8][32, 8, 8, 1]cpu" = attn_output_4.transpose(1, 2);  attn_output_4 = None
+        attn_output_5: "f32[1, 1, 4, 8][32, 8, 8, 1]cpu" = transpose_10.contiguous();  transpose_10 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:287 in forward, code: attn_output = attn_output.reshape(*input_shape, -1).contiguous()
+        reshape_5: "f32[1, 1, 32][32, 8, 1]cpu" = attn_output_5.reshape(1, 1, -1);  attn_output_5 = None
+        attn_output_6: "f32[1, 1, 32][32, 8, 1]cpu" = reshape_5.contiguous();  reshape_5 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:288 in forward, code: attn_output = self.o_proj(attn_output)
+        attn_output_7: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(attn_output_6, l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_o_proj_parameters_weight_, None);  attn_output_6 = l_self_modules_model_modules_layers_modules_1_modules_self_attn_modules_o_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:325 in forward, code: hidden_states = residual + hidden_states
+        hidden_states_15: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_9 + attn_output_7;  hidden_states_9 = attn_output_7 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:64 in forward, code: hidden_states = hidden_states.to(torch.float32)
+        hidden_states_16: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_15.to(torch.float32)
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:65 in forward, code: variance = hidden_states.pow(2).mean(-1, keepdim=True)
+        pow_4: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_16.pow(2)
+        variance_3: "f32[1, 1, 1][1, 1, 1]cpu" = pow_4.mean(-1, keepdim = True);  pow_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:66 in forward, code: hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+        add_14: "f32[1, 1, 1][1, 1, 1]cpu" = variance_3 + 1e-06;  variance_3 = None
+        rsqrt_3: "f32[1, 1, 1][1, 1, 1]cpu" = torch.rsqrt(add_14);  add_14 = None
+        hidden_states_17: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_16 * rsqrt_3;  hidden_states_16 = rsqrt_3 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:67 in forward, code: return self.weight * hidden_states.to(input_dtype)
+        to_12: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_17.to(torch.float32);  hidden_states_17 = None
+        hidden_states_18: "f32[1, 1, 32][32, 32, 1]cpu" = l_self_modules_model_modules_layers_modules_1_modules_post_attention_layernorm_parameters_weight_ * to_12;  l_self_modules_model_modules_layers_modules_1_modules_post_attention_layernorm_parameters_weight_ = to_12 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:183 in forward, code: down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+        linear_11: "f32[1, 1, 64][64, 64, 1]cpu" = torch._C._nn.linear(hidden_states_18, l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_gate_proj_parameters_weight_, None);  l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_gate_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/activations.py:103 in forward, code: return nn.functional.silu(input)
+        silu_1: "f32[1, 1, 64][64, 64, 1]cpu" = torch.nn.functional.silu(linear_11);  linear_11 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:183 in forward, code: down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+        linear_12: "f32[1, 1, 64][64, 64, 1]cpu" = torch._C._nn.linear(hidden_states_18, l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_up_proj_parameters_weight_, None);  hidden_states_18 = l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_up_proj_parameters_weight_ = None
+        mul_21: "f32[1, 1, 64][64, 64, 1]cpu" = silu_1 * linear_12;  silu_1 = linear_12 = None
+        down_proj_1: "f32[1, 1, 32][32, 32, 1]cpu" = torch._C._nn.linear(mul_21, l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_down_proj_parameters_weight_, None);  mul_21 = l_self_modules_model_modules_layers_modules_1_modules_mlp_modules_down_proj_parameters_weight_ = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:331 in forward, code: hidden_states = residual + hidden_states
+        hidden_states_19: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_15 + down_proj_1;  hidden_states_15 = down_proj_1 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:64 in forward, code: hidden_states = hidden_states.to(torch.float32)
+        hidden_states_20: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_19.to(torch.float32);  hidden_states_19 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:65 in forward, code: variance = hidden_states.pow(2).mean(-1, keepdim=True)
+        pow_5: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_20.pow(2)
+        variance_4: "f32[1, 1, 1][1, 1, 1]cpu" = pow_5.mean(-1, keepdim = True);  pow_5 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:66 in forward, code: hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+        add_16: "f32[1, 1, 1][1, 1, 1]cpu" = variance_4 + 1e-06;  variance_4 = None
+        rsqrt_4: "f32[1, 1, 1][1, 1, 1]cpu" = torch.rsqrt(add_16);  add_16 = None
+        hidden_states_21: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_20 * rsqrt_4;  hidden_states_20 = rsqrt_4 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:67 in forward, code: return self.weight * hidden_states.to(input_dtype)
+        to_14: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_21.to(torch.float32);  hidden_states_21 = None
+        hidden_states_22: "f32[1, 1, 32][32, 32, 1]cpu" = l_self_modules_model_modules_norm_parameters_weight_ * to_14;  l_self_modules_model_modules_norm_parameters_weight_ = to_14 = None
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/transformers/models/llama/modeling_llama.py:487 in forward, code: logits = self.lm_head(hidden_states[:, slice_indices, :])
+        getitem_14: "f32[1, 1, 32][32, 32, 1]cpu" = hidden_states_22[(slice(None, None, None), slice(-1, None, None), slice(None, None, None))];  hidden_states_22 = None
+        logits: "f32[1, 1, 64][64, 64, 1]cpu" = torch._C._nn.linear(getitem_14, l_self_modules_lm_head_parameters_weight_, None);  getitem_14 = l_self_modules_lm_head_parameters_weight_ = None
+        return (logits,)

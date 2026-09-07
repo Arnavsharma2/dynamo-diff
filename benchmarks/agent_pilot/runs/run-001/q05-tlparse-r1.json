@@ -1,0 +1,21 @@
+{
+  "id": "q05-tlparse-r1",
+  "question_id": "q05",
+  "condition": "tlparse",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"candidate_completed\": null,\n    \"candidate_failed\": null,\n    \"graph_emission_proves_completed\": false,\n    \"speedup_proven\": false\n  },\n  \"explanation\": \"The candidate B's graph artifact does not prove completed compilation, as there is no evidence of a terminal outcome or guarded-code emission. Additionally, there is no explicit evidence of completed compilation or failed attempts. The absence of such evidence prevents us from determining if the graph artifact demonstrates a successful optimization or speedup.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"Only these files are readable. HTML files are returned as readable text.\"\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"matches\": [], \"next_offset\": null, \"offset\": 0, \"query\": \"candidate completed\", \"total_matches\": 0, \"truncated\": false\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 6,
+  "tool_calls_requested": 5,
+  "tool_calls_executed": 5,
+  "input_tokens": 7060,
+  "output_tokens": 377,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1305,
+  "model_total_duration_ns": 35064390293,
+  "model_load_duration_ns": 28605334,
+  "token_counters_available": true,
+  "wall_seconds": 35.08654941699933
+}

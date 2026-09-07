@@ -1,0 +1,26 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: scale == 1                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:31:43.997000 77139 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     return x.sin() * scale
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: scale == 2                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() * scale
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: scale == 1                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+V0906 21:31:44.016000 77139 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     return x.sin() * scale
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2] torch._dynamo hit config.recompile_limit (2)
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2]    function: 'compute' (/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:16)
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2]    last reason: 0/1: scale == 2                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2] User stack trace:
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 17, in compute
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2]     return x.sin() * scale
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0906 21:31:44.016000 77139 torch/_dynamo/convert_frame.py:2008] [0/2] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html

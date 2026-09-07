@@ -1,0 +1,49 @@
+{
+  "case": "shape",
+  "backend_calls": [
+    {
+      "graph": "\n\n\ndef forward(self, L_x_ : torch.Tensor):\n    l_x_ = L_x_\n    sin = l_x_.sin();  l_x_ = None\n    mul = sin * 2;  sin = None\n    return (mul,)\n    "
+    },
+    {
+      "graph": "\n\n\ndef forward(self, L_x_ : torch.Tensor):\n    l_x_ = L_x_\n    sin = l_x_.sin();  l_x_ = None\n    mul = sin * 2;  sin = None\n    return (mul,)\n    "
+    }
+  ],
+  "calls": [
+    {
+      "shape": [
+        4
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "requires_grad": false,
+      "scale": 2,
+      "backend_calls_so_far": 1,
+      "output_correct": true
+    },
+    {
+      "shape": [
+        8
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "requires_grad": false,
+      "scale": 2,
+      "backend_calls_so_far": 2,
+      "output_correct": true
+    },
+    {
+      "shape": [
+        4
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "requires_grad": false,
+      "scale": 2,
+      "backend_calls_so_far": 2,
+      "output_correct": true
+    }
+  ],
+  "workload_completed": true,
+  "torch_version": "2.14.0",
+  "torch_git_version": "08187d9e0fba026dc8217405802ab5381dc88d90"
+}

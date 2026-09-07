@@ -1,0 +1,94 @@
+"""Full Transformers generate() path; authored CPU reproduction of issue #46421.
+
+The capture generator replaces the preparation marker with the one source edit.
+No pretrained weights, tokenizer downloads, model API, GPU or Inductor is used.
+"""
+
+import hashlib
+import inspect
+import json
+from pathlib import Path
+import sys
+
+import torch
+import transformers
+from transformers import CompileConfig, LlamaConfig, LlamaForCausalLM, StaticCache
+
+
+def tensor_hash(value):
+    return hashlib.sha256(value.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
+
+
+torch.manual_seed(101)
+torch.set_num_threads(1)
+config = LlamaConfig(vocab_size=64, hidden_size=32, intermediate_size=64,
+    num_hidden_layers=2, num_attention_heads=4, num_key_value_heads=2,
+    max_position_embeddings=64, bos_token_id=1, eos_token_id=None,
+    pad_token_id=0, attention_dropout=0.0)
+config._attn_implementation = "eager"
+model = LlamaForCausalLM(config).eval()
+parameter_hashes = {name: tensor_hash(value) for name, value in model.state_dict().items()}
+cache = StaticCache(config=config, max_cache_len=16)
+
+# CACHE_PREPARATION
+
+backend_calls = []
+
+
+def recording_backend(graph, example_inputs, **options):
+    backend_calls.append({"graph_nodes": len(list(graph.graph.nodes)),
+        "graph_code_sha256": hashlib.sha256(graph.code.encode()).hexdigest()})
+    return graph.forward
+
+
+compile_config = CompileConfig(backend=recording_backend, fullgraph=True, dynamic=False, mode="default")
+# Pinned Transformers test-only switch permits the real generate() compile path on CPU.
+compile_config._compile_all_devices = True
+
+# A separate uncompiled model with exactly the same weights is the numerical oracle.
+oracle = LlamaForCausalLM(config).eval()
+oracle.load_state_dict(model.state_dict())
+input_ids = torch.tensor([[1, 2, 3, 4, 5, 6, 7, 8]], dtype=torch.long)
+attention_mask = torch.ones_like(input_ids)
+generation = dict(max_new_tokens=3, do_sample=False, prefill_chunk_size=8,
+    eos_token_id=None, pad_token_id=0, return_dict_in_generate=True, output_logits=True)
+with torch.no_grad():
+    expected = oracle.generate(input_ids=input_ids, attention_mask=attention_mask,
+        past_key_values=StaticCache(config=config, max_cache_len=16),
+        disable_compile=True, **generation)
+if backend_calls:
+    raise RuntimeError("The eager oracle unexpectedly invoked the recording backend")
+
+calls = []
+for request in range(3):
+    cache.reset()
+    before = len(backend_calls)
+    with torch.no_grad():
+        actual = model.generate(input_ids=input_ids.clone(), attention_mask=attention_mask.clone(),
+            past_key_values=cache, compile_config=compile_config, **generation)
+    torch.testing.assert_close(actual.sequences, expected.sequences, rtol=0, atol=0)
+    errors = []
+    for actual_logits, expected_logits in zip(actual.logits, expected.logits, strict=True):
+        torch.testing.assert_close(actual_logits, expected_logits, rtol=1e-5, atol=1e-6)
+        errors.append(float((actual_logits - expected_logits).abs().max()))
+    calls.append({"request": request, "input_ids": input_ids.tolist(), "shape": list(input_ids.shape),
+        "strides": list(input_ids.stride()), "dtype": "int64", "device": "cpu",
+        "requires_grad": False, "grad_enabled": False, "model_training": False,
+        "attention_mask": attention_mask.tolist(), "output_tokens": actual.sequences.tolist(),
+        "output_logits_sha256": [tensor_hash(t) for t in actual.logits],
+        "output_correct": True, "maximum_logit_error": max(errors),
+        "backend_calls_before": before, "backend_calls_after": len(backend_calls)})
+    print(json.dumps({"request": request, "backend_calls": len(backend_calls), "maximum_logit_error": max(errors)}), flush=True)
+
+source_paths = {str(Path(__file__).resolve()), inspect.getsourcefile(LlamaForCausalLM),
+    inspect.getsourcefile(StaticCache), inspect.getsourcefile(model.forward),
+    str(Path(transformers.__file__).parent / "generation/utils.py")}
+Path(sys.argv[1]).write_text(json.dumps({"torch": torch.__version__, "torch_git": torch.version.git_version,
+    "transformers": transformers.__version__, "calls": calls, "backend_calls": backend_calls,
+    "parameter_count": sum(value.numel() for value in model.parameters()),
+    "parameter_hashes": parameter_hashes, "model_config": config.to_dict(),
+    "source_paths": sorted(path for path in source_paths if path),
+    "oracle": {"method": "separate uncompiled model with identical state_dict; exact tokens and per-step logits",
+        "rtol": 1e-5, "atol": 1e-6, "output_tokens": expected.sequences.tolist(),
+        "output_logits_sha256": [tensor_hash(t) for t in expected.logits]},
+    "application_timing": "not_measured"}, indent=2) + "\n")

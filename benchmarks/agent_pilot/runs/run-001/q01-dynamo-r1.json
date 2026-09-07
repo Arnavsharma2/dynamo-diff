@@ -1,0 +1,21 @@
+{
+  "id": "q01-dynamo-r1",
+  "question_id": "q01",
+  "condition": "dynamo",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\"answer\": {\"completed\": 2, \"guard_category\": \"type_identity_dispatch\", \"last_call_new_compile\": true, \"successful_recompiles\": 1}, \"explanation\": \"Capture A has 2 completed compilations. The guard category is 'type_identity_dispatch', which explains the recorded specialization. The final repeated call created another compilation, indicated by 'last_call_new_compile' being true.\", \"evidence\": [{\"retrieval_id\": \"r1\", \"quote\": \"guard_reason_entries\": 1, \"guard_category\": \"type_identity_dispatch\"}, {\"retrieval_id\": \"r1\", \"quote\": \"completed\": 2}, {\"retrieval_id\": \"r1\", \"quote\": \"last_call_new_compile\": true}, {\"retrieval_id\": \"r1\", \"quote\": \"confirmed_successful_recompilations\": 1}]}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2751,
+  "output_tokens": 277,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 976,
+  "model_total_duration_ns": 25463921292,
+  "model_load_duration_ns": 14555126,
+  "token_counters_available": true,
+  "wall_seconds": 26.45870954199927
+}

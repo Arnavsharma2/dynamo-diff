@@ -1,0 +1,69 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.13'
+      - name: Install pinned build and test tools without ML runtimes
+        run: python -m pip install --require-hashes -r requirements-test.lock
+      - name: Build wheel and source archive
+        run: python -m build --no-isolation
+      - name: Install wheel
+        run: python -m pip install --no-deps dist/dynamo_diff-0.1.0-py3-none-any.whl
+      - name: Verify wheel, schemas, tests and recorded demonstrations
+        run: python tools/check_release.py --require-wheel --junit artifacts/ci-core.xml
+      - name: Verify evaluation access boundaries and scoring without model calls
+        run: python -m pytest -q -o pythonpath= --import-mode=importlib benchmarks/agent_pilot
+
+  editor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: extension/package-lock.json
+      - name: Install the core into the test harness interpreter
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install --require-hashes -r requirements-test.lock
+          .venv/bin/python -m pip install --no-deps --no-build-isolation .
+      - name: Install pinned extension dependencies
+        working-directory: extension
+        run: npm ci
+      - name: Run actual VS Code integration
+        working-directory: extension
+        env:
+          DYNAMO_DIFF_TEST_RESULT: ${{ github.workspace }}/artifacts/ci-editor.json
+        run: xvfb-run --auto-servernum npm test
+      - name: Package the tested extension
+        working-directory: extension
+        run: npm run package
+      - name: Verify the installed VSIX
+        working-directory: extension
+        env:
+          DYNAMO_DIFF_VSIX: ${{ github.workspace }}/extension/dynamo-diff-0.1.0.vsix
+          DYNAMO_DIFF_TEST_RESULT: ${{ github.workspace }}/artifacts/ci-installed-editor.json
+        run: xvfb-run --auto-servernum npm test

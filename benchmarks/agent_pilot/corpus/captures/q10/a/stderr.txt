@@ -1,0 +1,7 @@
+V0906 23:24:02.118000 14520 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:24:02.118000 14520 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:24:02.118000 14520 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: tensor 'x' dtype mismatch. expected Float, actual Double
+V0906 23:24:02.141000 14520 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:24:02.141000 14520 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:24:02.141000 14520 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: tensor 'x' requires_grad mismatch. expected requires_grad=0
+V0906 23:24:02.141000 14520 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: tensor 'x' dtype mismatch. expected Float, actual Double

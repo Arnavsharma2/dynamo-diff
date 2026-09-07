@@ -1,0 +1,21 @@
+{
+  "id": "q04-dynamo-r1",
+  "question_id": "q04",
+  "condition": "dynamo",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"baseline_completed\": 2,\n    \"candidate_completed\": 1,\n    \"source_change_proven_cause\": null,\n    \"speedup_proven\": null,\n    \"workload_comparability\": \"unknown\"\n  },\n  \"explanation\": \"Baseline A has 2 completed compilations, while candidate B has 1. The workload comparability is unknown due to insufficient evidence. There is no clear evidence to attribute event reduction solely to a source change, and no speedup is proven.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 2\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"completed\": 1\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 2,
+  "tool_calls_executed": 2,
+  "input_tokens": 3367,
+  "output_tokens": 288,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1910,
+  "model_total_duration_ns": 31763273875,
+  "model_load_duration_ns": 30785000,
+  "token_counters_available": true,
+  "wall_seconds": 32.7177325830271
+}

@@ -1,0 +1,24 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Graph break in user code at /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:22
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Graph Break Reason: Encountered graph break when attempting to trace CALL: a function call, e.g. f(x, y):
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] Call to `torch._dynamo.graph_break()`
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Explanation: User-inserted graph break. Message: None
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Hint: Remove the `torch._dynamo.graph_break()` call.
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   Developer debug context: Called `torch._dynamo.graph_break()` with args `[]`, kwargs `{}`
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]  For more details about this graph break, please visit: https://meta-pytorch.github.io/compile-graph-break-site/gb/gb0025.html
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] User code traceback:
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 91, in <module>
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     main()
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     ~~~~^^
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 75, in main
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     actual = compiled_modules[i](x, scale) if modules else compiled(x, scale)
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]                                                            ~~~~~~~~^^^^^^^^^^
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py", line 22, in graph_break_compute
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     torch._dynamo.graph_break()
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+V0906 21:31:37.142000 77094 torch/_dynamo/symbolic_convert.py:5368] [0/0] [__graph_breaks] 

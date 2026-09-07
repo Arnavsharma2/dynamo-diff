@@ -1,0 +1,125 @@
+{
+  "name": "dynamo-diff",
+  "displayName": "Dynamo Diff",
+  "description": "Compare PyTorch Dynamo captures and inspect source-linked compiler evidence.",
+  "version": "0.1.0",
+  "publisher": "dynamo-diff",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Debuggers",
+    "Machine Learning",
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onView:dynamoDiff.results"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Importing and comparing captures runs the configured Python interpreter and requires a trusted workspace."
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "dynamoDiff.importCapture",
+        "title": "Dynamo Diff: Import Capture",
+        "icon": "$(add)"
+      },
+      {
+        "command": "dynamoDiff.compareCaptures",
+        "title": "Dynamo Diff: Compare Captures",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "dynamoDiff.openSource",
+        "title": "Dynamo Diff: Open Captured Source"
+      },
+      {
+        "command": "dynamoDiff.openEvidence",
+        "title": "Dynamo Diff: Open Evidence"
+      },
+      {
+        "command": "dynamoDiff.showTable",
+        "title": "Dynamo Diff: Show Comparison Table",
+        "icon": "$(table)"
+      },
+      {
+        "command": "dynamoDiff.showReport",
+        "title": "Dynamo Diff: Show Comparison Report",
+        "icon": "$(open-preview)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "dynamoDiff.results",
+          "name": "Dynamo Diff",
+          "when": "true"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "dynamoDiff.results",
+        "contents": "Compare recorded PyTorch compilation behavior.\n[Import a capture](command:dynamoDiff.importCapture)\n[Compare captures](command:dynamoDiff.compareCaptures)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "dynamoDiff.importCapture",
+          "when": "view == dynamoDiff.results",
+          "group": "navigation@1"
+        },
+        {
+          "command": "dynamoDiff.compareCaptures",
+          "when": "view == dynamoDiff.results",
+          "group": "navigation@2"
+        },
+        {
+          "command": "dynamoDiff.showTable",
+          "when": "view == dynamoDiff.results",
+          "group": "navigation@3"
+        },
+        {
+          "command": "dynamoDiff.showReport",
+          "when": "view == dynamoDiff.results",
+          "group": "navigation@4"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Dynamo Diff",
+      "properties": {
+        "dynamoDiff.pythonPath": {
+          "type": "string",
+          "default": "python3",
+          "scope": "machine-overridable",
+          "description": "Python executable with dynamo-diff installed. Paths containing spaces are supported."
+        },
+        "dynamoDiff.storePath": {
+          "type": "string",
+          "default": "",
+          "description": "Local capture store directory. Empty uses the extension's workspace storage."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "test": "npm run compile && node out/test/runTest.js",
+    "package": "npm run compile && vsce package --no-dependencies --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.1",
+    "@types/vscode": "1.100.0",
+    "@vscode/test-electron": "3.1.0",
+    "@vscode/vsce": "3.9.2",
+    "typescript": "7.0.2"
+  }
+}

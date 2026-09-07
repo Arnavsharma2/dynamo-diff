@@ -1,0 +1,69 @@
+{
+  "torch": "2.14.0",
+  "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "calls": [
+    {
+      "call": 0,
+      "backend_calls_before": 0,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        1.5403022766113281,
+        1.8253356218338013,
+        1.9800665378570557,
+        1.9800665378570557,
+        1.8253356218338013,
+        1.5403022766113281
+      ],
+      "error": null,
+      "backend_calls_after": 1
+    },
+    {
+      "call": 1,
+      "backend_calls_before": 1,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        1.5403022766113281,
+        1.8253356218338013,
+        1.9800665378570557,
+        1.9800665378570557,
+        1.8253356218338013,
+        1.5403022766113281
+      ],
+      "error": null,
+      "backend_calls_after": 2
+    },
+    {
+      "call": 2,
+      "backend_calls_before": 2,
+      "output_correct": true,
+      "maximum_error": 0.0,
+      "output": [
+        1.5403022766113281,
+        1.8253356218338013,
+        1.9800665378570557,
+        1.9800665378570557,
+        1.8253356218338013,
+        1.5403022766113281
+      ],
+      "error": null,
+      "backend_calls_after": 3
+    }
+  ],
+  "backend_calls": [
+    {
+      "graph_sha256": "21f50abe2c4bb31b5f80c1ada872b1b40cb8669ea08de999796c5d70da172883",
+      "graph_nodes": 4
+    },
+    {
+      "graph_sha256": "21f50abe2c4bb31b5f80c1ada872b1b40cb8669ea08de999796c5d70da172883",
+      "graph_nodes": 4
+    },
+    {
+      "graph_sha256": "21f50abe2c4bb31b5f80c1ada872b1b40cb8669ea08de999796c5d70da172883",
+      "graph_nodes": 4
+    }
+  ],
+  "all_calls_attempted": true
+}

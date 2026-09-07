@@ -1,0 +1,4 @@
+[
+  "0/1: step == 2                                                # if step > 0:  # .cache/edited-workload/model.py:10 in compute\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py\", line 10, in compute\n    if step > 0:",
+  "0/0: step == 1                                                # if step > 0:  # .cache/edited-workload/model.py:10 in compute\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py\", line 10, in compute\n    if step > 0:"
+]

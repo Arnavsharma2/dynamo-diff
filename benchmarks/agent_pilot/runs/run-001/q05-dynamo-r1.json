@@ -1,0 +1,21 @@
+{
+  "id": "q05-dynamo-r1",
+  "question_id": "q05",
+  "condition": "dynamo",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"candidate_completed\": 0,\n    \"candidate_failed\": 1,\n    \"graph_emission_proves_completed\": false,\n    \"speedup_proven\": false\n  },\n  \"explanation\": \"Candidate B failed compilation (completed: 0, failed: 1). The graph artifact does not prove completion since the capture validity indicates 'declared_completed' but no graph emission was observed. There is no evidence of a successful optimization or speedup.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"capture_validity\": {\"artifact_structure\": \"valid\", \"provenance\": \"hash_verified\", \"workload_completion\": \"declared_completed\"}'\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"capture_validity\": {\"artifact_structure\": \"valid\", \"provenance\": \"hash_verified\", \"workload_completion\": \"declared_completed\"}'\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 2,
+  "tool_calls_executed": 2,
+  "input_tokens": 3417,
+  "output_tokens": 401,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1952,
+  "model_total_duration_ns": 38149211667,
+  "model_load_duration_ns": 17300083,
+  "token_counters_available": true,
+  "wall_seconds": 39.15294212498702
+}

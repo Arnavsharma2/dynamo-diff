@@ -1,0 +1,21 @@
+{
+  "id": "q06-dynamo-r1",
+  "question_id": "q06",
+  "condition": "dynamo",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"candidate_completed\": 2,\n    \"candidate_failed\": 1,\n    \"candidate_limit_events\": 1,\n    \"speedup_proven\": false,\n    \"successful_recompiles\": 1\n  },\n  \"explanation\": \"Candidate B has 2 completed compilations, 1 failed compilation, and 1 compiler-limit event. The successful recompiles count is 1. However, the observed change does not establish a speedup because there is no performance measurement data available. The speedup_proven field is false due to the lack of performance data.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"compiler_limit_events\": 1\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"failed\": 1\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"confirmed_successful_recompilations\": 1\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"performance_conclusion\": \"not_measured\"\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 2,
+  "tool_calls_executed": 2,
+  "input_tokens": 3452,
+  "output_tokens": 434,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 1952,
+  "model_total_duration_ns": 41161694292,
+  "model_load_duration_ns": 14720791,
+  "token_counters_available": true,
+  "wall_seconds": 42.12467695801752
+}

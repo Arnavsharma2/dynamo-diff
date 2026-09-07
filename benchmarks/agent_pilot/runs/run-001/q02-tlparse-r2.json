@@ -1,0 +1,39 @@
+{
+  "id": "q02-tlparse-r2",
+  "question_id": "q02",
+  "condition": "tlparse",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 1,\n    \"guard_reason_entries\": 2,\n    \"last_recompile_reason_entries\": 1,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The capture A's manifest indicates that the workload was completed (workload_completed: true). There is no direct evidence of recompilation in the manifest. The 'recompile_reasons' files were not found in the allowed files, so we cannot determine the number of recompiles or guard reasons. Thus, the values for successful recompiles, guard reason entries, and last recompile reason entries are unknown. Each rejected cached specialization does not count as another new compilation unless there is explicit recompile evidence.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"a/manifest.json\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"workload_completed\\\": true\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 1,
+      "guard_reason_entries": 2,
+      "last_recompile_reason_entries": 1,
+      "successful_recompiles": 0
+    },
+    "explanation": "The capture A's manifest indicates that the workload was completed (workload_completed: true). There is no direct evidence of recompilation in the manifest. The 'recompile_reasons' files were not found in the allowed files, so we cannot determine the number of recompiles or guard reasons. Thus, the values for successful recompiles, guard reason entries, and last recompile reason entries are unknown. Each rejected cached specialization does not count as another new compilation unless there is explicit recompile evidence.",
+    "evidence": [
+      {
+        "retrieval_id": "r1",
+        "quote": "a/manifest.json"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "workload_completed\": true"
+      }
+    ]
+  },
+  "model_requests": 12,
+  "tool_calls_requested": 11,
+  "tool_calls_executed": 11,
+  "input_tokens": 25537,
+  "output_tokens": 633,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4157,
+  "model_total_duration_ns": 63061565042,
+  "model_load_duration_ns": 61629500,
+  "token_counters_available": true,
+  "wall_seconds": 63.10615920799319
+}

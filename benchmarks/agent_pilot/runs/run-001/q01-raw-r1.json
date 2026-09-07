@@ -1,0 +1,43 @@
+{
+  "id": "q01-raw-r1",
+  "question_id": "q01",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 4,\n    \"guard_category\": \"dtype_device\",\n    \"last_call_new_compile\": true,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The workload in capture A has four completed compilation identities. The final repeated call created a new compilation, indicated by 'last_call_new_compile': true. The guard category 'dtype_device' explains the recorded specialization, as it relates to the data type and device information.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload\\\": {\\\"calls\\\": [ ... ]}\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"capture\\\": {\\\"workload_completed\\\": true, \\\"process_exit_code\\\": 0, \\\"converter_exit_code\\\": 0, \\\"report_sha256\\\": \\\"3843de9e239e10534dc497d06b4207fa2e51a1178fd9da2e12a446603e0e1659\\\"}\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 4,
+      "guard_category": "dtype_device",
+      "last_call_new_compile": true,
+      "successful_recompiles": 0
+    },
+    "explanation": "The workload in capture A has four completed compilation identities. The final repeated call created a new compilation, indicated by 'last_call_new_compile': true. The guard category 'dtype_device' explains the recorded specialization, as it relates to the data type and device information.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload\": {\"calls\": [ ... ]}"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"capture\": {\"workload_completed\": true, \"process_exit_code\": 0, \"converter_exit_code\": 0, \"report_sha256\": \"3843de9e239e10534dc497d06b4207fa2e51a1178fd9da2e12a446603e0e1659\"}"
+      }
+    ]
+  },
+  "model_requests": 5,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 6599,
+  "output_tokens": 421,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 3235,
+  "model_total_duration_ns": 40046830958,
+  "model_load_duration_ns": 29353667,
+  "token_counters_available": true,
+  "wall_seconds": 40.06599108298542
+}

@@ -1,0 +1,21 @@
+{
+  "id": "q07-dynamo-r2",
+  "question_id": "q07",
+  "condition": "dynamo",
+  "repetition": 2,
+  "seed": 732,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"observed_completed\": 1,\n    \"whole_workload_recompiles_known\": false,\n    \"workload_completion\": \"unknown\"\n  },\n  \"explanation\": \"The capture A has one completed compilation observed. However, the workload completion status is unknown, and there is no evidence to determine the total recompilations for the entire workload from these artifacts.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"workload_completion\": \"unknown\"\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 1\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2782,
+  "output_tokens": 239,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 958,
+  "model_total_duration_ns": 23543472291,
+  "model_load_duration_ns": 15250083,
+  "token_counters_available": true,
+  "wall_seconds": 24.464626125001814
+}

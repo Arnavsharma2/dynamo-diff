@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-09-07T03:37:04.864704+00:00",
+  "tlparse": "tlparse 0.4.3",
+  "platform": {
+    "system": "Darwin",
+    "release": "25.1.0",
+    "machine": "arm64"
+  },
+  "method": "External converter wall time including process startup, fresh output directory per trial, OS filesystem cache not flushed; no Dynamo Diff import or workload execution included.",
+  "cases": [
+    {
+      "case": "multiple_guards",
+      "raw_bytes": 168087,
+      "raw_sha256": "5df5ddcd59155c29168eb1ce8bc86b4511fd12afcdab0ebd3db1889204f26fa4",
+      "median_seconds": 0.012777916999766603,
+      "trials": [
+        {
+          "seconds": 0.018027791986241937,
+          "output_bytes": 358793
+        },
+        {
+          "seconds": 0.012687042006291449,
+          "output_bytes": 358793
+        },
+        {
+          "seconds": 0.012777916999766603,
+          "output_bytes": 358793
+        }
+      ]
+    },
+    {
+      "case": "edit_before",
+      "raw_bytes": 167065,
+      "raw_sha256": "a7835636066b45f15886a808dedfb00830cba0bffcedd5fd33884eb483427127",
+      "median_seconds": 0.013251999975182116,
+      "trials": [
+        {
+          "seconds": 0.013251999975182116,
+          "output_bytes": 356129
+        },
+        {
+          "seconds": 0.01391487501678057,
+          "output_bytes": 356129
+        },
+        {
+          "seconds": 0.012095750018488616,
+          "output_bytes": 356129
+        }
+      ]
+    },
+    {
+      "case": "edit_after",
+      "raw_bytes": 109633,
+      "raw_sha256": "67e53a3607d9cb1d14c40199fb8ca4ee070b367cff2fef32de81abaef30c6186",
+      "median_seconds": 0.011319332988932729,
+      "trials": [
+        {
+          "seconds": 0.011725749995093793,
+          "output_bytes": 237037
+        },
+        {
+          "seconds": 0.010931999975582585,
+          "output_bytes": 237037
+        },
+        {
+          "seconds": 0.011319332988932729,
+          "output_bytes": 237037
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "recorder_assertion_failed",
+  "message": "The recorder looked for the JSON enum not_measured in human-readable CLI output, which says not measured. The recorder check was corrected; cli-002 is the replacement recording.",
+  "product_failure": false
+}

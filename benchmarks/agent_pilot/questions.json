@@ -1,0 +1,52 @@
+[
+  {
+    "id": "q01",
+    "prompt": "Inspect capture A and its ordered workload. Count completed compilation identities and confirmed successful recompilations. Did the final repeated call create another compilation, and which guard category explains the recorded specialization?",
+    "answer_fields": {"completed": "integer or null", "successful_recompiles": "integer or null", "last_call_new_compile": "boolean or null", "guard_category": "category string or null"}
+  },
+  {
+    "id": "q02",
+    "prompt": "Inspect capture A. Report completed compilations, successful recompilations, the total recorded guard-reason entries and the number of reasons associated with the last recompilation. Explain whether each rejected cached specialization should count as another new compilation.",
+    "answer_fields": {"completed": "integer or null", "successful_recompiles": "integer or null", "guard_reason_entries": "integer or null", "last_recompile_reason_entries": "integer or null"}
+  },
+  {
+    "id": "q03",
+    "prompt": "Compare baseline A with candidate B and their captured source. Count completed compilations on each side. Determine whether f can be matched despite its body changing, whether declared workloads are comparable, and whether these diagnostic runs prove an application speedup.",
+    "answer_fields": {"baseline_completed": "integer or null", "candidate_completed": "integer or null", "matched": "boolean or null", "source_body_changed": "boolean or null", "workload_comparability": "manifest_consistent, confounded, or unknown", "speedup_proven": "boolean"}
+  },
+  {
+    "id": "q04",
+    "prompt": "Compare baseline A with candidate B. Count completed compilations and assess workload comparability. Can the event reduction be attributed solely to a source change? Do the artifacts establish a speedup? Explain the material difference, if any.",
+    "answer_fields": {"baseline_completed": "integer or null", "candidate_completed": "integer or null", "workload_comparability": "manifest_consistent, confounded, or unknown", "source_change_proven_cause": "boolean", "speedup_proven": "boolean"}
+  },
+  {
+    "id": "q05",
+    "prompt": "Compare baseline A with candidate B. The candidate has a graph artifact. Did it complete compilation? Report candidate completed and failed counts, and decide whether the graph artifact and reduced completed count demonstrate a successful optimization or speedup.",
+    "answer_fields": {"candidate_completed": "integer or null", "candidate_failed": "integer or null", "graph_emission_proves_completed": "boolean", "speedup_proven": "boolean"}
+  },
+  {
+    "id": "q06",
+    "prompt": "Compare baseline A with candidate B. Report candidate completed compilations, failed compilations, explicit compiler-limit events and successful recompilations. Explain why the observed change does or does not establish a speedup, using the recorded failure/limit evidence.",
+    "answer_fields": {"candidate_completed": "integer or null", "candidate_failed": "integer or null", "candidate_limit_events": "integer or null", "successful_recompiles": "integer or null", "speedup_proven": "boolean"}
+  },
+  {
+    "id": "q07",
+    "prompt": "Inspect the saved capture A against its intended ordered workload. How many completed compilations are observed? Is completion of the whole workload established, and can the total recompilations for that whole workload be determined from these artifacts? Distinguish a completed compiler event from a completed workload recording.",
+    "answer_fields": {"observed_completed": "integer or null", "workload_completion": "declared_completed, declared_failed, or unknown", "whole_workload_recompiles_known": "boolean"}
+  },
+  {
+    "id": "q08",
+    "prompt": "Inspect capture A. Count completed compilation identities, internal attempts, successful recompilations and graph-break records. Explain the relationship between the original frame, any tracing restart and resumed execution.",
+    "answer_fields": {"completed": "integer or null", "attempts": "integer or null", "successful_recompiles": "integer or null", "graph_break_records": "integer or null"}
+  },
+  {
+    "id": "q09",
+    "prompt": "Inspect capture A, including its module calls and explicit recompilation evidence. Count completed compilations, confirmed successful recompilations and additional frame compilations. Do increasing frame-compile numbers alone establish recompilation in this case?",
+    "answer_fields": {"completed": "integer or null", "successful_recompiles": "integer or null", "additional_frame_compilations": "integer or null", "numeric_ids_alone_prove_recompilation": "boolean"}
+  },
+  {
+    "id": "q10",
+    "prompt": "Inspect capture A. Count completed compilations and successful recompilations, list the distinct guard categories that explain the new variants, and determine whether a changed input shape is recorded as the cause.",
+    "answer_fields": {"completed": "integer or null", "successful_recompiles": "integer or null", "guard_categories": "list of category strings", "shape_change_recorded": "boolean"}
+  }
+]

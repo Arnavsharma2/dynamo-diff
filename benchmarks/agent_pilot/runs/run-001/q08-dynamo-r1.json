@@ -1,0 +1,21 @@
+{
+  "id": "q08-dynamo-r1",
+  "question_id": "q08",
+  "condition": "dynamo",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"attempts\": 3,\n    \"completed\": 2,\n    \"graph_break_records\": 1,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"Capture A has 3 observed compilation attempts, with 2 completed. There is 1 graph-break record, indicating one point where execution was paused for compilation. No successful recompiles were confirmed. The original frame likely initiated tracing, and if resumed, it would have continued execution after the graph break.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"graph_break_records\": 1\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"observed_attempts\": 3\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"completed\": 2\n    },\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"confirmed_successful_recompilations\": 0\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 2,
+  "tool_calls_requested": 1,
+  "tool_calls_executed": 1,
+  "input_tokens": 2745,
+  "output_tokens": 322,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 976,
+  "model_total_duration_ns": 28748380916,
+  "model_load_duration_ns": 14151875,
+  "token_counters_available": true,
+  "wall_seconds": 29.70044233300723
+}

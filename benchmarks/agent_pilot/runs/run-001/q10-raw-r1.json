@@ -1,0 +1,55 @@
+{
+  "id": "q10-raw-r1",
+  "question_id": "q10",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 3,\n    \"guard_categories\": [\"tensor_shape_stride\", \"dtype_device\", \"grad_mode\"],\n    \"shape_change_recorded\": false,\n    \"successful_recompiles\": 2\n  },\n  \"explanation\": \"The capture shows three completed compilations (compile_id 0/0, 0/1, 0/2). The guard categories include tensor_shape_stride, dtype_device, and grad_mode. There is no indication of a shape change recorded as the cause of new variants. Successful recompiles are counted as 2 based on the compile_ids.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/0\\\", \\\"frame_key\\\": \\\"1\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/1\\\", \\\"frame_key\\\": \\\"2\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/2\\\", \\\"frame_key\\\": \\\"3\\\"\"\n    },\n    {\n      \"retrieval_id\": \"r4\",\n      \"quote\": \"\\\"guard_count\\\": 9, \\\"shape_env_guard_count\\\": 0\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 3,
+      "guard_categories": [
+        "tensor_shape_stride",
+        "dtype_device",
+        "grad_mode"
+      ],
+      "shape_change_recorded": false,
+      "successful_recompiles": 2
+    },
+    "explanation": "The capture shows three completed compilations (compile_id 0/0, 0/1, 0/2). The guard categories include tensor_shape_stride, dtype_device, and grad_mode. There is no indication of a shape change recorded as the cause of new variants. Successful recompiles are counted as 2 based on the compile_ids.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/0\", \"frame_key\": \"1\""
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/1\", \"frame_key\": \"2\""
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"compile_id\": \"0/2\", \"frame_key\": \"3\""
+      },
+      {
+        "retrieval_id": "r4",
+        "quote": "\"guard_count\": 9, \"shape_env_guard_count\": 0"
+      }
+    ]
+  },
+  "model_requests": 5,
+  "tool_calls_requested": 4,
+  "tool_calls_executed": 4,
+  "input_tokens": 8772,
+  "output_tokens": 444,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 10342,
+  "model_total_duration_ns": 65274505208,
+  "model_load_duration_ns": 36550249,
+  "token_counters_available": true,
+  "wall_seconds": 65.38251754100202
+}

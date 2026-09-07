@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "producer": {"python": null, "torch": null, "torch_git": null, "tlparse": null},
+  "source": {"revision": null, "dirty_patch_sha256": null, "files": []},
+  "workload": {
+    "calls": [],
+    "seed": null,
+    "backend": null,
+    "backend_options": {},
+    "dynamic": null,
+    "device": null,
+    "warmup_calls": null,
+    "measurement_calls": null,
+    "cache_policy": null,
+    "cache_directories": [],
+    "environment": {}
+  },
+  "capture": {
+    "workload_completed": false,
+    "process_exit_code": null,
+    "converter_exit_code": null,
+    "report_sha256": null,
+    "raw_traces": []
+  }
+}

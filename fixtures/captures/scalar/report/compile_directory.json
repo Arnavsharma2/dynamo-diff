@@ -1,0 +1,70 @@
+{
+  "[-/-]": {
+    "artifacts": [
+      {
+        "name": "torch_version_0.json",
+        "number": 0,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_-_-_-/torch_version_0.json"
+      }
+    ]
+  },
+  "[0/0]": {
+    "artifacts": [
+      {
+        "name": "dynamo_output_graph_1.txt",
+        "number": 1,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_output_graph_1.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_2.txt",
+        "number": 2,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/dynamo_cpp_guards_str_2.txt"
+      },
+      {
+        "name": "compilation_metrics_3.html",
+        "number": 3,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_0_0/compilation_metrics_3.html"
+      }
+    ]
+  },
+  "[0/1]": {
+    "artifacts": [
+      {
+        "name": "recompile_reasons_4.json",
+        "number": 4,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/recompile_reasons_4.json"
+      },
+      {
+        "name": "dynamo_output_graph_5.txt",
+        "number": 5,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_output_graph_5.txt"
+      },
+      {
+        "name": "dynamo_cpp_guards_str_6.txt",
+        "number": 6,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/dynamo_cpp_guards_str_6.txt"
+      },
+      {
+        "name": "compilation_metrics_7.html",
+        "number": 7,
+        "readable_url": null,
+        "suffix": "",
+        "url": "-_0_1_0/compilation_metrics_7.html"
+      }
+    ]
+  }
+}

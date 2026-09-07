@@ -1,0 +1,18 @@
+/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/lib/python3.13/site-packages/torch/_subclasses/functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py:9
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: step == 1                                                # if step > 0:  # .cache/edited-workload/model.py:10 in compute
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py", line 10, in compute
+V0906 21:47:37.724000 78020 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     if step > 0:
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function compute in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py:9
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: step == 2                                                # if step > 0:  # .cache/edited-workload/model.py:10 in compute
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py", line 10, in compute
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     if step > 0:
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: step == 1                                                # if step > 0:  # .cache/edited-workload/model.py:10 in compute
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py", line 10, in compute
+V0906 21:47:37.741000 78020 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     if step > 0:

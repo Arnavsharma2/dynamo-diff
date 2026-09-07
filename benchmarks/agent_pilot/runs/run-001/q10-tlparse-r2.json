@@ -1,0 +1,50 @@
+{
+  "id": "q10-tlparse-r2",
+  "question_id": "q10",
+  "condition": "tlparse",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 1,\n    \"guard_categories\": [\"dtype_device\", \"grad_mode\"],\n    \"shape_change_recorded\": false,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The capture indicates one completed compilation. The guard categories are dtype_device and grad_mode. There is no evidence of a shape change recorded as the cause for recompilation. No successful recompiles were observed.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"capture\\\": {\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"guard_categories\\\": [\\\"dtype_device\\\", \\\"grad_mode\\\"]\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"shape\\\": [6], \\\"strides\\\": [1], \\\"dtype\\\": \\\"float32\\\"\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 1,
+      "guard_categories": [
+        "dtype_device",
+        "grad_mode"
+      ],
+      "shape_change_recorded": false,
+      "successful_recompiles": 0
+    },
+    "explanation": "The capture indicates one completed compilation. The guard categories are dtype_device and grad_mode. There is no evidence of a shape change recorded as the cause for recompilation. No successful recompiles were observed.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"capture\": {\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"guard_categories\": [\"dtype_device\", \"grad_mode\"]"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"shape\": [6], \"strides\": [1], \"dtype\": \"float32\""
+      }
+    ]
+  },
+  "model_requests": 12,
+  "tool_calls_requested": 11,
+  "tool_calls_executed": 11,
+  "input_tokens": 25375,
+  "output_tokens": 653,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 4155,
+  "model_total_duration_ns": 62342224332,
+  "model_load_duration_ns": 68534041,
+  "token_counters_available": true,
+  "wall_seconds": 62.45822374999989
+}

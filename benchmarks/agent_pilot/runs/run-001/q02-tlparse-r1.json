@@ -1,0 +1,51 @@
+{
+  "id": "q02-tlparse-r1",
+  "question_id": "q02",
+  "condition": "tlparse",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"completed\": 1,\n    \"guard_reason_entries\": 2,\n    \"last_recompile_reason_entries\": 1,\n    \"successful_recompiles\": 0\n  },\n  \"explanation\": \"The capture A has one completed compilation. There are two guard reason entries, and the last recompilation had one reason entry. No successful recompiles were recorded. Each rejected cached specialization does not count as another new compilation unless there is explicit recompile evidence.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"capture\\\": {\\\"workload_completed\\\": true\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"guard_reason_entries\\\": 2\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"last_recompile_reason_entries\\\": 1\"\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"successful_recompiles\\\": 0\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "completed": 1,
+      "guard_reason_entries": 2,
+      "last_recompile_reason_entries": 1,
+      "successful_recompiles": 0
+    },
+    "explanation": "The capture A has one completed compilation. There are two guard reason entries, and the last recompilation had one reason entry. No successful recompiles were recorded. Each rejected cached specialization does not count as another new compilation unless there is explicit recompile evidence.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"capture\": {\"workload_completed\": true"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"guard_reason_entries\": 2"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"last_recompile_reason_entries\": 1"
+      },
+      {
+        "retrieval_id": "r3",
+        "quote": "\"successful_recompiles\": 0"
+      }
+    ]
+  },
+  "model_requests": 10,
+  "tool_calls_requested": 9,
+  "tool_calls_executed": 9,
+  "input_tokens": 19930,
+  "output_tokens": 590,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 3968,
+  "model_total_duration_ns": 54764382376,
+  "model_load_duration_ns": 45664623,
+  "token_counters_available": true,
+  "wall_seconds": 54.79911458300194
+}

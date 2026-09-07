@@ -1,0 +1,16 @@
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - 0/0: argument == 'east'                                       # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     - User stack trace:
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:37.551000 14305 torch/_dynamo/guards.py:5621] [0/1] [__recompiles]     -     if argument in ('east', 'north'):
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles] Recompiling function f in /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:7
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/1: argument == 'north'                                      # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     if argument in ('east', 'north'):
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - 0/0: argument == 'east'                                       # if argument in ('east', 'north'):  # .cache/pilot-worker/model.py:8 in f
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     - User stack trace:
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -   File "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py", line 8, in f
+V0906 23:23:37.570000 14305 torch/_dynamo/guards.py:5621] [0/2] [__recompiles]     -     if argument in ('east', 'north'):

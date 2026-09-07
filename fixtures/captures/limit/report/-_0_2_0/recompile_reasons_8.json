@@ -1,0 +1,4 @@
+[
+  "0/1: scale == 2                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py\", line 17, in compute\n    return x.sin() * scale",
+  "0/0: scale == 1                                               # return x.sin() * scale  # fixtures/workloads/compiler_cases.py:17 in compute\nUser stack trace:\n  File \"/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py\", line 17, in compute\n    return x.sin() * scale"
+]

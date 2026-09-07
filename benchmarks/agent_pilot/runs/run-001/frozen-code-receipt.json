@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "9fb8ae94fefc1c31cb138d5ca8c28b99d4a122e4633c2379084fa61abca6c4ea",
+  "files": {
+    "src/dynamo_diff/__init__.py": "4d06ff020c19557ca32519e3ffbd3bdc537aed9f6881193c29f147150f45dedf",
+    "src/dynamo_diff/adapters/__init__.py": "e19233796b9794d4773c311b7a8fcc45e035e90f3b26a4aa3d076cf8c610000d",
+    "src/dynamo_diff/adapters/tlparse.py": "827ee13fe91f81d9283d41a4723fd1ec2c25930187ca1fda160c4deb9b4787ae",
+    "src/dynamo_diff/cli.py": "744d2e9ebd3a48de1294e888ad5b0a59fa7beab8aa359a06cb0bc79eb7b87013",
+    "src/dynamo_diff/compare.py": "e6529f6293eea15f0ff4fea97ffb094b45ac112f4bfac7bd0a5b80055ece0532",
+    "src/dynamo_diff/errors.py": "c7fa5b0760ff462601e39b2a2b14a82113226d590c32aa57cad1ba4169f7427c",
+    "src/dynamo_diff/io.py": "5323a3ac1c0a335f3cd799608709819c10654e87990bbfe6ec58b02768990689",
+    "src/dynamo_diff/manifest.py": "a77247be0139d0c9022c182836a5776f145a086a8287803b6a4e1ca58e1a27c9",
+    "src/dynamo_diff/mcp_server.py": "8e3aea8f915a7aba3e31a688a8764498e9bc75146bc5921a3f1a5aa77ff84e61",
+    "src/dynamo_diff/model.py": "0fccd8a583a1edd5797635d92b5fcf70ee48bbec7e86911b9719150ba42af0f6",
+    "src/dynamo_diff/render.py": "3fd82b9ee2957a6bd6a5ffc8570020a7e3afde5ccfa39d3473d9d2b9d90c958b",
+    "src/dynamo_diff/store.py": "27d2ee4f9812a742a2f2f396a648b504abe7714bc74013c6d4b4ef6c50dc8ee0",
+    "benchmarks/agent_pilot/run.py": "04b4452893d9aa7286bc3262e47da50e9d5603f18b018e75b9388c81122c5360",
+    "benchmarks/agent_pilot/questions.json": "02ee57815a4fef4196b58abf6c8694bf5a78ea31a5298f2b81c7db74c9fbb349",
+    "benchmarks/agent_pilot/answer-key.json": "fdef414c5e405e1a2dc6ac900297021b58cd3b0db815fa0717aa8dbe5c124c71",
+    "benchmarks/agent_pilot/PROTOCOL.md": "55abeae4b52e587201df3d575a7a214d51881bbee6e63f1568840f5e7388f5c0"
+  },
+  "note": "Frozen evaluated source and protocol, captured before post-pilot product changes. Corpus is retained separately under corpus/captures with hashes in receipt.json."
+}

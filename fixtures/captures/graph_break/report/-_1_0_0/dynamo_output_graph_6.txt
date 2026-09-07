@@ -1,0 +1,7 @@
+class GraphModule(torch.nn.Module):
+    def forward(self, L_y_: "f32[4][1]cpu"):
+        l_y_ = L_y_
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/fixtures/workloads/compiler_cases.py:23 in torch_dynamo_resume_in_graph_break_compute_at_22, code: return y * scale
+        mul: "f32[4][1]cpu" = l_y_ * 2;  l_y_ = None
+        return (mul,)

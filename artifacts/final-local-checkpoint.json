@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-09-07T05:54:25.006106+00:00",
+  "status": "final_local_development_checkpoint",
+  "release_complete": false,
+  "files": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "bfd09db0a1a3667fce99a67d61403b9e342f3ea453663d16fe9d4cff13a9072c",
+      "bytes": 31412
+    },
+    "dist/dynamo_diff-0.1.0.tar.gz": {
+      "sha256": "b9245fe64c9cb5d49291d507f07a8636db29f9b1ec344fb1028f1d948133e462",
+      "bytes": 3772332
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "8f8bbe5f73b30e8e0933471b46153ddfbb706e43a5b8249b8c597339a3f28d6a",
+      "bytes": 9736
+    },
+    "artifacts/wheel-tests.xml": {
+      "sha256": "4c85dc6f6fd5e8d12371ac8257b62a1ce6ee598b9bfba992b1dc9d95cb0d01cb",
+      "bytes": 11980
+    },
+    "artifacts/pilot-harness-tests.xml": {
+      "sha256": "f30ee35a180133bbf95c08a8728fd30c2c6fa2f14bd59d681005ea81652b9dfa",
+      "bytes": 1922
+    },
+    "artifacts/installed-editor-integration.json": {
+      "sha256": "e80d9875109dc31eb009ec4b7ee99cd9d161aaf7581c3777c9de8a4cba5cfa3f",
+      "bytes": 835
+    },
+    "docs/PROJECT_SCOPE.md": {
+      "sha256": "bbbfc8f815cde3abb222646ba43403c9026287b1a99effe9f736bbe1a7fbea5a",
+      "bytes": 27673
+    },
+    "benchmarks/agent_pilot/runs/run-001/frozen-code.tar.gz": {
+      "sha256": "9fb8ae94fefc1c31cb138d5ca8c28b99d4a122e4633c2379084fa61abca6c4ea",
+      "bytes": 32668
+    },
+    "benchmarks/agent_pilot/runs/run-001/frozen-code-receipt.json": {
+      "sha256": "6e81d9cf2d89c9b2dff59c0274846bc505cfe7f1aa8e5ce41c8d127689f611e9",
+      "bytes": 1959
+    },
+    "artifacts/demo/cli-002/walkthrough.cast": {
+      "sha256": "f6a72a54200e35d3a4b2669e51977e0d2326e6af8f63bca0a5a24b2e55769a78",
+      "bytes": 7571
+    },
+    "artifacts/demo/cli-002/receipt.json": {
+      "sha256": "7bc85e7160dfdf1c7e70ad328c73371525420015836914eee904ddf527e8d5cb",
+      "bytes": 7865
+    }
+  },
+  "python_source_files": {
+    "src/dynamo_diff/__init__.py": "4d06ff020c19557ca32519e3ffbd3bdc537aed9f6881193c29f147150f45dedf",
+    "src/dynamo_diff/adapters/__init__.py": "e19233796b9794d4773c311b7a8fcc45e035e90f3b26a4aa3d076cf8c610000d",
+    "src/dynamo_diff/adapters/tlparse.py": "827ee13fe91f81d9283d41a4723fd1ec2c25930187ca1fda160c4deb9b4787ae",
+    "src/dynamo_diff/cli.py": "744d2e9ebd3a48de1294e888ad5b0a59fa7beab8aa359a06cb0bc79eb7b87013",
+    "src/dynamo_diff/compare.py": "e6529f6293eea15f0ff4fea97ffb094b45ac112f4bfac7bd0a5b80055ece0532",
+    "src/dynamo_diff/errors.py": "c7fa5b0760ff462601e39b2a2b14a82113226d590c32aa57cad1ba4169f7427c",
+    "src/dynamo_diff/io.py": "5323a3ac1c0a335f3cd799608709819c10654e87990bbfe6ec58b02768990689",
+    "src/dynamo_diff/manifest.py": "a77247be0139d0c9022c182836a5776f145a086a8287803b6a4e1ca58e1a27c9",
+    "src/dynamo_diff/mcp_server.py": "19c559dfcf82480be562e00c90507448c12312e3c58016ae79f94ba6178ef2a7",
+    "src/dynamo_diff/model.py": "0fccd8a583a1edd5797635d92b5fcf70ee48bbec7e86911b9719150ba42af0f6",
+    "src/dynamo_diff/render.py": "3fd82b9ee2957a6bd6a5ffc8570020a7e3afde5ccfa39d3473d9d2b9d90c958b",
+    "src/dynamo_diff/store.py": "27d2ee4f9812a742a2f2f396a648b504abe7714bc74013c6d4b4ef6c50dc8ee0"
+  },
+  "installed_wheel_sources_match_current_checkout": true,
+  "ml_runtimes_absent": true,
+  "test_results": {
+    "wheel-tests.xml": {
+      "passed": 91,
+      "seconds": 3.526
+    },
+    "pilot-harness-tests.xml": {
+      "passed": 12,
+      "seconds": 0.684
+    }
+  },
+  "offline_demonstrations_passed": [
+    "authored_edit",
+    "transformers_static_cache"
+  ],
+  "installed_vsix_checks_passed": 10,
+  "demo_profile": {
+    "name": "Dynamo Diff Demo",
+    "installation_verified": true,
+    "native_imports_completed": [
+      "edit_before",
+      "edit_after"
+    ],
+    "native_comparison_visual_acceptance": "pending_screen_capture_and_accessibility_failure"
+  },
+  "cli_recording": {
+    "commands_passed": 5,
+    "seconds": 25.905253958015237,
+    "is_native_editor_video": false
+  },
+  "pilot": {
+    "planned_attempts": 60,
+    "completed_attempts": 60,
+    "primary_conclusion": "no demonstrated end-to-end improvement",
+    "human_review": "pending",
+    "post_pilot_mcp_navigation_change": "transport tested; model performance not evaluated"
+  },
+  "source_archive": {
+    "required_evidence_members_verified": [
+      "docs/DEMO.md",
+      "artifacts/demo/cli-002/walkthrough.cast",
+      "artifacts/demo/cli-002/receipt.json",
+      "benchmarks/agent_pilot/runs/run-001/frozen-code.tar.gz",
+      "benchmarks/agent_pilot/runs/run-001/analysis/RESULTS.md",
+      "benchmarks/agent_pilot/runs/run-001/analysis/format-sensitivity.json"
+    ],
+    "excluded_cache_and_lock_paths": true
+  },
+  "original_scope_unchanged": true,
+  "open_gates": [
+    "human fixture and case explanation review",
+    "human pilot answer-key and semantic evidence review",
+    "native editor visual acceptance",
+    "hosted CI execution"
+  ]
+}

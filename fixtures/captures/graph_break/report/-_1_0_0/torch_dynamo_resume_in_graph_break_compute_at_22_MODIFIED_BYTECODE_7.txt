@@ -1,0 +1,37 @@
+ 22           RESUME                   0
+              LOAD_GLOBAL              9 (__compiled_fn_5_eaba7993_a90e_4f23_9ace_924365e1ca7e + NULL)
+              LOAD_GLOBAL             10 (__import_torch_dot__dynamo_dot_utils)
+              LOAD_ATTR               12 (record_pregraph_bytecode_enter)
+              COPY                     1
+              STORE_FAST               8 (tmp_1)
+              PUSH_NULL
+              CALL                     0
+              STORE_FAST               9 (tmp_2)
+              LOAD_FAST                4 (y)
+              LOAD_GLOBAL             10 (__import_torch_dot__dynamo_dot_utils)
+              LOAD_ATTR               14 (record_pregraph_bytecode_exit)
+              COPY                     1
+              STORE_FAST              10 (tmp_3)
+              PUSH_NULL
+              LOAD_FAST                9 (tmp_2)
+              CALL                     1
+              POP_TOP
+              CALL                     1
+              STORE_FAST               7 (graph_out_0)
+              BUILD_LIST               0
+              LOAD_FAST                7 (graph_out_0)
+              LOAD_CONST               3 (0)
+              BINARY_SUBSCR
+              BUILD_LIST               0
+              BUILD_LIST               0
+              SWAP                     2
+              BUILD_LIST               0
+              LIST_EXTEND              2
+              POP_TOP
+              BUILD_LIST               1
+              SWAP                     2
+              DELETE_FAST              7 (graph_out_0)
+              SWAP                     3
+              POP_TOP
+              POP_TOP
+              RETURN_VALUE

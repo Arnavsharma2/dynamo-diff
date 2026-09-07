@@ -1,0 +1,35 @@
+{
+  "id": "q08-tlparse-r2",
+  "question_id": "q08",
+  "condition": "tlparse",
+  "repetition": 2,
+  "seed": 732,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"attempts\": null,\n    \"completed\": 1,\n    \"graph_break_records\": null,\n    \"successful_recompiles\": null\n  },\n  \"explanation\": \"The capture A's manifest indicates that the workload was completed (workload_completed: true). However, there is no explicit mention of compilation attempts, successful recompiles, or graph-break records in the manifest file. These metrics might be detailed in other files like the report or logs, but they were not found in the manifest. The relationship between the original frame, tracing restart, and resumed execution is not explicitly detailed in the provided data.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"workload_completed\\\": true,\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "attempts": null,
+      "completed": 1,
+      "graph_break_records": null,
+      "successful_recompiles": null
+    },
+    "explanation": "The capture A's manifest indicates that the workload was completed (workload_completed: true). However, there is no explicit mention of compilation attempts, successful recompiles, or graph-break records in the manifest file. These metrics might be detailed in other files like the report or logs, but they were not found in the manifest. The relationship between the original frame, tracing restart, and resumed execution is not explicitly detailed in the provided data.",
+    "evidence": [
+      {
+        "retrieval_id": "r2",
+        "quote": "workload_completed\": true,"
+      }
+    ]
+  },
+  "model_requests": 6,
+  "tool_calls_requested": 5,
+  "tool_calls_executed": 5,
+  "input_tokens": 8285,
+  "output_tokens": 297,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 2193,
+  "model_total_duration_ns": 27587764875,
+  "model_load_duration_ns": 43481376,
+  "token_counters_available": true,
+  "wall_seconds": 27.614476624992676
+}

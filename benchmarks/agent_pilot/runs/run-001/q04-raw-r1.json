@@ -1,0 +1,21 @@
+{
+  "id": "q04-raw-r1",
+  "question_id": "q04",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "invalid_final_json",
+  "final_text": "{\n  \"answer\": {\n    \"baseline_completed\": null,\n    \"candidate_completed\": null,\n    \"source_change_proven_cause\": false,\n    \"speedup_proven\": false,\n    \"workload_comparability\": \"unknown\"\n  },\n  \"explanation\": \"The manifest files for both A and B do not contain evidence of completed compilations. The search for 'completed compilations' returned no matches. There is no direct evidence of a source change causing event reduction, and no artifacts establish a speedup. Workload comparability cannot be determined due to lack of evidence.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r1\",\n      \"quote\": \"Only these files are readable. HTML files are returned as readable text.\"\n    },\n    {\n      \"retrieval_id\": \"r2\",\n      \"quote\": \"matches\": [], \"next_offset\": null, \"offset\": 0, \"query\": \"completed compilations\", \"total_matches\": 0, \"truncated\": false\n    },\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"matches\": [], \"next_offset\": null, \"offset\": 0, \"query\": \"completed compilations\", \"total_matches\": 0, \"truncated\": false\n    }\n  ]\n}",
+  "final": null,
+  "model_requests": 4,
+  "tool_calls_requested": 3,
+  "tool_calls_executed": 3,
+  "input_tokens": 3762,
+  "output_tokens": 375,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 557,
+  "model_total_duration_ns": 32009260250,
+  "model_load_duration_ns": 22970000,
+  "token_counters_available": true,
+  "wall_seconds": 32.02478041598806
+}

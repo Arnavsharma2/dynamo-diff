@@ -1,0 +1,8 @@
+class GraphModule(torch.nn.Module):
+    def forward(self, L_z_: "f32[9][1]cpu"):
+        l_z_ = L_z_
+
+        # File: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/pilot-worker/model.py:10 in torch_dynamo_resume_in_f_at_9, code: return z.tanh() + argument
+        tanh: "f32[9][1]cpu" = l_z_.tanh();  l_z_ = None
+        add: "f32[9][1]cpu" = tanh + 2;  tanh = None
+        return (add,)

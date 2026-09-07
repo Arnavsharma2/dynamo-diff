@@ -1,0 +1,47 @@
+{
+  "id": "q08-raw-r1",
+  "question_id": "q08",
+  "condition": "raw",
+  "repetition": 1,
+  "seed": 731,
+  "status": "completed",
+  "final_text": "{\n  \"answer\": {\n    \"attempts\": 2,\n    \"completed\": 2,\n    \"graph_break_records\": 20,\n    \"successful_recompiles\": 1\n  },\n  \"explanation\": \"Capture A shows two completed compilation identities (compile_id 0/0 and 1/0). There were two internal compilation attempts, with one successful recompilation (compile_id 1/0). The graph-break records are derived from the 'guard_count' and 'shape_env_guard_count' metrics, totaling 20. The original frame (compile_id 0/0) was traced and compiled, and resumed execution (compile_id 1/0) was triggered by a tracing restart, indicating a recompilation due to a change in the execution context.\",\n  \"evidence\": [\n    {\n      \"retrieval_id\": \"r3\",\n      \"quote\": \"\\\"workload_completed\\\": true, \\\"process_exit_code\\\": 0, \\\"converter_exit_code\\\": 0\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"compile_id\\\": \\\"0/0\\\", \\\"frame_key\\\": \\\"1\\\", \\\"guard_count\\\": 11, \\\"shape_env_guard_count\\\": 0, \\\"graph_op_count\\\": 1, \\\"graph_node_count\\\": 3, \\\"graph_input_count\\\": 1\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"compile_id\\\": \\\"1/0\\\", \\\"frame_key\\\": \\\"2\\\", \\\"guard_count\\\": 9, \\\"shape_env_guard_count\\\": 0, \\\"graph_op_count\\\": 2, \\\"graph_node_count\\\": 4, \\\"graph_input_count\\\": 1\"\n    },\n    {\n      \"retrieval_id\": \"r5\",\n      \"quote\": \"\\\"error_on_recompile\\\": false, \\\"fail_on_recompile_limit_hit\\\": false\"\n    }\n  ]\n}",
+  "final": {
+    "answer": {
+      "attempts": 2,
+      "completed": 2,
+      "graph_break_records": 20,
+      "successful_recompiles": 1
+    },
+    "explanation": "Capture A shows two completed compilation identities (compile_id 0/0 and 1/0). There were two internal compilation attempts, with one successful recompilation (compile_id 1/0). The graph-break records are derived from the 'guard_count' and 'shape_env_guard_count' metrics, totaling 20. The original frame (compile_id 0/0) was traced and compiled, and resumed execution (compile_id 1/0) was triggered by a tracing restart, indicating a recompilation due to a change in the execution context.",
+    "evidence": [
+      {
+        "retrieval_id": "r3",
+        "quote": "\"workload_completed\": true, \"process_exit_code\": 0, \"converter_exit_code\": 0"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"compile_id\": \"0/0\", \"frame_key\": \"1\", \"guard_count\": 11, \"shape_env_guard_count\": 0, \"graph_op_count\": 1, \"graph_node_count\": 3, \"graph_input_count\": 1"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"compile_id\": \"1/0\", \"frame_key\": \"2\", \"guard_count\": 9, \"shape_env_guard_count\": 0, \"graph_op_count\": 2, \"graph_node_count\": 4, \"graph_input_count\": 1"
+      },
+      {
+        "retrieval_id": "r5",
+        "quote": "\"error_on_recompile\": false, \"fail_on_recompile_limit_hit\": false"
+      }
+    ]
+  },
+  "model_requests": 6,
+  "tool_calls_requested": 5,
+  "tool_calls_executed": 5,
+  "input_tokens": 10072,
+  "output_tokens": 578,
+  "cached_input_tokens": 0,
+  "retrieved_chars": 8655,
+  "model_total_duration_ns": 66078835750,
+  "model_load_duration_ns": 37542041,
+  "token_counters_available": true,
+  "wall_seconds": 66.11318129100255
+}

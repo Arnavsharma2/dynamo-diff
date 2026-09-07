@@ -2,14 +2,14 @@
 
 Implementation started September 6, 2026. The original scope remains the acceptance contract. This is an implementation checkpoint, **not a completed release**.
 
-Current evidence: [hosted CI](../artifacts/HOSTED_CI.md) passes 93 installed-wheel tests, both offline demonstrations and 12 evaluation-harness tests on macOS and Linux, with PyTorch and Transformers absent. Eleven checks pass against the installed VSIX in VS Code 1.132.1 on both platforms, including editor-group preservation and rendered-table activation. The authored-edit demo and the full Transformers static-cache case reproduce their expected comparisons. The CLI now displays both baseline and candidate guard categories. The validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
+Current evidence: the [input-boundary audit](INPUT_AUDIT.md) found and corrected silent acceptance of conflicting/non-object source maps. The updated installed wheel passes 96 tests, both offline demonstrations and 12 evaluation-harness tests with PyTorch and Transformers absent. The preceding revision's [hosted CI](../artifacts/HOSTED_CI.md) passes 93 core tests on macOS/Linux and ten development/eleven installed-VSIX checks on Linux. Local macOS installed-VSIX checks also pass. The CLI displays both baseline and candidate guard categories. The earlier adapter-validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
 
 ## Milestones
 
 | Milestone | State | Evidence / next requirement |
 |---|---|---|
 | Feasibility and differentiation | Initial gate verified | Python 3.13.2 / PyTorch 2.14.0 / tlparse 0.4.3 captures; edited-function demo and `FEASIBILITY.md`. Diagnostic value study still pending. |
-| Parser and evidence model | Implemented; boundary audit tested | Twelve recorded scenarios plus edit pair, malformed JSON/manifest checks, aggregate limits, bounded source analysis and no-execution checks. The [fixture review guide](../fixtures/REVIEW.md) links expectations to direct records. Human review and final audit remain. |
+| Parser and evidence model | Implemented; boundary audit recorded | Twelve recorded scenarios plus edit pair, malformed JSON/manifest checks, aggregate limits, bounded source analysis and no-execution checks. The [input audit](INPUT_AUDIT.md) records inspected boundaries, the corrected source-map issue and limits. The [fixture review guide](../fixtures/REVIEW.md) links expectations to direct records. Human review remains. |
 | Comparison and CLI | Implemented; release audit open | Ordinary body edits, shifted IDs, duplicate-source ambiguity, manifest gates, capture/comparison schemas, text/Markdown/JSON. |
 | MCP interface | Locally verified | Three tools, real stdio test, bounded retrieval, approved roots and CLI/core parity. Evidence discovery now exposes IDs hidden in compact rows. All 60 frozen pilot attempts finished; strict response-format failures prevented a demonstrated end-to-end improvement. |
 | VS Code interface | Installed VSIX verified | Import/compare, native tree, table, captured source/evidence, error paths and actual cancellation pass against the installed package. Visual review remains. |
@@ -28,7 +28,7 @@ Current evidence: [hosted CI](../artifacts/HOSTED_CI.md) passes 93 installed-whe
 - [x] Backend failures, no-graph outcomes and limits; missing explicit fallback records stay unclaimed.
 - [x] Multiple module instances sharing a code object.
 - [x] Line shifts, changed frame IDs, ordinary body edits and ambiguous source matches; duplicate-source ambiguity has a labeled synthetic robustness case.
-- [x] Truncated/malformed/missing/unsupported examples, including clean truncation; full hostile-input audit remains open.
+- [x] Truncated/malformed/missing/unsupported examples, including clean truncation; input-boundary audit and its limitations recorded.
 - [x] Duplicate imports and rejection of mixed-process identities.
 - [x] Space-containing paths and escaped-root/symlink rejection.
 - [x] Unsupported compiled-autograd/multi-rank examples visibly rejected.
@@ -41,7 +41,7 @@ Current evidence: [hosted CI](../artifacts/HOSTED_CI.md) passes 93 installed-whe
 - [x] MCP import_trace/compare_runs/get_evidence tools and bounded retrieval.
 - [x] CLI/MCP/editor model parity and actual subprocess integration checks on the tested platform.
 - [x] VS Code import/compare/results/navigation/cancellation/error handling in the development host.
-- [x] Guard/source no-execution code path and explicit side-effect regression; broader hostile-input audit remains open.
+- [x] Guard/source no-execution code path, explicit side-effect regression and recorded input-boundary code audit.
 - [x] Local processing, no telemetry, documented agent source-sharing boundary.
 - [x] 10 MiB/100 MiB synthetic scale import benchmarks, peak RSS, warm real-pair comparison latency, output size and separate small-trace conversion costs; individual trials and limitations in `PERFORMANCE.md`.
 - [x] Full Transformers generate() before/after investigation with pinned reproduction, raw compiler evidence, independent backend observations and eager-output oracle. Human explanation review remains separate.

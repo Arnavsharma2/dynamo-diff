@@ -12,7 +12,7 @@ from . import __version__
 from .adapters.tlparse import analyze_report
 from .compare import Comparison, compare_runs
 from .errors import DynamoDiffError
-from .io import read_text
+from .io import json_value, read_text
 from .model import Capture
 from .render import capture_summary, render_capture, render_comparison
 from .store import Store
@@ -64,7 +64,14 @@ def main(argv: list[str] | None = None) -> int:
                 return 0
             output = capture.model_dump(exclude={"manifest", "evidence"})
         elif args.command == "compare":
-            source_map = json.loads(read_text(args.source_map, store.limits.record_bytes)) if args.source_map else None
+            source_map = None
+            if args.source_map:
+                try:
+                    source_map = json_value(read_text(args.source_map, store.limits.record_bytes))
+                except (ValueError, UnicodeError, RecursionError) as error:
+                    raise DynamoDiffError("invalid_source_map", "Source map must be a JSON object with unique keys and bounded nesting") from error
+                if not isinstance(source_map, dict):
+                    raise DynamoDiffError("invalid_source_map", "Source map must map baseline function IDs to candidate function IDs")
             comparison = compare_runs(store, args.baseline_id, args.candidate_id, source_map=source_map)
             if args.format != "json":
                 print(render_comparison(comparison, markdown=args.format == "markdown"), end="")

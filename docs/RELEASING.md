@@ -25,7 +25,7 @@ For the extension, run the isolated editor suite and install the VSIX into a sep
 ## Release gates still requiring evidence
 
 - Human-reviewed fixture expectations and explanations, including negative controls.
-- Full malformed-input, ambiguity, resource and no-execution audit.
+- Review the completed [input and evidence boundary audit](INPUT_AUDIT.md), its source-map correction and documented limits.
 - Review the retained [Transformers investigation](../case_studies/transformers_cache/README.md), its independent output evidence and reproduction recipe.
 - Human review of the completed ten-question, 60-attempt diagnostic pilot across raw logs, tlparse text and Dynamo Diff. Individual results and failures are retained; the primary result shows no demonstrated end-to-end improvement.
 - Review [upstream notices](THIRD_PARTY_NOTICES.md) and the included license texts for redistributed artifacts.

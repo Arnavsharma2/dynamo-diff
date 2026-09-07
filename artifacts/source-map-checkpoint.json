@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-09-07T17:17:44.551607+00:00",
+  "kind": "source_map_input_audit_checkpoint",
+  "supersedes_local_wheel_identity": "artifacts/final-local-checkpoint.json",
+  "review_type": "AI code and evidence audit",
+  "release_complete": false,
+  "files": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "784e97a3899160ddb04970fec07d94171014bb7b96599d7dedef944f25cb6d42",
+      "bytes": 31644
+    },
+    "dist/dynamo_diff-0.1.0.tar.gz": {
+      "sha256": "b77b46e31f1f2cd1fe93e3e41fc540f8efa0c3c1b767399d468a92148a5698b0",
+      "bytes": 3776708
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "656d722307549ce69c572ec491ffeedd449b97c569ca17c37d87b8eee4b8bcaf",
+      "bytes": 9732
+    },
+    "src/dynamo_diff/cli.py": {
+      "sha256": "9f68f781b55d39068225ade03caf83be392c3e7801f8a5e1962f151470d550a1",
+      "bytes": 5626
+    },
+    "src/dynamo_diff/compare.py": {
+      "sha256": "a9de59e11a6509adc2a8e226949634ce92d3c7c74c99ee2620adc18200508997",
+      "bytes": 12699
+    },
+    "tests/test_compare_cli.py": {
+      "sha256": "980fe8ea9762edbbe44412ad728d269d4bc901ecdb5f2d00728d9d526cb527c3",
+      "bytes": 10189
+    },
+    "docs/INPUT_AUDIT.md": {
+      "sha256": "d32d05049f6e3faeff785467d3beb409e5ca73b9235f58a62b102f6840782e27",
+      "bytes": 5376
+    },
+    "artifacts/source-map-regression-before.log": {
+      "sha256": "505d66c78a146db2b9eddde3ac8e0ded4180490b5649bc4d3b4ebd6463399ad4",
+      "bytes": 32822
+    },
+    "artifacts/source-map-regression-after.xml": {
+      "sha256": "7a60e2c02eb7d7b7e2894fd7cee6f18cf0004c856f8436608ee700d1ea535718",
+      "bytes": 2534
+    },
+    "artifacts/wheel-source-map-tests.xml": {
+      "sha256": "7e29bad882ef08e12959f3529a44b1d86f28883718ee0a0a805e4abbc0b8f24e",
+      "bytes": 12666
+    },
+    "artifacts/wheel-source-map-check.log": {
+      "sha256": "9a4ec4abac2ba098e432b2274c2806638b4b0fced25c101ce458971b56f40a9b",
+      "bytes": 1500
+    },
+    "artifacts/pilot-source-map-tests.xml": {
+      "sha256": "6a776dd4e0a048e14fd1ebe0356b47c06e0542d3b6b61bcbf42d2120bc4ca205",
+      "bytes": 1922
+    }
+  },
+  "wheel_and_installed_python_sources_match_checkout": true,
+  "sdist_contains_current_audit_and_regression": true,
+  "extension_unchanged": true,
+  "original_scope_unchanged": true,
+  "tests": {
+    "focused_comparison_passed": 18,
+    "installed_wheel_passed": 96,
+    "offline_demos_passed": [
+      "authored_edit",
+      "transformers_static_cache"
+    ],
+    "evaluation_harness_passed": 12,
+    "models_called": false
+  },
+  "open_gates": [
+    "human fixture/case/evaluation review or explicit user revision of that requirement",
+    "remaining native candidate/evidence/table visual walkthrough"
+  ]
+}

@@ -32,6 +32,8 @@ Source snapshots are parsed with Python's AST parser, never imported. Qualified 
 
 Without sufficient snapshot evidence, source-location matches remain ambiguous. Explicit mappings are permitted and labeled. Generated resume regions with changed snapshots remain unresolved because splitting/merging them is outside v1's matching contract.
 
+Explicit source-map files must be JSON objects with unique baseline keys and one-to-one existing function IDs. Conflicting duplicate keys are rejected rather than silently accepting the last candidate. Invalid shapes and excessive nesting return a structured `invalid_source_map` error.
+
 ## Completeness and comparability
 
 Parsing a valid file does not prove a complete workload. Imported finalization metadata must identify the source trace hashes, successful process/converter exit codes, and the exact converted report hash. The result is labeled **declared completed**, not independently observed completion. Missing metadata stays unknown; a changed report with a stale finalization hash is rejected.

@@ -166,7 +166,7 @@ def comparability(baseline: Capture, candidate: Capture) -> tuple[str, list[dict
 def compare_runs(store: Store, baseline_id: str, candidate_id: str, *, source_map: dict[str, str] | None = None) -> Comparison:
     baseline, candidate = store.load(baseline_id), store.load(candidate_id)
     left, right = groups(baseline), groups(candidate)
-    source_map = source_map or {}
+    source_map = {} if source_map is None else source_map
     if not isinstance(source_map, dict) or any(not isinstance(k, str) or not isinstance(v, str) for k, v in source_map.items()):
         raise DynamoDiffError("invalid_source_map", "Source map must map baseline function IDs to candidate function IDs")
     if any(key not in left or value not in right for key, value in source_map.items()) or len(set(source_map.values())) != len(source_map):

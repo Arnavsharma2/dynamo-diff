@@ -1,0 +1,720 @@
+FF.                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_cli_rejects_ambiguous_or_malformed_source_mapping[conflicting_duplicate] _
+
+tmp_path = PosixPath('/private/var/folders/kl/rgvb9jg15b94m3psh706svd80000gn/T/pytest-of-aps/pytest-95/test_cli_rejects_ambiguous_or_0')
+malformation = 'conflicting_duplicate'
+
+    @pytest.mark.parametrize("malformation", ["conflicting_duplicate", "non_object", "deeply_nested"])
+    def test_cli_rejects_ambiguous_or_malformed_source_mapping(tmp_path, malformation):
+        store = Store(tmp_path / "store")
+        baseline, candidate = imported(store, "edit_before"), imported(store, "edit_after")
+        report = compare_runs(store, baseline.id, candidate.id)
+        matched = next(row for row in report.functions if row.match_status == "matched")
+        helper = next(row for row in report.functions if row.match_status == "unmatched")
+        source_id = json.dumps(matched.baseline[0].id)
+        correct_id = json.dumps(matched.candidate[0].id)
+        wrong_id = json.dumps(helper.candidate[0].id)
+        # Conflicting duplicate keys must not silently map compute to helper.
+        text = {
+            "conflicting_duplicate": f'{{{source_id}:{correct_id},{source_id}:{wrong_id}}}',
+            "non_object": "[]",
+            "deeply_nested": "[" * 1000 + "0" + "]" * 1000,
+        }[malformation]
+        mapping = tmp_path / "mapping.json"
+        mapping.write_text(text)
+        run = subprocess.run(
+            [sys.executable, "-m", "dynamo_diff.cli", "--store", str(store.root), "compare",
+             baseline.id, candidate.id, "--source-map", str(mapping), "--format", "json"],
+            capture_output=True, text=True, timeout=30,
+        )
+>       assert run.returncode == 2, run.stdout
+E       AssertionError: {
+E           "schema_version": "1",
+E           "adapter_version": "tlparse-0.4.3-torch-2.14-log3-v4",
+E           "comparison_version": "4",
+E           "id": "13aded02fcd5a74dc3408e7e76f024116b16724ba26a7d425dc5f19b6a611747",
+E           "baseline_id": "4c89bff73d2fbba6bdc8021769723fe598d267c4c995c12bb8c6bf0599dba991",
+E           "candidate_id": "d95713729bb764fe3ef768f44d23003d9c3eb6c174f447f2d8e57cdf7f8fcf58",
+E           "capture_validity": {
+E             "baseline": {
+E               "artifact_structure": "valid",
+E               "workload_completion": "declared_completed",
+E               "provenance": "hash_verified"
+E             },
+E             "candidate": {
+E               "artifact_structure": "valid",
+E               "workload_completion": "declared_completed",
+E               "provenance": "hash_verified"
+E             }
+E           },
+E           "workload_comparability": "manifest_consistent",
+E           "comparability_differences": [],
+E           "baseline_counts": {
+E             "observed_compilation_identities": 3,
+E             "observed_attempts": 3,
+E             "completed": 3,
+E             "failed": 0,
+E             "no_graph_observed": 0,
+E             "unknown_outcomes": 0,
+E             "confirmed_recompilation_identities": 2,
+E             "confirmed_successful_recompilations": 2,
+E             "additional_frame_compilations": 0,
+E             "guard_reason_entries": 3,
+E             "graph_break_records": 0,
+E             "unique_graph_break_sites": 0,
+E             "compiler_limit_events": 0,
+E             "fallback_reports": 0
+E           },
+E           "candidate_counts": {
+E             "observed_compilation_identities": 2,
+E             "observed_attempts": 2,
+E             "completed": 2,
+E             "failed": 0,
+E             "no_graph_observed": 0,
+E             "unknown_outcomes": 0,
+E             "confirmed_recompilation_identities": 0,
+E             "confirmed_successful_recompilations": 0,
+E             "additional_frame_compilations": 0,
+E             "guard_reason_entries": 0,
+E             "graph_break_records": 0,
+E             "unique_graph_break_sites": 0,
+E             "compiler_limit_events": 0,
+E             "fallback_reports": 0
+E           },
+E           "functions": [
+E             {
+E               "match_status": "matched",
+E               "match_method": "explicit_source_mapping",
+E               "baseline": [
+E                 {
+E                   "id": "rank-unspecified:0",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "compute",
+E                     "qualified_name": "compute",
+E                     "first_line": 9,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "4b94483d38b17ac6c314c7e101dfd344b6f7bdef896bde782a3f4efec0a3dacc",
+E                     "function_sha256": "a1096472c7aed8431c0706dd8ac03ba134e36c8cdfd64a16e02d591a3a3f7908",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:0/0",
+E                     "rank-unspecified:0/1",
+E                     "rank-unspecified:0/2"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 3,
+E                     "observed_attempts": 3,
+E                     "completed": 3,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 2,
+E                     "confirmed_successful_recompilations": 2,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 3,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [
+E                     "python_scalar"
+E                   ],
+E                   "evidence_ids": [
+E                     "record-3",
+E                     "record-7",
+E                     "payload-7",
+E                     "record-8",
+E                     "payload-8",
+E                     "record-9",
+E                     "record-10",
+E                     "payload-10",
+E                     "record-11",
+E                     "record-15",
+E                     "payload-15",
+E                     "record-16",
+E                     "payload-16",
+E                     "record-17",
+E                     "record-18",
+E                     "payload-18",
+E                     "record-19",
+E                     "record-23",
+E                     "payload-23",
+E                     "record-24",
+E                     "payload-24",
+E                     "record-25"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "candidate": [
+E                 {
+E                   "id": "rank-unspecified:0",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "helper",
+E                     "qualified_name": "helper",
+E                     "first_line": 19,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "0c8eb3ad8975538c4e85b8e15c20b58bf0e468794c4002c6b28608a780af2000",
+E                     "function_sha256": "e52b2a570356c2b60b403852cb91da34988db2d659f6187db32af8ce92e86a0d",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:0/0"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 1,
+E                     "observed_attempts": 1,
+E                     "completed": 1,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 0,
+E                     "confirmed_successful_recompilations": 0,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 0,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [],
+E                   "evidence_ids": [
+E                     "record-3",
+E                     "record-7",
+E                     "payload-7",
+E                     "record-8",
+E                     "payload-8",
+E                     "record-9"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "baseline_counts": {
+E                 "observed_compilation_identities": 3,
+E                 "observed_attempts": 3,
+E                 "completed": 3,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 2,
+E                 "confirmed_successful_recompilations": 2,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 3,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "candidate_counts": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "delta": {
+E                 "observed_compilation_identities": -2,
+E                 "observed_attempts": -2,
+E                 "completed": -2,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": -2,
+E                 "confirmed_successful_recompilations": -2,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": -3,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "interpretation": "Observed compiler-event difference; application performance was not measured."
+E             },
+E             {
+E               "match_status": "unmatched",
+E               "match_method": "no_source_counterpart",
+E               "baseline": [],
+E               "candidate": [
+E                 {
+E                   "id": "rank-unspecified:1",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "compute",
+E                     "qualified_name": "compute",
+E                     "first_line": 9,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "0c8eb3ad8975538c4e85b8e15c20b58bf0e468794c4002c6b28608a780af2000",
+E                     "function_sha256": "088590eab553a58020850a42c0971ae2b7f58d2e2eb205d7716812df2c0520da",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:1/0"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 1,
+E                     "observed_attempts": 1,
+E                     "completed": 1,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 0,
+E                     "confirmed_successful_recompilations": 0,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 0,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [],
+E                   "evidence_ids": [
+E                     "record-10",
+E                     "record-14",
+E                     "payload-14",
+E                     "record-15",
+E                     "payload-15",
+E                     "record-16"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "baseline_counts": {
+E                 "observed_compilation_identities": 0,
+E                 "observed_attempts": 0,
+E                 "completed": 0,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "candidate_counts": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "delta": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "interpretation": "Source correspondence is unresolved; these counts do not establish a function-level regression."
+E             }
+E           ],
+E           "notices": [],
+E           "performance_conclusion": "not_measured"
+E         }
+E         
+E       assert 0 == 2
+E        +  where 0 = CompletedProcess(args=['/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/bin/python', '-m', 'dynamo_diff.cli', ...unction-level regression."\n    }\n  ],\n  "notices": [],\n  "performance_conclusion": "not_measured"\n}\n', stderr='').returncode
+
+tests/test_compare_cli.py:89: AssertionError
+______ test_cli_rejects_ambiguous_or_malformed_source_mapping[non_object] ______
+
+tmp_path = PosixPath('/private/var/folders/kl/rgvb9jg15b94m3psh706svd80000gn/T/pytest-of-aps/pytest-95/test_cli_rejects_ambiguous_or_1')
+malformation = 'non_object'
+
+    @pytest.mark.parametrize("malformation", ["conflicting_duplicate", "non_object", "deeply_nested"])
+    def test_cli_rejects_ambiguous_or_malformed_source_mapping(tmp_path, malformation):
+        store = Store(tmp_path / "store")
+        baseline, candidate = imported(store, "edit_before"), imported(store, "edit_after")
+        report = compare_runs(store, baseline.id, candidate.id)
+        matched = next(row for row in report.functions if row.match_status == "matched")
+        helper = next(row for row in report.functions if row.match_status == "unmatched")
+        source_id = json.dumps(matched.baseline[0].id)
+        correct_id = json.dumps(matched.candidate[0].id)
+        wrong_id = json.dumps(helper.candidate[0].id)
+        # Conflicting duplicate keys must not silently map compute to helper.
+        text = {
+            "conflicting_duplicate": f'{{{source_id}:{correct_id},{source_id}:{wrong_id}}}',
+            "non_object": "[]",
+            "deeply_nested": "[" * 1000 + "0" + "]" * 1000,
+        }[malformation]
+        mapping = tmp_path / "mapping.json"
+        mapping.write_text(text)
+        run = subprocess.run(
+            [sys.executable, "-m", "dynamo_diff.cli", "--store", str(store.root), "compare",
+             baseline.id, candidate.id, "--source-map", str(mapping), "--format", "json"],
+            capture_output=True, text=True, timeout=30,
+        )
+>       assert run.returncode == 2, run.stdout
+E       AssertionError: {
+E           "schema_version": "1",
+E           "adapter_version": "tlparse-0.4.3-torch-2.14-log3-v4",
+E           "comparison_version": "4",
+E           "id": "0d5baeef2c0edae51d5a2d0b2d8915452018524f6628261a823f5fc546dee04b",
+E           "baseline_id": "4c89bff73d2fbba6bdc8021769723fe598d267c4c995c12bb8c6bf0599dba991",
+E           "candidate_id": "d95713729bb764fe3ef768f44d23003d9c3eb6c174f447f2d8e57cdf7f8fcf58",
+E           "capture_validity": {
+E             "baseline": {
+E               "artifact_structure": "valid",
+E               "workload_completion": "declared_completed",
+E               "provenance": "hash_verified"
+E             },
+E             "candidate": {
+E               "artifact_structure": "valid",
+E               "workload_completion": "declared_completed",
+E               "provenance": "hash_verified"
+E             }
+E           },
+E           "workload_comparability": "manifest_consistent",
+E           "comparability_differences": [],
+E           "baseline_counts": {
+E             "observed_compilation_identities": 3,
+E             "observed_attempts": 3,
+E             "completed": 3,
+E             "failed": 0,
+E             "no_graph_observed": 0,
+E             "unknown_outcomes": 0,
+E             "confirmed_recompilation_identities": 2,
+E             "confirmed_successful_recompilations": 2,
+E             "additional_frame_compilations": 0,
+E             "guard_reason_entries": 3,
+E             "graph_break_records": 0,
+E             "unique_graph_break_sites": 0,
+E             "compiler_limit_events": 0,
+E             "fallback_reports": 0
+E           },
+E           "candidate_counts": {
+E             "observed_compilation_identities": 2,
+E             "observed_attempts": 2,
+E             "completed": 2,
+E             "failed": 0,
+E             "no_graph_observed": 0,
+E             "unknown_outcomes": 0,
+E             "confirmed_recompilation_identities": 0,
+E             "confirmed_successful_recompilations": 0,
+E             "additional_frame_compilations": 0,
+E             "guard_reason_entries": 0,
+E             "graph_break_records": 0,
+E             "unique_graph_break_sites": 0,
+E             "compiler_limit_events": 0,
+E             "fallback_reports": 0
+E           },
+E           "functions": [
+E             {
+E               "match_status": "matched",
+E               "match_method": "source_diff_function_boundary",
+E               "baseline": [
+E                 {
+E                   "id": "rank-unspecified:0",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "compute",
+E                     "qualified_name": "compute",
+E                     "first_line": 9,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "4b94483d38b17ac6c314c7e101dfd344b6f7bdef896bde782a3f4efec0a3dacc",
+E                     "function_sha256": "a1096472c7aed8431c0706dd8ac03ba134e36c8cdfd64a16e02d591a3a3f7908",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:0/0",
+E                     "rank-unspecified:0/1",
+E                     "rank-unspecified:0/2"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 3,
+E                     "observed_attempts": 3,
+E                     "completed": 3,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 2,
+E                     "confirmed_successful_recompilations": 2,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 3,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [
+E                     "python_scalar"
+E                   ],
+E                   "evidence_ids": [
+E                     "record-3",
+E                     "record-7",
+E                     "payload-7",
+E                     "record-8",
+E                     "payload-8",
+E                     "record-9",
+E                     "record-10",
+E                     "payload-10",
+E                     "record-11",
+E                     "record-15",
+E                     "payload-15",
+E                     "record-16",
+E                     "payload-16",
+E                     "record-17",
+E                     "record-18",
+E                     "payload-18",
+E                     "record-19",
+E                     "record-23",
+E                     "payload-23",
+E                     "record-24",
+E                     "payload-24",
+E                     "record-25"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "candidate": [
+E                 {
+E                   "id": "rank-unspecified:1",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "compute",
+E                     "qualified_name": "compute",
+E                     "first_line": 9,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "0c8eb3ad8975538c4e85b8e15c20b58bf0e468794c4002c6b28608a780af2000",
+E                     "function_sha256": "088590eab553a58020850a42c0971ae2b7f58d2e2eb205d7716812df2c0520da",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:1/0"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 1,
+E                     "observed_attempts": 1,
+E                     "completed": 1,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 0,
+E                     "confirmed_successful_recompilations": 0,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 0,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [],
+E                   "evidence_ids": [
+E                     "record-10",
+E                     "record-14",
+E                     "payload-14",
+E                     "record-15",
+E                     "payload-15",
+E                     "record-16"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "baseline_counts": {
+E                 "observed_compilation_identities": 3,
+E                 "observed_attempts": 3,
+E                 "completed": 3,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 2,
+E                 "confirmed_successful_recompilations": 2,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 3,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "candidate_counts": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "delta": {
+E                 "observed_compilation_identities": -2,
+E                 "observed_attempts": -2,
+E                 "completed": -2,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": -2,
+E                 "confirmed_successful_recompilations": -2,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": -3,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "interpretation": "Observed compiler-event difference; application performance was not measured."
+E             },
+E             {
+E               "match_status": "unmatched",
+E               "match_method": "no_source_counterpart",
+E               "baseline": [],
+E               "candidate": [
+E                 {
+E                   "id": "rank-unspecified:0",
+E                   "source": {
+E                     "captured_path": "/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/edited-workload/model.py",
+E                     "relative_path": "model.py",
+E                     "function": "helper",
+E                     "qualified_name": "helper",
+E                     "first_line": 19,
+E                     "snapshot": "sources/model.py",
+E                     "snapshot_sha256": "0c8eb3ad8975538c4e85b8e15c20b58bf0e468794c4002c6b28608a780af2000",
+E                     "function_sha256": "e52b2a570356c2b60b403852cb91da34988db2d659f6187db32af8ce92e86a0d",
+E                     "generated_resume": false,
+E                     "attribution": "trace"
+E                   },
+E                   "compilation_ids": [
+E                     "rank-unspecified:0/0"
+E                   ],
+E                   "counts": {
+E                     "observed_compilation_identities": 1,
+E                     "observed_attempts": 1,
+E                     "completed": 1,
+E                     "failed": 0,
+E                     "no_graph_observed": 0,
+E                     "unknown_outcomes": 0,
+E                     "confirmed_recompilation_identities": 0,
+E                     "confirmed_successful_recompilations": 0,
+E                     "additional_frame_compilations": 0,
+E                     "guard_reason_entries": 0,
+E                     "graph_break_records": 0,
+E                     "unique_graph_break_sites": 0,
+E                     "compiler_limit_events": 0,
+E                     "fallback_reports": 0
+E                   },
+E                   "guard_categories": [],
+E                   "evidence_ids": [
+E                     "record-3",
+E                     "record-7",
+E                     "payload-7",
+E                     "record-8",
+E                     "payload-8",
+E                     "record-9"
+E                   ],
+E                   "graph_break_sites": []
+E                 }
+E               ],
+E               "baseline_counts": {
+E                 "observed_compilation_identities": 0,
+E                 "observed_attempts": 0,
+E                 "completed": 0,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "candidate_counts": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "delta": {
+E                 "observed_compilation_identities": 1,
+E                 "observed_attempts": 1,
+E                 "completed": 1,
+E                 "failed": 0,
+E                 "no_graph_observed": 0,
+E                 "unknown_outcomes": 0,
+E                 "confirmed_recompilation_identities": 0,
+E                 "confirmed_successful_recompilations": 0,
+E                 "additional_frame_compilations": 0,
+E                 "guard_reason_entries": 0,
+E                 "graph_break_records": 0,
+E                 "unique_graph_break_sites": 0,
+E                 "compiler_limit_events": 0,
+E                 "fallback_reports": 0
+E               },
+E               "interpretation": "Source correspondence is unresolved; these counts do not establish a function-level regression."
+E             }
+E           ],
+E           "notices": [],
+E           "performance_conclusion": "not_measured"
+E         }
+E         
+E       assert 0 == 2
+E        +  where 0 = CompletedProcess(args=['/Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.venv/bin/python', '-m', 'dynamo_diff.cli', ...unction-level regression."\n    }\n  ],\n  "notices": [],\n  "performance_conclusion": "not_measured"\n}\n', stderr='').returncode
+
+tests/test_compare_cli.py:89: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_compare_cli.py::test_cli_rejects_ambiguous_or_malformed_source_mapping[conflicting_duplicate]
+FAILED tests/test_compare_cli.py::test_cli_rejects_ambiguous_or_malformed_source_mapping[non_object]
+2 failed, 1 passed, 15 deselected in 0.79s

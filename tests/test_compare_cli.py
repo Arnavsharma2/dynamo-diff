@@ -63,6 +63,34 @@ def test_explicit_source_map_and_identity_validation(tmp_path):
     assert error.value.code == "invalid_source_map"
 
 
+@pytest.mark.parametrize("malformation", ["conflicting_duplicate", "non_object", "deeply_nested"])
+def test_cli_rejects_ambiguous_or_malformed_source_mapping(tmp_path, malformation):
+    store = Store(tmp_path / "store")
+    baseline, candidate = imported(store, "edit_before"), imported(store, "edit_after")
+    report = compare_runs(store, baseline.id, candidate.id)
+    matched = next(row for row in report.functions if row.match_status == "matched")
+    helper = next(row for row in report.functions if row.match_status == "unmatched")
+    source_id = json.dumps(matched.baseline[0].id)
+    correct_id = json.dumps(matched.candidate[0].id)
+    wrong_id = json.dumps(helper.candidate[0].id)
+    # Conflicting duplicate keys must not silently map compute to helper.
+    text = {
+        "conflicting_duplicate": f'{{{source_id}:{correct_id},{source_id}:{wrong_id}}}',
+        "non_object": "[]",
+        "deeply_nested": "[" * 1000 + "0" + "]" * 1000,
+    }[malformation]
+    mapping = tmp_path / "mapping.json"
+    mapping.write_text(text)
+    run = subprocess.run(
+        [sys.executable, "-m", "dynamo_diff.cli", "--store", str(store.root), "compare",
+         baseline.id, candidate.id, "--source-map", str(mapping), "--format", "json"],
+        capture_output=True, text=True, timeout=30,
+    )
+    assert run.returncode == 2, run.stdout
+    assert not run.stdout
+    assert json.loads(run.stderr)["error"]["code"] == "invalid_source_map"
+
+
 def test_fallback_and_failure_never_get_a_speed_verdict(tmp_path):
     store = Store(tmp_path)
     baseline, candidate = imported(store, "multiple_guards"), imported(store, "limit")

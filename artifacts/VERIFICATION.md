@@ -2,6 +2,12 @@
 
 This records local and hosted evidence, not a release-completion claim. Raw compiler fixtures and their expected counts are separate from these test receipts.
 
+## Latest input-audit revision
+
+The [input-boundary audit](../docs/INPUT_AUDIT.md) found that duplicate source-map keys could silently select the wrong function and an empty array could silently become an omitted mapping. Both regressions failed before the correction. The updated CLI/core reject malformed maps with `invalid_source_map`; 18 focused comparison checks pass. The rebuilt installed wheel passes **96 tests in 5.25 seconds** and both offline demonstrations with PyTorch/Transformers absent, recorded in `wheel-source-map-check.log` and `wheel-source-map-tests.xml`. Twelve evaluation-harness checks also pass. [The source-map checkpoint](source-map-checkpoint.json) records the current package hashes and verified installed/source-archive payloads. This supersedes the earlier wheel's source identity and test count below; the extension code and VSIX are unchanged.
+
+Native automation briefly recovered a current screenshot of the updated profile's baseline source: `compute` at line 9, its original scalar-dependent branch and `VARIANT = "before"`, in one editor group. This verifies baseline source navigation and its layout. Subsequent stream errors and stale tree updates still prevent final acceptance of the candidate/evidence/table walkthrough; no complete native visual sign-off is claimed.
+
 ## Python wheel
 
 The wheel was built with `python -m build --no-isolation` and reinstalled with `--no-deps --force-reinstall` into the separate environment under `.cache/clean-env`, which was created from the hashed `requirements-test.lock`. The release-check script confirms the package comes from that environment's site-packages and that neither PyTorch nor Transformers is installed.

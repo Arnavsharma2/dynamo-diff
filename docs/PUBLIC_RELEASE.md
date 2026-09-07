@@ -16,4 +16,4 @@ Validation includes the installed-wheel core suite, both offline demonstrations,
 
 ## Claim boundaries
 
-This is a public software release with measured compiler evidence. There is no PyPI or Marketplace publication, external adoption claim, CUDA/Inductor speedup claim or demonstrated end-to-end agent improvement. The 60-attempt pilot's negative primary result remains unchanged. Reviews are AI-reviewed under the approved scope; independent human review remains optional and unclaimed.
+This is a public software release with measured compiler evidence. VS Code extension 0.1.1 was subsequently [published on Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff); its [separate receipt](../artifacts/marketplace-publication.json) identifies the verified package. There is no PyPI publication, external adoption claim, CUDA/Inductor speedup claim or demonstrated end-to-end agent improvement. The 60-attempt pilot's negative primary result remains unchanged. Reviews are AI-reviewed under the approved scope; independent human review remains optional and unclaimed.

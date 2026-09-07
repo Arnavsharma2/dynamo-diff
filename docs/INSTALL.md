@@ -1,6 +1,6 @@
-# Install Dynamo Diff 0.1.0
+# Install Dynamo Diff
 
-Download the Python wheel and VS Code extension from the [v0.1.0 release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). The release also includes a source archive, build evidence and `SHA256SUMS`. GitHub is the distribution channel for this version.
+Install the VS Code extension **0.1.1** from [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff), and download the Python analyzer **0.1.0** from the [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). The Python release also includes a source archive, build evidence and `SHA256SUMS`. The extension requires the separately installed Python analyzer.
 
 Python 3.13 is the tested setup on macOS and Linux. The package declares Python 3.11 or newer, but other versions and Windows have not been verified. Inspecting saved captures needs neither PyTorch nor a GPU.
 
@@ -18,11 +18,12 @@ The `mcp` extra enables the local agent server. Omit `[mcp]` if you only need th
 
 ## VS Code extension
 
-1. Download `dynamo-diff-0.1.0.vsix` from the same release.
-2. In VS Code, run **Extensions: Install from VSIX...** and select that file.
-3. Set **Dynamo Diff: Python Path** (`dynamoDiff.pythonPath`) to the absolute path of the virtual environment's Python, such as `/your/project/.venv/bin/python`. Preserve the virtual-environment path instead of resolving its symlink to the base interpreter.
-4. In a trusted workspace, run **Dynamo Diff: Import Capture** for each saved report directory and its manifest, then **Dynamo Diff: Compare Captures**.
-5. Expand **Dynamo Diff** in Explorer to open the comparison table, captured source or original guard evidence.
+1. Install **Dynamo Diff**, published by **Dynamo Diff**, from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff). Its exact identifier is `dynamo-diff.dynamo-diff`. From a terminal with the VS Code CLI configured, you can use `code --install-extension dynamo-diff.dynamo-diff`.
+2. Set **Dynamo Diff: Python Path** (`dynamoDiff.pythonPath`) to the absolute path of the virtual environment's Python, such as `/your/project/.venv/bin/python`. Preserve the virtual-environment path instead of resolving its symlink to the base interpreter.
+3. In a trusted workspace, run **Dynamo Diff: Import Capture** for each saved report directory and its manifest, then **Dynamo Diff: Compare Captures**.
+4. Expand **Dynamo Diff** in Explorer to open the comparison table, captured source or original guard evidence.
+
+The earlier 0.1.0 VSIX remains available in the GitHub release for that version. Use Marketplace for the current editor package.
 
 The extension is tested with VS Code 1.132.1 on macOS and Linux. Its manifest permits 1.100 or newer; that entire version range has not been tested. It invokes the configured local Python package, so installing the VSIX alone is insufficient.
 

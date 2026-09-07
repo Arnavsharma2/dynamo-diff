@@ -1,5 +1,9 @@
 # Changelog
 
+## VS Code extension 0.1.1 — September 7, 2026
+
+Published to [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff) under `dynamo-diff.dynamo-diff`. This editor package adds Python setup instructions, compatibility details, search keywords and support links. It uses the same verified runtime behavior and requires Python analyzer 0.1.0. Marketplace validation and a byte-for-byte public download check passed; see the [publication receipt](../artifacts/marketplace-publication.json).
+
 ## 0.1.0 — September 7, 2026
 
 Initial public release of the saved-capture analyzer, local MCP server and VS Code extension. The tested adapter reads PyTorch 2.14.0 / tlparse 0.4.3 bundles without requiring ML runtimes for analysis.

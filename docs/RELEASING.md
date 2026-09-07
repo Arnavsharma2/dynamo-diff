@@ -1,6 +1,6 @@
 # Build and release checklist
 
-These instructions create installable artifacts. Version 0.1.0 uses [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) as its public distribution channel. [Installation instructions](INSTALL.md) cover release users. PyPI and the VS Code Marketplace are not used.
+These instructions create installable artifacts. Python analyzer 0.1.0 uses [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0); VS Code extension 0.1.1 is published on [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff). [Installation instructions](INSTALL.md) cover both components. PyPI is not used.
 
 Portfolio v1 has completed this checklist under the [approved scope audit](COMPLETION_AUDIT.md). The [delivery receipt](../artifacts/portfolio-v1-delivery.json) identifies its wheel, source archive and tested VSIX. Reviews are AI-reviewed; the user made independent human review optional. The native walkthrough is complete in the recorded demo profile.
 
@@ -17,6 +17,12 @@ python -m build --no-isolation
 ```
 
 The wheel and source archive appear under `dist`. Build the extension with `npm ci` and `npm run package` from `extension`. Do not infer Marketplace availability from a successful VSIX build.
+
+## Marketplace publication
+
+The publisher identifier is `dynamo-diff`; the extension identifier is `dynamo-diff.dynamo-diff`. Version 0.1.1 was uploaded through the authenticated publisher management page after [hosted validation](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34153836150). Marketplace validation then passed, the public listing returned HTTP 200, and the anonymous VSIX download matched the tested package byte for byte. The [publication receipt](../artifacts/marketplace-publication.json) records the source commit and hash.
+
+For subsequent versions, package and test the changed extension, upload the VSIX under the existing publisher, wait for Marketplace validation, and verify the public package and listing. Keep Python and extension version numbers distinct when only one component changes. Browser publication does not require a PAT to be saved in the repository.
 
 ## Fresh installation
 

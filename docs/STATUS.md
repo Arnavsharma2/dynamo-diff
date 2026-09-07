@@ -2,7 +2,7 @@
 
 Implementation started September 6, 2026. The original scope remains the acceptance contract. This is an implementation checkpoint, **not a completed release**.
 
-Current evidence: 91 Python tests pass against the installed wheel with PyTorch and Transformers absent; the real MCP stdio round trip and retained real-project investigation are included. Ten checks pass against the installed VSIX in VS Code 1.132.1 on macOS. The authored-edit demo and the full Transformers static-cache case reproduce their expected comparisons. The validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
+Current evidence: 93 Python tests pass against the installed wheel with PyTorch and Transformers absent; the real MCP stdio round trip and retained real-project investigation are included. Eleven checks pass against the installed VSIX in VS Code 1.132.1 on macOS, including editor-group preservation and rendered-table activation. The authored-edit demo and the full Transformers static-cache case reproduce their expected comparisons. The CLI now displays both baseline and candidate guard categories. The validation changes have a retained 10 MiB/100 MiB performance rerun. See [verification evidence](../artifacts/VERIFICATION.md).
 
 ## Milestones
 
@@ -55,5 +55,5 @@ Human review of expected fixture explanations and external user feedback must be
 ## Next work in the unchanged scope
 
 1. Complete human key and semantic review of the [recorded 60-trial pilot](../benchmarks/agent_pilot/README.md). The strict result shows no demonstrated end-to-end improvement. An explicitly post-hoc answer-member analysis describes formatting sensitivity; it does not replace the primary result. No paid model usage was incurred.
-2. Finish native editor visual verification. The short [CLI demonstration](DEMO.md) is recorded and reproducible. Hosted CI has not run while the repository remains local; no Linux runtime claim is made.
+2. Resume native editor visual verification after the Mac is unlocked. Import, comparison totals and table contents were inspected; the updated profile's final layout and source/evidence walkthrough remain open. The corrected [CLI demonstration](DEMO.md) is recorded and reproducible. Hosted CI has not run while the repository remains local; no Linux runtime claim is made.
 3. Obtain the required human review of fixture explanations, case study and pilot answer keys, then close the remaining items in the [requirement audit](COMPLETION_AUDIT.md). Human review has not occurred. Demand-validation targets remain unclaimed; no outreach has been sent.

@@ -1,6 +1,6 @@
 # Recorded CLI walkthrough
 
-The [26-second recording](../artifacts/demo/cli-002/walkthrough.cast) runs five real commands against the retained authored-edit captures. The [plain-text transcript](../artifacts/demo/cli-002/transcript.txt) is readable without a player. The [receipt](../artifacts/demo/cli-002/receipt.json) retains each argument list, stdout, stderr, exit code, command duration, recorder hash and recording hash. All five commands exited 0.
+The [26-second recording](../artifacts/demo/cli-003/walkthrough.cast) runs five real commands against the retained authored-edit captures. The [plain-text transcript](../artifacts/demo/cli-003/transcript.txt) is readable without a player. The [receipt](../artifacts/demo/cli-003/receipt.json) retains each argument list, stdout, stderr, exit code, command duration, recorder hash and recording hash. All five commands exited 0.
 
 1. Import the baseline report and its manifest.
 2. Import the candidate report and its manifest.
@@ -8,11 +8,11 @@ The [26-second recording](../artifacts/demo/cli-002/walkthrough.cast) runs five 
 4. Retrieve an original guard reason, including its artifact path and SHA-256.
 5. Verify the edited function and the newly added, unmatched helper.
 
-The comparison matches `compute` across the source edit: three completed compilations, including two confirmed recompilations, become one completed compilation with no confirmed recompilation. The candidate's new helper contributes another completed compilation to candidate totals. The manifest comparison is consistent, but declarations alone do not prove equivalent execution. Application performance remains explicitly unmeasured.
+The comparison matches `compute` across the source edit: three completed compilations, including two confirmed recompilations, become one completed compilation with no confirmed recompilation. Guard categories are shown on both sides: `python_scalar → none recorded`. The candidate's new helper contributes another completed compilation to candidate totals, and its absent baseline counterpart is labeled `function absent`. The manifest comparison is consistent, but declarations alone do not prove equivalent execution. Application performance remains explicitly unmeasured.
 
-This is actual CLI subprocess output with narrated command labels and five intentional five-second presentation pauses. Its total duration is not a processing benchmark. The recording used the separate installed-wheel environment without PyTorch or Transformers. It predates the post-pilot MCP import-navigation change; the CLI behavior is unchanged. It is not a native VS Code screen recording.
+This is actual CLI subprocess output with narrated command labels and five intentional five-second presentation pauses. Its total duration is not a processing benchmark. The recording used the separate installed-wheel environment without PyTorch or Transformers, after the baseline-guard display correction. It is not a native VS Code screen recording.
 
-The file uses the documented [asciicast v2 format](https://docs.asciinema.org/manual/asciicast/v2/). A compatible player can replay it locally; no upload is required. The earlier `artifacts/demo/cli-001/failure.json` records a recorder setup assertion failure and is not a successful demo.
+The file uses the documented [asciicast v2 format](https://docs.asciinema.org/manual/asciicast/v2/). A compatible player can replay it locally; no upload is required. The earlier `artifacts/demo/cli-001/failure.json` records a recorder setup assertion failure and is not a successful demo. `cli-002` retains the earlier successful recording, whose comparison displayed only candidate guard categories; use `cli-003` for the corrected current behavior.
 
 ## Reproduce
 
@@ -29,4 +29,6 @@ Choose a new output directory each time. The recorder refuses to overwrite an ex
 
 The tested VSIX is installed in the user-approved `Dynamo Diff Demo` profile. Both authored captures were imported through the native UI. The demo workspace's Python setting points to the virtual environment executable, preserving its path rather than resolving its symlink to the base Python interpreter.
 
-The installed-VSIX integration suite passed ten checks, including comparison, captured source/evidence navigation, error recovery and cancellation. Native visual acceptance is still pending: macOS screen capture and accessibility control failed before a verified comparison-table walkthrough. These automation errors do not establish another editor crash. The CLI recording does not substitute for that visual check.
+The installed-VSIX integration suite passed eleven checks, including comparison, captured source/evidence navigation, error recovery, cancellation, active-editor-group reuse and activation of the rendered table. The original navigation code expanded a one-column test workspace to six columns; the retained regression fails on that behavior, and the fix preserves one column. Source snapshots remain distinct and read-only.
+
+Native import and comparison produced three → two total completed compilations and two → zero confirmed recompilations. The table's baseline/candidate categories and validity fields were inspected through the native accessibility tree. The rebuilt VSIX was then installed in the approved profile, and the demo window was reloaded. The desktop locked before the updated layout and native source/evidence walkthrough could be visually verified. The CLI recording does not substitute for that remaining visual check. Earlier stale capture/accessibility errors are retained in the verification notes; they do not establish another editor crash.

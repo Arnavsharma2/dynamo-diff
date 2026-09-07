@@ -57,6 +57,7 @@ export async function run(): Promise<void> {
     assert.ok(roots.some((item: any) => item.label === 'compute' && item.description.includes('2 → 0')));
     checks.push('CLI/editor full JSON parity and native results tree');
 
+    const initialEditorGroups = vscode.window.tabGroups.all.length;
     const sourceBefore = await vscode.commands.executeCommand<any>('dynamoDiff.openSource', {
         captureId: before.capture_id, functionId: row.baseline[0].id,
     });
@@ -94,6 +95,23 @@ export async function run(): Promise<void> {
     assert.ok(table?.includes('| Confirmed successful recompilations | 2 | 0 |'));
     assert.ok(table?.includes('not measured'));
     assert.ok(!table?.includes('undefined'));
+    // The built-in Markdown command returns before its preview tab is activated.
+    await new Promise<void>((resolve, reject) => {
+        const timeout = setTimeout(() => {
+            subscription.dispose();
+            reject(new Error('Show Comparison Table did not select its rendered Markdown preview'));
+        }, 5000);
+        const check = () => {
+            if (vscode.window.tabGroups.activeTabGroup.activeTab?.input instanceof vscode.TabInputWebview) {
+                clearTimeout(timeout); subscription.dispose(); resolve();
+            }
+        };
+        const subscription = vscode.window.tabGroups.onDidChangeTabs(check);
+        check();
+    });
+    assert.equal(vscode.window.tabGroups.all.length, initialEditorGroups,
+        'Source, evidence and table navigation must not keep splitting the workbench');
+    checks.push('captured views reuse the active editor group and the table selects its rendered preview');
     const malicious = structuredClone(report);
     malicious.functions[0].candidate[0].source.relative_path = '<img src="https://example.invalid/">![remote](https://example.invalid/)\n|';
     const safeTable = comparisonTable(malicious);

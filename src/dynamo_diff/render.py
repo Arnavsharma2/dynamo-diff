@@ -42,13 +42,17 @@ def render_comparison(comparison: Comparison, *, markdown: bool = False) -> str:
     lines = ["# Dynamo comparison" if markdown else "Dynamo comparison", "", f"Baseline: {comparison.baseline_id}",
              f"Candidate: {comparison.candidate_id}", f"Workload comparability: {comparison.workload_comparability}", ""]
     if markdown:
-        lines.extend(["| Function | Match | Completed before → after | Confirmed recompiles before → after | Guard categories |",
+        lines.extend(["| Function | Match | Completed before → after | Confirmed recompiles before → after | Guard categories before → after |",
                       "|---|---|---:|---:|---|"])
     for row in comparison.functions:
         group = (row.candidate or row.baseline)[0]
         source = group.source
         name = f"{source.relative_path or source.captured_path or '?'}:{source.qualified_name or source.function or '?'}"
-        guards = ", ".join(sorted({category for item in row.candidate for category in item.guard_categories})) or "none recorded"
+        guards = " → ".join(
+            ", ".join(sorted({category for item in groups for category in item.guard_categories}))
+            or ("none recorded" if groups else "function absent")
+            for groups in (row.baseline, row.candidate)
+        )
         completed = f"{row.baseline_counts.completed} → {row.candidate_counts.completed}"
         recompiles = f"{row.baseline_counts.confirmed_successful_recompilations} → {row.candidate_counts.confirmed_successful_recompilations}"
         if markdown:
@@ -56,7 +60,7 @@ def render_comparison(comparison: Comparison, *, markdown: bool = False) -> str:
             lines.append(f"| {escaped_name} | {row.match_status} | {completed} | {recompiles} | {guards} |")
         else:
             lines.append(f"{name}: {row.match_status} ({row.match_method})")
-            lines.append(f"  Completed: {completed}; confirmed recompiles: {recompiles}; guards: {guards}")
+            lines.append(f"  Completed: {completed}; confirmed recompiles: {recompiles}; guards before → after: {guards}")
     lines.append("")
     for difference in comparison.comparability_differences:
         lines.append(f"Workload metadata: {difference['field']} is {difference['status']}.")

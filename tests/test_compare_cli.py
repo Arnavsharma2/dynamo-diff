@@ -85,6 +85,27 @@ def test_cli_matches_library_and_returns_structured_errors(tmp_path):
     assert json.loads(error.stderr)["error"]["code"] == "invalid_capture_id"
 
 
+@pytest.mark.parametrize("output_format", ["text", "markdown"])
+def test_cli_displays_guard_categories_on_both_sides_of_an_edit(tmp_path, output_format):
+    store = Store(tmp_path)
+    before, after = imported(store, "edit_before"), imported(store, "edit_after")
+    command = [sys.executable, "-m", "dynamo_diff.cli", "--store", str(tmp_path), "compare"]
+    for baseline, candidate, categories in (
+        (before, after, "python_scalar → none recorded"),
+        (after, before, "none recorded → python_scalar"),
+    ):
+        run = subprocess.run(
+            [*command, baseline.id, candidate.id, "--format", output_format],
+            capture_output=True, text=True, timeout=30,
+        )
+        assert run.returncode == 0, run.stderr
+        # The original baseline has explicit scalar guards. Removing them must
+        # not make the entire comparison say that no guards were recorded.
+        assert categories in run.stdout
+        assert "function absent" in run.stdout  # The added/removed helper has no counterpart.
+        assert "Application performance: not measured." in run.stdout
+
+
 @pytest.mark.parametrize("value", [None, "", "  "])
 def test_unknown_declarations_do_not_make_workload_consistent(tmp_path, value):
     from dynamo_diff.compare import comparability

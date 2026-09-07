@@ -6,4 +6,5 @@ graft benchmarks
 graft case_studies
 graft .github
 recursive-include artifacts/demo/cli-002 *.cast *.json *.txt
+recursive-include artifacts/demo/cli-003 *.cast *.json *.txt
 global-exclude __pycache__ *.py[cod] .DS_Store .lock

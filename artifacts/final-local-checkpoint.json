@@ -1,31 +1,31 @@
 {
-  "created_at": "2026-09-07T05:54:25.006106+00:00",
+  "created_at": "2026-09-07T06:23:46.473698+00:00",
   "status": "final_local_development_checkpoint",
   "release_complete": false,
   "files": {
     "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
-      "sha256": "bfd09db0a1a3667fce99a67d61403b9e342f3ea453663d16fe9d4cff13a9072c",
-      "bytes": 31412
+      "sha256": "29f0bb927a398b525a85f176b5c90684995c9cdfe7561b229434bc5f0ba449f8",
+      "bytes": 31456
     },
     "dist/dynamo_diff-0.1.0.tar.gz": {
-      "sha256": "b9245fe64c9cb5d49291d507f07a8636db29f9b1ec344fb1028f1d948133e462",
-      "bytes": 3772332
+      "sha256": "e54fff32cc6e66aa6b353170281d65d32d216668553b7e22f702828f943e1933",
+      "bytes": 3773633
     },
     "extension/dynamo-diff-0.1.0.vsix": {
-      "sha256": "8f8bbe5f73b30e8e0933471b46153ddfbb706e43a5b8249b8c597339a3f28d6a",
-      "bytes": 9736
+      "sha256": "656d722307549ce69c572ec491ffeedd449b97c569ca17c37d87b8eee4b8bcaf",
+      "bytes": 9732
     },
     "artifacts/wheel-tests.xml": {
-      "sha256": "4c85dc6f6fd5e8d12371ac8257b62a1ce6ee598b9bfba992b1dc9d95cb0d01cb",
-      "bytes": 11980
+      "sha256": "4d24cc68c24430cc8563470b8e86aed84cdcf832003146ac313aa80d7bc82b37",
+      "bytes": 12250
     },
     "artifacts/pilot-harness-tests.xml": {
       "sha256": "f30ee35a180133bbf95c08a8728fd30c2c6fa2f14bd59d681005ea81652b9dfa",
       "bytes": 1922
     },
     "artifacts/installed-editor-integration.json": {
-      "sha256": "e80d9875109dc31eb009ec4b7ee99cd9d161aaf7581c3777c9de8a4cba5cfa3f",
-      "bytes": 835
+      "sha256": "241e0e213c30fd5ab3d2080a37c977a0d76eab067339535686675f2c438dc5fb",
+      "bytes": 930
     },
     "docs/PROJECT_SCOPE.md": {
       "sha256": "bbbfc8f815cde3abb222646ba43403c9026287b1a99effe9f736bbe1a7fbea5a",
@@ -46,6 +46,22 @@
     "artifacts/demo/cli-002/receipt.json": {
       "sha256": "7bc85e7160dfdf1c7e70ad328c73371525420015836914eee904ddf527e8d5cb",
       "bytes": 7865
+    },
+    "artifacts/demo/cli-003/walkthrough.cast": {
+      "sha256": "7d37c9326dab0aa6b70c3b5ef044474c5eb345fc53e8a6e800567a0d46da3201",
+      "bytes": 7702
+    },
+    "artifacts/demo/cli-003/receipt.json": {
+      "sha256": "8c40fe74c1f5e8afccc93141ff837c71b7ce90f976d19422b7ee3df86a502c55",
+      "bytes": 8014
+    },
+    "artifacts/editor-integration.json": {
+      "sha256": "0bf64be851f7249c25df02462e23de4b087b323ceba139efa5630bc4b9282fca",
+      "bytes": 763
+    },
+    "artifacts/editor-view-regression-before.log": {
+      "sha256": "3af14c60cc5a180e813e69a66b20fe5538a11936cd73edec884080fcb54b0e0c",
+      "bytes": 2242
     }
   },
   "python_source_files": {
@@ -59,15 +75,15 @@
     "src/dynamo_diff/manifest.py": "a77247be0139d0c9022c182836a5776f145a086a8287803b6a4e1ca58e1a27c9",
     "src/dynamo_diff/mcp_server.py": "19c559dfcf82480be562e00c90507448c12312e3c58016ae79f94ba6178ef2a7",
     "src/dynamo_diff/model.py": "0fccd8a583a1edd5797635d92b5fcf70ee48bbec7e86911b9719150ba42af0f6",
-    "src/dynamo_diff/render.py": "3fd82b9ee2957a6bd6a5ffc8570020a7e3afde5ccfa39d3473d9d2b9d90c958b",
+    "src/dynamo_diff/render.py": "5701c22b79fd6320176551f8aca65ed60923cc2e23dee7e3ada278a01a9ec365",
     "src/dynamo_diff/store.py": "27d2ee4f9812a742a2f2f396a648b504abe7714bc74013c6d4b4ef6c50dc8ee0"
   },
   "installed_wheel_sources_match_current_checkout": true,
   "ml_runtimes_absent": true,
   "test_results": {
     "wheel-tests.xml": {
-      "passed": 91,
-      "seconds": 3.526
+      "passed": 93,
+      "seconds": 4.14
     },
     "pilot-harness-tests.xml": {
       "passed": 12,
@@ -78,7 +94,7 @@
     "authored_edit",
     "transformers_static_cache"
   ],
-  "installed_vsix_checks_passed": 10,
+  "installed_vsix_checks_passed": 11,
   "demo_profile": {
     "name": "Dynamo Diff Demo",
     "installation_verified": true,
@@ -86,12 +102,26 @@
       "edit_before",
       "edit_after"
     ],
-    "native_comparison_visual_acceptance": "pending_screen_capture_and_accessibility_failure"
+    "native_comparison_visual_acceptance": "Updated profile installed and reload requested; final layout and source/evidence walkthrough pending because the Mac locked",
+    "installed_vsix_sha256": "656d722307549ce69c572ec491ffeedd449b97c569ca17c37d87b8eee4b8bcaf",
+    "native_comparison_totals_verified": {
+      "completed": [
+        3,
+        2
+      ],
+      "confirmed_recompilations": [
+        2,
+        0
+      ]
+    },
+    "native_table_fields_inspected_before_view_fix": true
   },
   "cli_recording": {
+    "receipt": "artifacts/demo/cli-003/receipt.json",
     "commands_passed": 5,
-    "seconds": 25.905253958015237,
-    "is_native_editor_video": false
+    "seconds": 25.883286791999126,
+    "is_native_editor_video": false,
+    "both_guard_sides_visible": true
   },
   "pilot": {
     "planned_attempts": 60,
@@ -102,12 +132,15 @@
   },
   "source_archive": {
     "required_evidence_members_verified": [
-      "docs/DEMO.md",
-      "artifacts/demo/cli-002/walkthrough.cast",
       "artifacts/demo/cli-002/receipt.json",
-      "benchmarks/agent_pilot/runs/run-001/frozen-code.tar.gz",
+      "artifacts/demo/cli-002/walkthrough.cast",
+      "artifacts/demo/cli-003/receipt.json",
+      "artifacts/demo/cli-003/transcript.txt",
+      "artifacts/demo/cli-003/walkthrough.cast",
       "benchmarks/agent_pilot/runs/run-001/analysis/RESULTS.md",
-      "benchmarks/agent_pilot/runs/run-001/analysis/format-sensitivity.json"
+      "benchmarks/agent_pilot/runs/run-001/analysis/format-sensitivity.json",
+      "benchmarks/agent_pilot/runs/run-001/frozen-code.tar.gz",
+      "docs/DEMO.md"
     ],
     "excluded_cache_and_lock_paths": true
   },
@@ -115,7 +148,14 @@
   "open_gates": [
     "human fixture and case explanation review",
     "human pilot answer-key and semantic evidence review",
-    "native editor visual acceptance",
-    "hosted CI execution"
-  ]
+    "unlock Mac and finish native editor visual acceptance",
+    "approve repository upload and execute hosted CI"
+  ],
+  "development_editor_checks_passed": 10,
+  "installed_wheel_payloads_match_current_archive": true,
+  "display_regressions": {
+    "baseline_commit": "46825a5",
+    "cli_regression": "Two text/Markdown cases failed before the change; both directions now preserve baseline and candidate categories",
+    "editor_regression": "Retained before log shows six editor groups instead of one; corrected development and installed-VSIX checks preserve one and activate the rendered preview"
+  }
 }

@@ -149,7 +149,7 @@ class Documents implements vscode.TextDocumentContentProvider {
         this.values.set(uri.toString(), text);
         let document = await vscode.workspace.openTextDocument(uri);
         document = await vscode.languages.setTextDocumentLanguage(document, language);
-        const editor = await vscode.window.showTextDocument(document, { preview: true, viewColumn: vscode.ViewColumn.Beside });
+        const editor = await vscode.window.showTextDocument(document, { preview: true, viewColumn: vscode.ViewColumn.Active });
         if (line) {
             const position = new vscode.Position(Math.max(0, Math.min(line - 1, document.lineCount - 1)), 0);
             editor.selection = new vscode.Selection(position, position);
@@ -252,7 +252,7 @@ export function activate(context: vscode.ExtensionContext) {
     register('dynamoDiff.showTable', async () => {
         if (!results.report) { throw new Error('Compare two captures to create a table.'); }
         const editor = await documents.open('table', results.report.id, 'comparison.md', comparisonTable(results.report), 'markdown');
-        await vscode.commands.executeCommand('markdown.showPreviewToSide', editor.document.uri);
+        await vscode.commands.executeCommand('markdown.showPreview', editor.document.uri);
         return editor.document.getText();
     });
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## Python analyzer 0.1.1 — prepared for PyPI
+
+- Add a PyPI-specific package description with absolute documentation links and installation instructions for the base analyzer and optional MCP extra.
+- Add a manually dispatched build, verification and Trusted Publishing workflow, followed by installation checks against the public index.
+- Keep the analyzer implementation unchanged apart from its reported version. Publication is pending account setup; see [publishing instructions](PYPI_PUBLISHING.md).
+
 ## VS Code extension 0.1.1 — September 7, 2026
 
 Published to [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff) under `dynamo-diff.dynamo-diff`. This editor package adds Python setup instructions, compatibility details, search keywords and support links. It uses the same verified runtime behavior and requires Python analyzer 0.1.0. Marketplace validation and a byte-for-byte public download check passed; see the [publication receipt](../artifacts/marketplace-publication.json).

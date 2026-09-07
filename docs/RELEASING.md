@@ -1,6 +1,6 @@
 # Build and release checklist
 
-These instructions create installable artifacts. Python analyzer 0.1.0 uses [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0); VS Code extension 0.1.1 is published on [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff). [Installation instructions](INSTALL.md) cover both components. PyPI is not used.
+These instructions create installable artifacts. Python analyzer 0.1.0 uses [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0); VS Code extension 0.1.2 is published on [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff). [Installation instructions](INSTALL.md) cover both components. Python analyzer 0.1.1 is prepared for PyPI; its [publishing workflow and account configuration](PYPI_PUBLISHING.md) are documented separately. Public PyPI publication is pending.
 
 Portfolio v1 has completed this checklist under the [approved scope audit](COMPLETION_AUDIT.md). The [delivery receipt](../artifacts/portfolio-v1-delivery.json) identifies its wheel, source archive and tested VSIX. Reviews are AI-reviewed; the user made independent human review optional. The native walkthrough is complete in the recorded demo profile.
 

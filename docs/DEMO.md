@@ -1,5 +1,7 @@
 # Recorded CLI walkthrough
 
+**Native walkthrough complete.** In the approved `Dynamo Diff Demo` profile, imports, comparison table, baseline source, candidate source and original guard evidence were visually inspected. Candidate `model.py` opens `compute` at captured line 9, shows `VARIANT = "after"`, the branch-free `return x.sin() * 2`, and the new helper in one editor group. Both source snapshots are distinct, consistent with the installed-extension immutability checks. The final candidate screenshot was inspected after native state recovered from the earlier stale captures and locked desktop. The chronology below preserves those earlier limitations; they are now resolved for this walkthrough.
+
 The [26-second recording](../artifacts/demo/cli-003/walkthrough.cast) runs five real commands against the retained authored-edit captures. The [plain-text transcript](../artifacts/demo/cli-003/transcript.txt) is readable without a player. The [receipt](../artifacts/demo/cli-003/receipt.json) retains each argument list, stdout, stderr, exit code, command duration, recorder hash and recording hash. All five commands exited 0.
 
 1. Import the baseline report and its manifest.

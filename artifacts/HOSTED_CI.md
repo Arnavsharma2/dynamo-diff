@@ -1,5 +1,7 @@
 # Hosted CI checkpoint
 
+The approved review-policy documentation revision `e20b29163b1f0b658e26037bba54f618e12ea1da` also passed all three jobs in [run 34149211212](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34149211212): macOS/Linux installed-wheel checks and Linux development/installed-extension checks. The implementation-specific retained logs below continue to document the unchanged runtime and its regression coverage.
+
 ## Current implementation: source-map validation
 
 [Verify run 34147070929](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34147070929) passed at commit `813b7f8407175c14ffb666eb4c0af1aa541a03d5` on September 7, 2026. Both macOS arm64 and Ubuntu x64 used CPython 3.13.15 and passed **96 installed-wheel tests**, both offline demonstrations and **12 evaluation-harness tests**. The Linux editor job passed **10 development-host checks**, packaged the extension, and passed **11 isolated installed-VSIX checks** in VS Code 1.132.1.

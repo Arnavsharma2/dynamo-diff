@@ -2,6 +2,8 @@
 
 These instructions create installable local artifacts. Public package publication is a separate action requiring a chosen distribution channel.
 
+Portfolio v1 has completed this checklist under the [approved scope audit](COMPLETION_AUDIT.md). The [delivery receipt](../artifacts/portfolio-v1-delivery.json) identifies its wheel, source archive and tested VSIX. Reviews are AI-reviewed; the user made independent human review optional. The native walkthrough is complete in the recorded demo profile.
+
 ## Build
 
 Use Python 3.13 and install the hashed test/build lock, then the checkout:

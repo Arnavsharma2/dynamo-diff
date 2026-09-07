@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-09-07T18:02:02.804996+00:00",
+  "kind": "portfolio_v1_delivery",
+  "portfolio_v1_complete": true,
+  "version": "0.1.0",
+  "approved_scope": "docs/PROJECT_SCOPE.md",
+  "completion_audit": "docs/COMPLETION_AUDIT.md",
+  "review_type": "AI review; independent human review optional and not performed",
+  "required_open_gates": [],
+  "supersedes_current_artifact_identity": "artifacts/review-policy-checkpoint.json",
+  "implementation_commit": "813b7f8407175c14ffb666eb4c0af1aa541a03d5",
+  "runtime_changes_since_implementation_commit": false,
+  "validation": {
+    "installed_wheel": {
+      "tests": "96",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.992"
+    },
+    "evaluation_harness": {
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.785"
+    }
+  },
+  "offline_demonstrations": [
+    "authored_edit",
+    "transformers_generate_static_cache"
+  ],
+  "native_visual_review": {
+    "date": "2026-09-07",
+    "profile": "Dynamo Diff Demo",
+    "vscode": "1.132.1",
+    "platform": "macOS arm64",
+    "observed_editor_groups": 1,
+    "passed": [
+      "imports and comparison selection",
+      "baseline source at captured line 9 with original scalar branch",
+      "readable rendered table with both guard columns and limitations",
+      "original guard excerpt with artifact/record/hash provenance",
+      "candidate source at captured line 9 with VARIANT after and scalar branch removed"
+    ],
+    "candidate_source_sha256": "0c8eb3ad8975538c4e85b8e15c20b58bf0e468794c4002c6b28608a780af2000",
+    "evidence": "Native screenshots inspected through CUA; notes in docs/DEMO.md and artifacts/VERIFICATION.md"
+  },
+  "payload_verification": {
+    "wheel_python_matches_checkout_and_installed_package": true,
+    "wheel_readme_matches_final_documentation": true,
+    "sdist_docs_and_demo_payloads_match_checkout": true,
+    "vsix_runtime_matches_tested_build": true,
+    "frozen_pilot_inputs_and_archive_verified": true,
+    "original_scope_preserved_and_scope_copies_equal": true
+  },
+  "hosted_ci_evidence": [
+    "https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34147070929",
+    "https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34149211212"
+  ],
+  "distribution": {
+    "repository": "https://github.com/Arnavsharma2/dynamo-diff",
+    "visibility": "private",
+    "pypi_published": false,
+    "marketplace_published": false
+  },
+  "limitations": [
+    "No demonstrated end-to-end improvement in the recorded agent pilot",
+    "Mechanical pilot scores are not human semantic validation",
+    "No application-speed or CUDA/Inductor claim",
+    "External adoption and human review unclaimed",
+    "Compatibility limited to recorded producer and test environments"
+  ],
+  "files": {
+    "dist/dynamo_diff-0.1.0-py3-none-any.whl": {
+      "sha256": "8afd975e26f61fe4703b994e6259883ded8a67494e4a160b702306e5f71c6cf5",
+      "bytes": 31744
+    },
+    "dist/dynamo_diff-0.1.0.tar.gz": {
+      "sha256": "e95f96ca3f58a9359946cccb3829b5a30584645cca1ea288623ee2534cc72baa",
+      "bytes": 3779354
+    },
+    "extension/dynamo-diff-0.1.0.vsix": {
+      "sha256": "656d722307549ce69c572ec491ffeedd449b97c569ca17c37d87b8eee4b8bcaf",
+      "bytes": 9732
+    },
+    "docs/PROJECT_SCOPE.md": {
+      "sha256": "20348947bf272805077b10f0d4cd57e72d8c6d7cc3fc6489865ebfbc6195c925",
+      "bytes": 28701
+    },
+    "docs/PROJECT_SCOPE_ORIGINAL.md": {
+      "sha256": "bbbfc8f815cde3abb222646ba43403c9026287b1a99effe9f736bbe1a7fbea5a",
+      "bytes": 27673
+    },
+    "docs/COMPLETION_AUDIT.md": {
+      "sha256": "e220f9af693c8308ec80c7ed03a4fc77589c5e228ee9ddece43803fe9a637956",
+      "bytes": 9005
+    },
+    "docs/STATUS.md": {
+      "sha256": "b815ff249970e3e72ff3e44061f363eeda5a12cad6f2e3f0718963208d8d2962",
+      "bytes": 8198
+    },
+    "docs/DEMO.md": {
+      "sha256": "f5931694f80ffac2aee504fb6f7f6b745e7a8279587460d0f9943138533f665e",
+      "bytes": 6062
+    },
+    "docs/CHANGELOG.md": {
+      "sha256": "e95cd4029ced707e5354372a17683e8af17efdc587fba6cad72ce4f83c1e838f",
+      "bytes": 1401
+    },
+    "artifacts/portfolio-v1-wheel-tests.xml": {
+      "sha256": "cc0f88262f11a8cb867bb54f8e4dc7c48ab562e113da91f163401b674cc967c8",
+      "bytes": 12666
+    },
+    "artifacts/portfolio-v1-wheel-check.log": {
+      "sha256": "4fc4f868640250281f30596482b5547e58a5c2ca321c313dbf9660fc57b2568e",
+      "bytes": 1500
+    },
+    "artifacts/portfolio-v1-pilot-tests.xml": {
+      "sha256": "7d37ff11c742991ae74ef6e06ecf950b02a2a2014bf7c854bd1e1775bb8dc8f8",
+      "bytes": 1922
+    },
+    "artifacts/editor-integration.json": {
+      "sha256": "0bf64be851f7249c25df02462e23de4b087b323ceba139efa5630bc4b9282fca",
+      "bytes": 763
+    },
+    "artifacts/installed-editor-integration.json": {
+      "sha256": "241e0e213c30fd5ab3d2080a37c977a0d76eab067339535686675f2c438dc5fb",
+      "bytes": 930
+    },
+    "artifacts/demo/cli-003/receipt.json": {
+      "sha256": "8c40fe74c1f5e8afccc93141ff837c71b7ce90f976d19422b7ee3df86a502c55",
+      "bytes": 8014
+    },
+    "benchmarks/agent_pilot/runs/run-001/analysis/scores.json": {
+      "sha256": "e40385c4c8f3f9c86bbfc8cc3622fb7cf3718e40614ebfa12dd6205752e189e2",
+      "bytes": 172253
+    },
+    "benchmarks/agent_pilot/runs/run-001/frozen-code-receipt.json": {
+      "sha256": "6e81d9cf2d89c9b2dff59c0274846bc505cfe7f1aa8e5ce41c8d127689f611e9",
+      "bytes": 1959
+    }
+  }
+}

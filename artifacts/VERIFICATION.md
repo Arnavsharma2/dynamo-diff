@@ -1,5 +1,11 @@
 # Verification checkpoint
 
+## Portfolio v1 delivery
+
+All required portfolio-v1 gates in the [approved scope audit](../docs/COMPLETION_AUDIT.md) are satisfied. The final native candidate screenshot shows `compute` at captured line 9, `VARIANT = "after"`, the removed scalar-dependent branch and the new helper, readable in one editor group. Baseline source, comparison table and original evidence had already passed visual inspection. This completes the native walkthrough in the approved macOS VS Code 1.132.1 profile.
+
+The [delivery receipt](portfolio-v1-delivery.json) identifies final artifacts, source/documentation payload checks and validation. Final Python sources and extension runtime remain identical to the source-map revision; the wheel and source archive were rebuilt to carry the final documentation. No additional model calls or application-speed measurements were needed. Reviews remain AI-reviewed. The previous checkpoint sections below are historical and do not reopen the now-resolved native or optional human-review delivery gates.
+
 ## Approved review-policy revision and evidence-view completion
 
 On September 7, 2026, the user made independent human fixture/case/pilot review optional for portfolio v1. The [current scope](../docs/PROJECT_SCOPE.md) records that revision and links the byte-preserved [original proposal](../docs/PROJECT_SCOPE_ORIGINAL.md). Reviews remain AI-reviewed; no human validation is claimed. Frozen pilot protocols, responses and scores are unchanged. Earlier pending-review notes below describe their historical checkpoints.

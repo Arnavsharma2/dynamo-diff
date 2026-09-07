@@ -4,7 +4,7 @@
 
 | Component | Tested version / role |
 |---|---|
-| CPython | 3.13.2 locally on macOS arm64; hosted 3.13.14 on macOS arm64 and 3.13.15 on Linux x64 |
+| CPython | 3.13.2 locally on macOS arm64; hosted 3.13.14/3.13.15 on macOS arm64 and 3.13.15 on Linux x64 |
 | PyTorch | 2.14.0, source commit `08187d9e0fba026dc8217405802ab5381dc88d90` |
 | Transformers | 5.10.1, full CPU `generate()` static-cache case study |
 | tlparse | Published package 0.4.3; `raw.jsonl` export and linked payloads |

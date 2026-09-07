@@ -1,5 +1,13 @@
 # Hosted CI checkpoint
 
+## Current implementation: source-map validation
+
+[Verify run 34147070929](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34147070929) passed at commit `813b7f8407175c14ffb666eb4c0af1aa541a03d5` on September 7, 2026. Both macOS arm64 and Ubuntu x64 used CPython 3.13.15 and passed **96 installed-wheel tests**, both offline demonstrations and **12 evaluation-harness tests**. The Linux editor job passed **10 development-host checks**, packaged the extension, and passed **11 isolated installed-VSIX checks** in VS Code 1.132.1.
+
+The [status receipt](hosted-ci-34147070929.json) and [complete log](hosted-ci-34147070929.log) retain exact jobs, environments, commands and results. This runner's VSIX SHA-256 is `1717312c8f2d1c5f24298bc3c1ebdcd96ad89ef03fb8b581e599e6992e97e669`. These results include the [source-map regressions](../docs/INPUT_AUDIT.md); they required no additional CI fix or model calls. The [local source-map checkpoint](source-map-checkpoint.json) identifies the separately built local packages.
+
+## Initial upload
+
 The private `Arnavsharma2/dynamo-diff` repository was created and the prepared `codex/dynamo-diff` branch uploaded with user approval on September 7, 2026. [Verify run 34145658752](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34145658752) passed on commit `0fd1053530792a979ec397a1b7f91154b9d4f0d1` without a workflow or implementation fix.
 
 | Job | Environment observed in the log | Result |

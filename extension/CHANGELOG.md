@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Add a custom amber and mint compiler-path icon to the extension and Marketplace listing.
+
 ## 0.1.1
 
 - Prepare the Marketplace package with Python setup instructions, compatibility details, search keywords and support links.

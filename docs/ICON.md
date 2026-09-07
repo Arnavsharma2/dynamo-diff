@@ -1,0 +1,7 @@
+# Extension icon
+
+The extension uses [images/icon.png](../extension/images/icon.png), generated on September 7, 2026 with Codex's built-in image-generation tool. The amber branching path and mint streamlined path form a D-shaped compiler comparison mark. The original PNG is included without manual image edits.
+
+## Generation prompt
+
+Use case: logo-brand. Asset type: a square raster icon for the Dynamo Diff VS Code Marketplace extension. Primary request: create a polished, distinctive developer-tool icon representing comparison of PyTorch compiler traces. Design: one bold, compact symbol made from two parallel compiler-flow paths: a small branching path beside a streamlined path, using a few large circular nodes joined by thick rounded strokes. Integrate the two paths into a balanced, almost D-shaped silhouette, with clear negative space and a subtle sense of before/after comparison. Style: precise flat graphic design, crisp edges, minimal geometric construction, strong small-size readability. Color treatment: dark navy background with mint and warm amber accents, consistent with this project's prior visual palette. Center the symbol with generous padding, fill most of the square, no surrounding mockup or page. No words, letters, captions, numbers, watermarks, gradients, glow, shadows, tiny circuitry, brains, robots, generic AI sparkles, or copied brand marks. Deliver exactly one finished square icon, preferably 512 by 512 pixels, usable as a PNG asset.

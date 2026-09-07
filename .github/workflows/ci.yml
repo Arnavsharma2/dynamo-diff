@@ -64,6 +64,6 @@ jobs:
       - name: Verify the installed VSIX
         working-directory: extension
         env:
-          DYNAMO_DIFF_VSIX: ${{ github.workspace }}/extension/dynamo-diff-0.1.1.vsix
+          DYNAMO_DIFF_VSIX: ${{ github.workspace }}/extension/dynamo-diff-0.1.2.vsix
           DYNAMO_DIFF_TEST_RESULT: ${{ github.workspace }}/artifacts/ci-installed-editor.json
         run: xvfb-run --auto-servernum npm test

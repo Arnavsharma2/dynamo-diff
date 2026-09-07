@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-09-07T22:45:13.389Z",
+  "status": "published_and_validated",
+  "marketplace_url": "https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff",
+  "publisher_id": "dynamo-diff",
+  "extension_id": "dynamo-diff.dynamo-diff",
+  "version": "0.1.3",
+  "extension_first_published_date": "2026-09-07T20:10:53.343Z",
+  "version_last_updated": "2026-09-07T22:44:42.113Z",
+  "source_commit": "d91e76ece2de917d87df25dcf2f4764b78fef269",
+  "package_sha256": "00dfe48862e2e6af429c05780bc4896297c88aac2dc6d74008c1217db2c963b2",
+  "package_bytes": 1115327,
+  "public_download_byte_match": true,
+  "public_listing_http_status": 200,
+  "ci_url": "https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34167097022",
+  "verification": "Anonymous public gallery query reports the version as validated; public VSIX bytes match the tested package; listing returns HTTP 200. Public icon bytes match the packaged PNG.",
+  "icon_sha256": "370403d7573cefe405fae84ff731195f2b2dc1cae71d05068bfd8f0910177ab5",
+  "public_readme_pypi_install_verified": true,
+  "public_icon_byte_match": true,
+  "runtime_matches_0_1_2": true,
+  "public_listing_rendered_verified": true
+}

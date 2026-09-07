@@ -1,5 +1,10 @@
 # Changelog
 
+## VS Code extension 0.1.3 — September 7, 2026
+
+- Update Marketplace setup instructions to install the analyzer from PyPI. Runtime code and the icon are unchanged from 0.1.2.
+- Verify Marketplace validation, matching public VSIX/icon downloads, and the published setup instructions; see the [publication receipt](../artifacts/marketplace-publication-0.1.3.json).
+
 ## Python analyzer 0.1.1 — September 7, 2026
 
 - Add a PyPI-specific package description with absolute documentation links and installation instructions for the base analyzer and optional MCP extra.

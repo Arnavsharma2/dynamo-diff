@@ -1,6 +1,6 @@
 # Install Dynamo Diff
 
-Install the VS Code extension **0.1.2** from [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff), and install the Python analyzer **0.1.1** from [PyPI](https://pypi.org/project/dynamo-diff/). The extension requires the separately installed Python analyzer. The earlier **0.1.0** [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) remains available with its source archive, build evidence and `SHA256SUMS`.
+Install the VS Code extension **0.1.3** from [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff), and install the Python analyzer **0.1.1** from [PyPI](https://pypi.org/project/dynamo-diff/). The extension requires the separately installed Python analyzer. The earlier **0.1.0** [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) remains available with its source archive, build evidence and `SHA256SUMS`.
 
 Python 3.13 is the tested setup on macOS and Linux. The package declares Python 3.11 or newer, but other versions and Windows have not been verified. Inspecting saved captures needs neither PyTorch nor a GPU.
 

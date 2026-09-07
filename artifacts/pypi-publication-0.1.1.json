@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-09-07T22:29:21.344487+00:00",
+  "status": "published_and_verified",
+  "pypi_url": "https://pypi.org/project/dynamo-diff/0.1.1/",
+  "project": "dynamo-diff",
+  "version": "0.1.1",
+  "maintainer": "Arnavsharma2",
+  "source_commit": "b31c00981653db16ec99b1ac2127f65206cf1e32",
+  "workflow_url": "https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34166470273",
+  "workflow_conclusion": "success",
+  "trusted_publishing": true,
+  "attestations_uploaded": true,
+  "files": [
+    {
+      "filename": "dynamo_diff-0.1.1-py3-none-any.whl",
+      "sha256": "72339dda7ad50999db0c891654a1ef4bd39d6263328ebc1e66ab771a1f53284b",
+      "bytes": 30116,
+      "uploaded_at": "2026-09-07T22:23:45.200871Z",
+      "public_download_byte_match": true
+    },
+    {
+      "filename": "dynamo_diff-0.1.1.tar.gz",
+      "sha256": "7996fd7a5a6f958b2fce8612d26b6915f6f58ca05ce4e57919d7445a3bf7a76a",
+      "bytes": 3778077,
+      "uploaded_at": "2026-09-07T22:23:46.921789Z",
+      "public_download_byte_match": true
+    }
+  ],
+  "verification": {
+    "linux_public_install": "passed; 96 installed-package tests and both recorded demonstrations",
+    "macos_python": "3.13.2",
+    "macos_base_install": "passed; imported from site-packages, dependencies consistent, torch/transformers/mcp absent, both recorded demonstrations passed",
+    "macos_mcp_install": "passed; dependencies consistent and 4 MCP tests passed, including stdio subprocess integration",
+    "public_description_and_maintainer_verified": true
+  }
+}

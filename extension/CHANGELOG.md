@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Simplify analyzer setup to install directly from PyPI with `pip install dynamo-diff`.
+
 ## 0.1.2
 
 - Add a custom amber and mint compiler-path icon to the extension and Marketplace listing.

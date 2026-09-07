@@ -2,7 +2,7 @@
 
 ## One installed Python package
 
-Install the checkout with `python -m pip install '.[mcp]'` in your chosen virtual environment. All interfaces use the same capture/comparison model. The core has no model API dependency. Keep the chosen environment available: the editor does not bundle Python or download packages automatically.
+Install from PyPI with `python -m pip install 'dynamo-diff[mcp]'` in your chosen virtual environment. All interfaces use the same capture/comparison model. The core has no model API dependency. Keep the chosen environment available: the editor does not bundle Python or download packages automatically.
 
 Use absolute executable/store/capture paths in integrations. On Windows the environment's Python executable is normally under `Scripts`; on macOS/Linux it is under `bin`. Windows integration is not yet verified.
 
@@ -49,14 +49,14 @@ Default reports do not include raw source text. Requested evidence can include p
 
 ## VS Code extension
 
-Build a local VSIX from the `extension` directory:
+Install [Dynamo Diff from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff). For local development, build a VSIX from the `extension` directory:
 
 ```sh
 npm ci
 npm run package
 ```
 
-In VS Code, run **Extensions: Install from VSIX...** and select the generated VSIX. This local artifact does not require a Marketplace publisher account. The working publisher ID is not a claim of Marketplace registration.
+For that local build, run **Extensions: Install from VSIX...** in VS Code and select the generated VSIX.
 
 Set `dynamoDiff.pythonPath` to the full path of the Python executable where the package is installed. Optionally set `dynamoDiff.storePath`; otherwise the extension uses its workspace storage. Trust the workspace before invoking Python.
 

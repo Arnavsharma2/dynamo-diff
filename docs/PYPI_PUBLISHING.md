@@ -1,10 +1,10 @@
 # PyPI publication
 
-Python analyzer 0.1.1 is prepared for its first PyPI publication. It is not published until the public index and fresh-install checks pass. The existing GitHub analyzer release remains available while account setup is pending.
+Python analyzer 0.1.1 is [published on PyPI](https://pypi.org/project/dynamo-diff/0.1.1/) through [this successful workflow](https://github.com/Arnavsharma2/dynamo-diff/actions/runs/34166470273). The [publication receipt](../artifacts/pypi-publication-0.1.1.json) records matching public downloads and fresh macOS/Linux installations. The earlier GitHub analyzer release remains available.
 
 ## Publisher configuration
 
-Use the project's owner account on PyPI. Under account **Publishing**, configure this GitHub pending publisher:
+The owning PyPI account is `Arnavsharma2`. The initial GitHub pending publisher used this configuration and became an active publisher after the first release:
 
 | Field | Value |
 |---|---|
@@ -18,7 +18,7 @@ The [PyPI documentation](https://docs.pypi.org/trusted-publishers/creating-a-pro
 
 ## Release workflow
 
-The manually dispatched [publishing workflow](../.github/workflows/publish-pypi.yml) accepts only the `codex/dynamo-diff` branch. Configure the GitHub `pypi` environment to allow that branch. The workflow:
+The manually dispatched [publishing workflow](../.github/workflows/publish-pypi.yml) accepts only the `codex/dynamo-diff` branch. The GitHub `pypi` environment is configured to allow only that branch. The workflow:
 
 1. Checks that package metadata and CLI versions agree.
 2. Builds a source archive and builds the wheel from that archive with the pinned build dependencies.

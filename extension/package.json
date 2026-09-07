@@ -2,7 +2,7 @@
   "name": "dynamo-diff",
   "displayName": "Dynamo Diff",
   "description": "Compare PyTorch Dynamo captures and inspect source-linked compiler evidence.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "icon": "images/icon.png",
   "publisher": "dynamo-diff",
   "license": "MIT",

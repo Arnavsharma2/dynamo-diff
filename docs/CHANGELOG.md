@@ -1,10 +1,10 @@
 # Changelog
 
-## Python analyzer 0.1.1 — prepared for PyPI
+## Python analyzer 0.1.1 — September 7, 2026
 
 - Add a PyPI-specific package description with absolute documentation links and installation instructions for the base analyzer and optional MCP extra.
 - Add a manually dispatched build, verification and Trusted Publishing workflow, followed by installation checks against the public index.
-- Keep the analyzer implementation unchanged apart from its reported version. Publication is pending account setup; see [publishing instructions](PYPI_PUBLISHING.md).
+- Keep the analyzer implementation unchanged apart from its reported version. Published on [PyPI](https://pypi.org/project/dynamo-diff/0.1.1/) through Trusted Publishing. Public wheel/source downloads match the verified build, and fresh macOS/Linux installations pass; see the [publication receipt](../artifacts/pypi-publication-0.1.1.json).
 
 ## VS Code extension 0.1.1 — September 7, 2026
 
@@ -23,4 +23,4 @@ Initial public release of the saved-capture analyzer, local MCP server and VS Co
 
 The visual walkthrough was removed from the repository and release downloads in a documentation-only revision. Analyzer and editor runtime behavior are unchanged.
 
-The pilot shows no demonstrated end-to-end agent improvement. CPU compiler evidence does not establish an application-speed benefit. Reviews are AI-reviewed; the approved scope makes independent human review optional. This version is delivered through the public repository and [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0), with no PyPI or Marketplace publication or external-adoption claim.
+The pilot shows no demonstrated end-to-end agent improvement. CPU compiler evidence does not establish an application-speed benefit. Reviews are AI-reviewed; the approved scope makes independent human review optional. The initial 0.1.0 distribution used the public repository and [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). Later Python and editor publications are described above. External adoption remains unclaimed.

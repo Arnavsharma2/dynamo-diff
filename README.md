@@ -2,7 +2,7 @@
 
 Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behind the difference. A local Python analyzer powers a CLI, three MCP tools, and a small VS Code extension.
 
-[Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff) · [Download the Python analyzer](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) · [Setup instructions](docs/INSTALL.md) · [Compatibility](docs/COMPATIBILITY.md)
+[Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff) · [Python package on PyPI](https://pypi.org/project/dynamo-diff/) · [Setup instructions](docs/INSTALL.md) · [Compatibility](docs/COMPATIBILITY.md)
 
 ## What a comparison tells you
 
@@ -18,27 +18,28 @@ The tool does not prove an optimization is correct or faster. Several failed gua
 Use Python 3.13 for the tested setup. The package declares Python 3.11 or newer; other Python versions have not yet been verified.
 
 ```sh
-git clone https://github.com/Arnavsharma2/dynamo-diff.git
-cd dynamo-diff
 python3.13 -m venv .venv
-.venv/bin/python -m pip install '.[mcp]'
+.venv/bin/python -m pip install 'dynamo-diff[mcp]'
 .venv/bin/dynamo-diff --version
-.venv/bin/python tools/demo.py
+.venv/bin/dynamo-diff --help
 ```
 
-Inspecting saved captures requires neither PyTorch nor a GPU. The Python wheel is available in the [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0), and the editor extension is on [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff); follow the [installation guide](docs/INSTALL.md). `.[fixtures]` adds the pinned compiler and converter for generating new captures. [Compatibility](docs/COMPATIBILITY.md) lists the supported trace format; arbitrary PyTorch/tlparse versions are not supported.
+Inspecting saved captures requires neither PyTorch nor a GPU. Omit `[mcp]` if you only need the CLI and editor. The Python package is on [PyPI](https://pypi.org/project/dynamo-diff/), and the editor extension is on [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff); follow the [installation guide](docs/INSTALL.md). The `fixtures` extra adds the pinned compiler and converter for generating new captures. [Compatibility](docs/COMPATIBILITY.md) lists the supported trace format; arbitrary PyTorch/tlparse versions are not supported.
 
 ## Try the recorded edit
 
+The example scripts and captures are included in the source repository:
+
 ```sh
-.venv/bin/python tools/demo.py
+git clone https://github.com/Arnavsharma2/dynamo-diff.git dynamo-diff-examples
+.venv/bin/python dynamo-diff-examples/tools/demo.py
 ```
 
 This imports the bundled before/after captures into a temporary store, checks their expected comparison, and prints a Markdown table. `compute` changes from three completed compilations, including two confirmed recompilations, to one completed compilation with no confirmed recompilation. A new helper remains in candidate totals as an unmatched function. These are captured compiler observations, not a runtime-speed result.
 
 The [recorded example guide](docs/DEMO.md) explains the source edit, comparison and original compiler evidence.
 
-For the retained full Transformers `generate()` case, run `python case_studies/transformers_cache/verify.py`. Early static-cache initialization removes one warm-request recompile while retaining prefill/decode specialization. This inspection also works without PyTorch or Transformers; the case guide separately explains workload regeneration.
+For the retained full Transformers `generate()` case, run `.venv/bin/python dynamo-diff-examples/case_studies/transformers_cache/verify.py`. Early static-cache initialization removes one warm-request recompile while retaining prefill/decode specialization. This inspection also works without PyTorch or Transformers; the case guide separately explains workload regeneration.
 
 To inspect your own converted reports:
 
@@ -66,6 +67,8 @@ The VS Code extension invokes the same CLI using a configured Python executable.
 
 ## Development
 
+From a repository checkout with its own `.venv`:
+
 ```sh
 .venv/bin/python -m pip install --require-hashes -r requirements-test.lock
 .venv/bin/python -m pip install --no-deps --no-build-isolation -e .
@@ -83,7 +86,7 @@ See [architecture](docs/ARCHITECTURE.md), [semantics](docs/SEMANTICS.md), [relea
 
 Version 0.1.0 includes twelve controlled recorded scenarios, an authored source-edit pair and a [Transformers generation investigation](case_studies/transformers_cache/README.md). The installed-wheel suite passes 96 core tests, both offline demonstrations and twelve evaluation-harness tests. [CI](https://github.com/Arnavsharma2/dynamo-diff/actions/workflows/ci.yml) checks the core on macOS/Linux and the development/installed VS Code extension on Linux. Local macOS editor checks and native visual inspection also passed.
 
-The [processing benchmark](docs/PERFORMANCE.md) measures this tool's import and comparison costs. The [60-attempt diagnostic pilot](benchmarks/agent_pilot/README.md) found no demonstrated end-to-end agent improvement. Application-speed gains and external adoption are unclaimed. Audits are **AI-reviewed**, with independent human review optional under the approved scope. See the [completion audit](docs/COMPLETION_AUDIT.md), [delivery status](docs/STATUS.md) and [release notes](docs/CHANGELOG.md). Python 0.1.0 packages are distributed through GitHub Releases; VS Code extension 0.1.2 is published on Marketplace with a [verified publication receipt](artifacts/marketplace-publication-0.1.2.json). There is no PyPI publication.
+The [processing benchmark](docs/PERFORMANCE.md) measures this tool's import and comparison costs. The [60-attempt diagnostic pilot](benchmarks/agent_pilot/README.md) found no demonstrated end-to-end agent improvement. Application-speed gains and external adoption are unclaimed. Audits are **AI-reviewed**, with independent human review optional under the approved scope. See the [completion audit](docs/COMPLETION_AUDIT.md), [delivery status](docs/STATUS.md) and [release notes](docs/CHANGELOG.md). Python analyzer 0.1.1 is published on [PyPI](https://pypi.org/project/dynamo-diff/) with [verified downloads and fresh installations](artifacts/pypi-publication-0.1.1.json). VS Code extension 0.1.2 is published on Marketplace with a [verified publication receipt](artifacts/marketplace-publication-0.1.2.json). The original 0.1.0 GitHub release remains available.
 
 ## Local data handling
 

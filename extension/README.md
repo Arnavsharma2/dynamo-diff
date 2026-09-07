@@ -4,11 +4,11 @@ Compare two saved PyTorch Dynamo runs, inspect which functions recompiled, and o
 
 ## Set up the Python analyzer
 
-The extension uses the local Dynamo Diff Python CLI. Download `dynamo_diff-0.1.0-py3-none-any.whl` from [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0), then run from the download directory:
+The extension uses the local Dynamo Diff Python CLI. Install it from [PyPI](https://pypi.org/project/dynamo-diff/):
 
 ```sh
 python3.13 -m venv .venv
-.venv/bin/python -m pip install ./dynamo_diff-0.1.0-py3-none-any.whl
+.venv/bin/python -m pip install dynamo-diff
 .venv/bin/dynamo-diff --version
 ```
 

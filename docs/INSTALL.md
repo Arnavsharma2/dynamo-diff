@@ -1,16 +1,16 @@
 # Install Dynamo Diff
 
-Install the VS Code extension **0.1.2** from [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff), and download the Python analyzer **0.1.0** from the [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). The Python release also includes a source archive, build evidence and `SHA256SUMS`. The extension requires the separately installed Python analyzer.
+Install the VS Code extension **0.1.2** from [Marketplace](https://marketplace.visualstudio.com/items?itemName=dynamo-diff.dynamo-diff), and install the Python analyzer **0.1.1** from [PyPI](https://pypi.org/project/dynamo-diff/). The extension requires the separately installed Python analyzer. The earlier **0.1.0** [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) remains available with its source archive, build evidence and `SHA256SUMS`.
 
 Python 3.13 is the tested setup on macOS and Linux. The package declares Python 3.11 or newer, but other versions and Windows have not been verified. Inspecting saved captures needs neither PyTorch nor a GPU.
 
 ## Python CLI
 
-From the directory containing the downloaded wheel:
+Create a virtual environment and install from PyPI:
 
 ```sh
 python3.13 -m venv .venv
-.venv/bin/python -m pip install './dynamo_diff-0.1.0-py3-none-any.whl[mcp]'
+.venv/bin/python -m pip install 'dynamo-diff[mcp]'
 .venv/bin/dynamo-diff --version
 ```
 
@@ -29,7 +29,7 @@ The extension is tested with VS Code 1.132.1 on macOS and Linux. Its manifest pe
 
 ## Try the included captures
 
-The wheel contains the analyzer. The source archive and Git checkout additionally contain the demo scripts and recorded captures. After installing the wheel, extract `dynamo_diff-0.1.0.tar.gz` or clone the repository, then run from that source directory using your installed environment:
+The wheel contains the analyzer. The source archive and Git checkout additionally contain the demo scripts and recorded captures. After installing the package, download and extract the source distribution from [PyPI's files page](https://pypi.org/project/dynamo-diff/0.1.1/#files), or clone the repository, then run from that source directory using your installed environment:
 
 ```sh
 /absolute/path/to/.venv/bin/python tools/demo.py
@@ -42,4 +42,6 @@ These commands inspect retained outputs without executing their workloads. [Capt
 
 ## Verify downloads
 
-Keep the files and `SHA256SUMS` together. On macOS, use `shasum -a 256 -c SHA256SUMS`; on Linux, use `sha256sum -c SHA256SUMS`. Download all listed files for a complete check. The checksum file checks byte integrity; it is not a separate signed attestation.
+The [PyPI publication receipt](../artifacts/pypi-publication-0.1.1.json) records the wheel/source archive hashes and fresh-install verification. PyPI also lists file hashes and publishing attestations on its files page.
+
+For the historical GitHub release, keep the downloaded files and `SHA256SUMS` together. On macOS, use `shasum -a 256 -c SHA256SUMS`; on Linux, use `sha256sum -c SHA256SUMS`. Download all listed files for a complete check. That checksum file checks byte integrity; it is not a separate signed attestation.

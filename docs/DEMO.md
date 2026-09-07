@@ -1,42 +1,42 @@
-# Recorded CLI walkthrough
+# Dynamo Diff walkthrough
 
-**Native walkthrough complete.** In the approved `Dynamo Diff Demo` profile, imports, comparison table, baseline source, candidate source and original guard evidence were visually inspected. Candidate `model.py` opens `compute` at captured line 9, shows `VARIANT = "after"`, the branch-free `return x.sin() * 2`, and the new helper in one editor group. Both source snapshots are distinct, consistent with the installed-extension immutability checks. The final candidate screenshot was inspected after native state recovered from the earlier stale captures and locked desktop. The chronology below preserves those earlier limitations; they are now resolved for this walkthrough.
+[Watch or download the 72-second video](https://github.com/Arnavsharma2/dynamo-diff/releases/download/v0.1.0/walkthrough.mp4) · [Transcript](demo/TRANSCRIPT.md) · [Command receipt](demo/receipt.json)
 
-The [26-second recording](../artifacts/demo/cli-003/walkthrough.cast) runs five real commands against the retained authored-edit captures. The [plain-text transcript](../artifacts/demo/cli-003/transcript.txt) is readable without a player. The [receipt](../artifacts/demo/cli-003/receipt.json) retains each argument list, stdout, stderr, exit code, command duration, recorder hash and recording hash. All five commands exited 0.
+[![Dynamo Diff comparison and guard-evidence walkthrough](demo/walkthrough.gif)](demo/walkthrough.mp4)
 
-1. Import the baseline report and its manifest.
-2. Import the candidate report and its manifest.
-3. Compare their workload declarations, matched functions and compiler counts.
-4. Retrieve an original guard reason, including its artifact path and SHA-256.
-5. Verify the edited function and the newly added, unmatched helper.
+The video presents selected fields from seven actual CLI subprocess calls against the retained authored-edit captures: two imports, comparison, both source snapshots, baseline analysis and original evidence retrieval. All seven commands succeeded. The receipt preserves argument lists, complete stdout, stderr, exit codes, timings and hashes. Source excerpts omit only an explanatory comment; the displayed evidence hash is shortened, with the full value in the receipt.
 
-The comparison matches `compute` across the source edit: three completed compilations, including two confirmed recompilations, become one completed compilation with no confirmed recompilation. Guard categories are shown on both sides: `python_scalar → none recorded`. The candidate's new helper contributes another completed compilation to candidate totals, and its absent baseline counterpart is labeled `function absent`. The manifest comparison is consistent, but declarations alone do not prove equivalent execution. Application performance remains explicitly unmeasured.
+The timeline is paced for reading and has no audio. It is a visual presentation of captured CLI output, not a native VS Code screen recording or processing benchmark. All six chapter images were visually inspected; the encoded H.264 video was decoded successfully at 1280×720, 12 fps and 72 seconds.
 
-This is actual CLI subprocess output with narrated command labels and five intentional five-second presentation pauses. Its total duration is not a processing benchmark. The recording used the separate installed-wheel environment without PyTorch or Transformers, after the baseline-guard display correction. It is not a native VS Code screen recording.
+## What the example shows
 
-The file uses the documented [asciicast v2 format](https://docs.asciinema.org/manual/asciicast/v2/). A compatible player can replay it locally; no upload is required. The earlier `artifacts/demo/cli-001/failure.json` records a recorder setup assertion failure and is not a successful demo. `cli-002` retains the earlier successful recording, whose comparison displayed only candidate guard categories; use `cli-003` for the corrected current behavior.
+The comparison matches `compute` across an ordinary source edit and changed frame IDs. Three completed compilations, including two confirmed recompilations, become one completed compilation with no confirmed recompilation. The candidate's new helper remains unmatched and adds another completed compilation to candidate totals, making the overall comparison three → two.
 
-## Reproduce
+Original baseline evidence retains `step == 1`, its captured `if step > 0` context, artifact `-_0_1_0/recompile_reasons_4.json`, record 10 and SHA-256 `832c22b265eea6007916338024fa9ad308f931e2ca6ecf4bbc57ce205b43dc6a`. Manifest consistency describes matching declarations; it does not prove equivalent execution. Application speed remains unmeasured.
 
-From the checkout, using an installed Dynamo Diff package:
+## Reproduce the commands
+
+From the source checkout, with Dynamo Diff installed:
 
 ```sh
 python tools/demo.py
 python tools/record_demo.py --output artifacts/demo/my-new-recording
 ```
 
-Choose a new output directory each time. The recorder refuses to overwrite an existing recording, uses a temporary capture store, and inspects saved captures without executing the recorded workloads. `--pause 0` removes presentation pauses for a quick local check.
+The second command records a terminal-oriented five-command walkthrough. It refuses to overwrite an existing directory and uses a temporary capture store. `--pause 0` removes presentation pauses. The earlier [26-second asciicast recording](../artifacts/demo/cli-003/walkthrough.cast), [plain-text transcript](../artifacts/demo/cli-003/transcript.txt) and [receipt](../artifacts/demo/cli-003/receipt.json) remain available.
 
-## VS Code review
+## Rebuild the visual presentation
 
-The tested VSIX is installed in the user-approved `Dynamo Diff Demo` profile. Both authored captures were imported through the native UI. The demo workspace's Python setting points to the virtual environment executable, preserving its path rather than resolving its symlink to the base Python interpreter.
+`tools/create_release_demo.py` uses optional authoring tools: Pillow 12.3, an ffmpeg executable with H.264 encoding, and local proportional/monospace TrueType fonts. These are not analyzer dependencies. With Pillow available in the authoring interpreter:
 
-The installed-VSIX integration suite passed eleven checks, including comparison, captured source/evidence navigation, error recovery, cancellation, active-editor-group reuse and activation of the rendered table. The original navigation code expanded a one-column test workspace to six columns; the retained regression fails on that behavior, and the fix preserves one column. Source snapshots remain distinct and read-only.
+```sh
+python tools/create_release_demo.py --python /absolute/path/to/dynamo-diff-env/bin/python --ffmpeg /absolute/path/to/ffmpeg --font /absolute/path/to/proportional.ttf --mono-font /absolute/path/to/monospace.ttf --output artifacts/demo/my-new-visual-demo
+```
 
-Native import and comparison produced three → two total completed compilations and two → zero confirmed recompilations. The table's baseline/candidate categories and validity fields were inspected through the native accessibility tree. The rebuilt VSIX was then installed in the approved profile, and the demo window was reloaded. The desktop locked before the updated layout and native source/evidence walkthrough could be visually verified. The CLI recording does not substitute for that remaining visual check. Earlier stale capture/accessibility errors are retained in the verification notes; they do not establish another editor crash.
+The command interpreter must have Dynamo Diff installed; keep its virtual-environment path intact. The output directory must be new. The script executes the seven CLI calls, checks the selected observations and renders six chapter images, a GIF, MP4, transcript and receipt. Font and encoder differences may change media hashes. Inspect the output before sharing it.
 
-The September 7 retry recovered the updated comparison tree and invoked table/source navigation, but the outer window title, accessibility content and screenshots disagreed about the active view. Final visual acceptance remains pending consistent native state. Hosted Linux and local macOS installed-VSIX tests independently passed source/evidence navigation and editor-group preservation; those checks are recorded in the [verification notes](../artifacts/VERIFICATION.md).
+## VS Code verification
 
-A later follow-up visually verified the baseline's original `compute` branch at line 9 and the rendered table with counts, separate baseline/candidate guards, the unmatched helper and performance limitation in one editor group. The evidence action changed the outer title to `payload-10-0.txt`, but its content could not yet be verified because the UI tool continued showing the old table. The remaining visual check is candidate source and original evidence; baseline/table inspection is complete.
+The native walkthrough is complete in the approved demo profile: imports, comparison table, baseline source, candidate source and original guard evidence were visually inspected in one editor group. Candidate `model.py` opens `compute` at captured line 9, with `VARIANT = "after"`, the branch-free `return x.sin() * 2` and the new helper. Baseline and candidate snapshots remain distinct and read-only.
 
-The next native screenshot verified the original evidence view: `payload-10-0.txt` displays `step == 1`, the captured `if step > 0` source context, artifact `-_0_1_0/recompile_reasons_4.json`, record 10 and SHA-256 `832c22b265eea6007916338024fa9ad308f931e2ca6ecf4bbc57ce205b43dc6a`. The full excerpt fits in one editor group. This closes original-evidence visual inspection; candidate source remains.
+The installed-VSIX integration suite passed eleven checks, including source/evidence navigation, error recovery, cancellation, active-editor-group reuse and the rendered table. [Verification evidence](../artifacts/VERIFICATION.md) retains the earlier editor-column regression and native UI recovery chronology. The public video demonstrates CLI evidence; it does not replace those separately recorded editor checks.

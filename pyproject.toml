@@ -11,6 +11,11 @@ requires-python = ">=3.11"
 license = "MIT"
 dependencies = ["pydantic>=2.13,<3"]
 
+[project.urls]
+Repository = "https://github.com/Arnavsharma2/dynamo-diff"
+Documentation = "https://github.com/Arnavsharma2/dynamo-diff#readme"
+Issues = "https://github.com/Arnavsharma2/dynamo-diff/issues"
+
 [project.optional-dependencies]
 mcp = ["mcp==2.1.1"]
 fixtures = ["torch==2.14.0", "tlparse==0.4.3"]

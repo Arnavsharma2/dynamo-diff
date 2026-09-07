@@ -2,7 +2,11 @@
 
 Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behind the difference. A local Python analyzer powers a CLI, three MCP tools, and a small VS Code extension.
 
-**Portfolio v1 complete:** the CLI, MCP server and VS Code extension satisfy the [approved scope audit](docs/COMPLETION_AUDIT.md). [Hosted CI](artifacts/HOSTED_CI.md) passes core and MCP checks on macOS/Linux and development/installed-extension checks on Linux; local macOS editor checks and the native visual walkthrough also pass. The [import benchmark](docs/PERFORMANCE.md) and [Transformers investigation](case_studies/transformers_cache/README.md) retain measured evidence. The [60-trial diagnostic pilot](benchmarks/agent_pilot/README.md) found no demonstrated end-to-end agent improvement. Audits remain **AI-reviewed**, with independent human review optional under the approved scope. See [delivery status](docs/STATUS.md) and [release notes](docs/CHANGELOG.md). This project is delivered through the private repository and local packages; it is not published to PyPI or the VS Code Marketplace.
+[Download v0.1.0](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) · [Install the CLI and VS Code extension](docs/INSTALL.md) · [72-second demo](docs/demo/walkthrough.mp4) · [Compatibility](docs/COMPATIBILITY.md)
+
+[![Dynamo Diff walkthrough: compare captured compilations and inspect original guard evidence](docs/demo/walkthrough.gif)](https://github.com/Arnavsharma2/dynamo-diff/releases/download/v0.1.0/walkthrough.mp4)
+
+The demo presents actual CLI output with a paced timeline. [Transcript and provenance](docs/DEMO.md) include the original commands and results.
 
 ## What a comparison tells you
 
@@ -13,17 +17,20 @@ Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behin
 
 The tool does not prove an optimization is correct or faster. Several failed guards can belong to one recompilation; fewer compilations can accompany a failure or a compiler limit. These distinctions are part of its [correctness contract](docs/SEMANTICS.md).
 
-## Install from this checkout
+## Quick start
 
 Use Python 3.13 for the tested setup. The package declares Python 3.11 or newer; other Python versions have not yet been verified.
 
 ```sh
+git clone https://github.com/Arnavsharma2/dynamo-diff.git
+cd dynamo-diff
 python3.13 -m venv .venv
 .venv/bin/python -m pip install '.[mcp]'
 .venv/bin/dynamo-diff --version
+.venv/bin/python tools/demo.py
 ```
 
-Inspecting saved captures requires neither PyTorch nor a GPU. `.[fixtures]` adds the pinned compiler and converter for generating new captures. [Compatibility](docs/COMPATIBILITY.md) lists the supported trace format; arbitrary PyTorch/tlparse versions are not supported.
+Inspecting saved captures requires neither PyTorch nor a GPU. Prebuilt wheel and VSIX downloads are available in the [GitHub release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0); follow the [installation guide](docs/INSTALL.md). `.[fixtures]` adds the pinned compiler and converter for generating new captures. [Compatibility](docs/COMPATIBILITY.md) lists the supported trace format; arbitrary PyTorch/tlparse versions are not supported.
 
 ## Try the recorded edit
 
@@ -33,7 +40,7 @@ Inspecting saved captures requires neither PyTorch nor a GPU. `.[fixtures]` adds
 
 This imports the bundled before/after captures into a temporary store, checks their expected comparison, and prints a Markdown table. `compute` changes from three completed compilations, including two confirmed recompilations, to one completed compilation with no confirmed recompilation. A new helper remains in candidate totals as an unmatched function. These are captured compiler observations, not a runtime-speed result.
 
-The [recorded walkthrough](docs/DEMO.md) shows the five-command import, comparison and original-evidence flow, with a plain-text transcript and reproducible recording script.
+The [recorded walkthrough](docs/DEMO.md) follows the edit, comparison and original-evidence flow, with video, a transcript and a reproducible authoring script.
 
 For the retained full Transformers `generate()` case, run `python case_studies/transformers_cache/verify.py`. Early static-cache initialization removes one warm-request recompile while retaining prefill/decode specialization. This inspection also works without PyTorch or Transformers; the case guide separately explains workload regeneration.
 
@@ -75,6 +82,12 @@ npm run compile
 `requirements-test.lock` pins core, MCP, tests and packaging without PyTorch. `requirements-dev.lock` additionally pins fixture generation. `requirements-case-study.lock` adds the pinned Transformers reproduction. All target Python 3.13. Actual artifact regeneration is separate from ordinary tests and refuses to overwrite retained captures.
 
 See [architecture](docs/ARCHITECTURE.md), [semantics](docs/SEMANTICS.md), [release instructions](docs/RELEASING.md), and the original [project scope](docs/PROJECT_SCOPE.md).
+
+## Validation and limits
+
+Version 0.1.0 includes twelve controlled recorded scenarios, an authored source-edit pair and a [Transformers generation investigation](case_studies/transformers_cache/README.md). The installed-wheel suite passes 96 core tests, both offline demonstrations and twelve evaluation-harness tests. [CI](https://github.com/Arnavsharma2/dynamo-diff/actions/workflows/ci.yml) checks the core on macOS/Linux and the development/installed VS Code extension on Linux. Local macOS editor checks and native visual inspection also passed.
+
+The [processing benchmark](docs/PERFORMANCE.md) measures this tool's import and comparison costs. The [60-attempt diagnostic pilot](benchmarks/agent_pilot/README.md) found no demonstrated end-to-end agent improvement. Application-speed gains and external adoption are unclaimed. Audits are **AI-reviewed**, with independent human review optional under the approved scope. See the [completion audit](docs/COMPLETION_AUDIT.md), [delivery status](docs/STATUS.md) and [release notes](docs/CHANGELOG.md). Downloads are distributed through GitHub Releases; there is no PyPI or VS Code Marketplace publication.
 
 ## Local data handling
 

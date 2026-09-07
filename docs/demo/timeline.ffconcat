@@ -1,0 +1,14 @@
+ffconcat version 1.0
+file 'chapter-01.png'
+duration 8
+file 'chapter-02.png'
+duration 12
+file 'chapter-03.png'
+duration 14
+file 'chapter-04.png'
+duration 16
+file 'chapter-05.png'
+duration 12
+file 'chapter-06.png'
+duration 10
+file 'chapter-06.png'

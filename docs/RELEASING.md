@@ -1,6 +1,6 @@
-# Local build and release checklist
+# Build and release checklist
 
-These instructions create installable local artifacts. Public package publication is a separate action requiring a chosen distribution channel.
+These instructions create installable artifacts. Version 0.1.0 uses [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) as its public distribution channel. [Installation instructions](INSTALL.md) cover release users. PyPI and the VS Code Marketplace are not used.
 
 Portfolio v1 has completed this checklist under the [approved scope audit](COMPLETION_AUDIT.md). The [delivery receipt](../artifacts/portfolio-v1-delivery.json) identifies its wheel, source archive and tested VSIX. Reviews are AI-reviewed; the user made independent human review optional. The native walkthrough is complete in the recorded demo profile.
 
@@ -34,7 +34,7 @@ For the extension, run the isolated editor suite and install the VSIX into a sep
 - Native editor visual acceptance. Fresh-wheel and installed-VSIX checks pass locally and in [hosted CI](../artifacts/HOSTED_CI.md); the [short CLI demo](DEMO.md) is recorded.
 - Requirement-by-requirement comparison against the current approved project scope; preserve the [original proposal](PROJECT_SCOPE_ORIGINAL.md) alongside the review-policy revision.
 
-Record evidence in `STATUS.md`; never replace an unverified gate with a broader claim based on unit tests. External feedback/adoption remains unclaimed unless actually obtained. Once the gates pass, finalize the version/changelog and hash the artifacts. The approved private repository provides project delivery; PyPI, Marketplace and public repository publication remain separate decisions.
+Record evidence in `STATUS.md`; never replace an unverified gate with a broader claim based on unit tests. External feedback/adoption remains unclaimed unless actually obtained. Once the gates pass, finalize the version/changelog and hash the artifacts. For a public release, review reachable history, nested archives, bundled source attribution and existing CI logs; build and test the final packages; run hosted CI on the release commit; then publish that commit with the wheel, source archive, VSIX, demo, receipt and SHA-256 checksums. Preserve historical receipts instead of replacing their hashes with a newer build. See [the v0.1.0 public-release review](PUBLIC_RELEASE.md).
 
 The initial 10 MiB/100 MiB processing baseline and separate conversion timings are already recorded in [PERFORMANCE.md](PERFORMANCE.md). Repeat them when implementation changes or unresolved regression concerns warrant it.
 

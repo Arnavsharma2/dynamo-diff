@@ -5,6 +5,11 @@
   "version": "0.1.0",
   "publisher": "dynamo-diff",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arnavsharma2/dynamo-diff.git",
+    "directory": "extension"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -113,7 +118,7 @@
   "scripts": {
     "compile": "tsc -p ./",
     "test": "npm run compile && node out/test/runTest.js",
-    "package": "npm run compile && vsce package --no-dependencies --allow-missing-repository"
+    "package": "npm run compile && vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "26.4.1",

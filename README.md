@@ -2,9 +2,7 @@
 
 Compare two recorded PyTorch Dynamo runs and inspect the compiler evidence behind the difference. A local Python analyzer powers a CLI, three MCP tools, and a small VS Code extension.
 
-[Download v0.1.0](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) · [Install the CLI and VS Code extension](docs/INSTALL.md) · [72-second demo](docs/demo/walkthrough.mp4) · [Compatibility](docs/COMPATIBILITY.md)
-
-The demo presents actual CLI output with a paced timeline. [Transcript and provenance](docs/DEMO.md) include the original commands and results.
+[Download v0.1.0](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0) · [Install the CLI and VS Code extension](docs/INSTALL.md) · [Compatibility](docs/COMPATIBILITY.md)
 
 ## What a comparison tells you
 
@@ -38,7 +36,7 @@ Inspecting saved captures requires neither PyTorch nor a GPU. Prebuilt wheel and
 
 This imports the bundled before/after captures into a temporary store, checks their expected comparison, and prints a Markdown table. `compute` changes from three completed compilations, including two confirmed recompilations, to one completed compilation with no confirmed recompilation. A new helper remains in candidate totals as an unmatched function. These are captured compiler observations, not a runtime-speed result.
 
-The [recorded walkthrough](docs/DEMO.md) follows the edit, comparison and original-evidence flow, with video, a transcript and a reproducible authoring script.
+The [recorded example guide](docs/DEMO.md) explains the source edit, comparison and original compiler evidence.
 
 For the retained full Transformers `generate()` case, run `python case_studies/transformers_cache/verify.py`. Early static-cache initialization removes one warm-request recompile while retaining prefill/decode specialization. This inspection also works without PyTorch or Transformers; the case guide separately explains workload regeneration.
 

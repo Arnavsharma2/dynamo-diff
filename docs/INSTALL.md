@@ -1,6 +1,6 @@
 # Install Dynamo Diff 0.1.0
 
-Download the Python wheel and VS Code extension from the [v0.1.0 release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). The release also includes a source archive, a 72-second demo, build evidence and `SHA256SUMS`. GitHub is the distribution channel for this version.
+Download the Python wheel and VS Code extension from the [v0.1.0 release](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). The release also includes a source archive, build evidence and `SHA256SUMS`. GitHub is the distribution channel for this version.
 
 Python 3.13 is the tested setup on macOS and Linux. The package declares Python 3.11 or newer, but other versions and Windows have not been verified. Inspecting saved captures needs neither PyTorch nor a GPU.
 

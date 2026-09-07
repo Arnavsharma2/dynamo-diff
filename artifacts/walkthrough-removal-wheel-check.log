@@ -1,0 +1,25 @@
+Package under test: /Users/aps/Documents/ChatGPT/Job Apps/dynamo-diff/.cache/clean-env/lib/python3.13/site-packages/dynamo_diff/__init__.py
+........................................................................ [ 75%]
+........................                                                 [100%]
+96 passed in 4.89s
+# Dynamo comparison
+
+Baseline: 4c89bff73d2fbba6bdc8021769723fe598d267c4c995c12bb8c6bf0599dba991
+Candidate: d95713729bb764fe3ef768f44d23003d9c3eb6c174f447f2d8e57cdf7f8fcf58
+Workload comparability: manifest_consistent
+
+| Function | Match | Completed before → after | Confirmed recompiles before → after | Guard categories before → after |
+|---|---|---:|---:|---|
+| model.py:compute | matched | 3 → 1 | 2 → 0 | python_scalar → none recorded |
+| model.py:helper | unmatched | 0 → 1 | 0 → 0 | function absent → none recorded |
+
+Application performance: not measured. Counts describe captured compiler behavior.
+{
+  "checks": [
+    "baseline: finalization, raw terminals, recompile artifacts, normalized events, backend totals and eager-output evidence",
+    "candidate: finalization, raw terminals, recompile artifacts, normalized events, backend totals and eager-output evidence",
+    "matched wrapper, one fewer completed recompile, cache-initialization reason removed, shape specialization retained, no speed verdict"
+  ],
+  "review_status": "human_review_pending"
+}
+Core release checks passed. Human review, agent evaluation and editor/release gates are separate.

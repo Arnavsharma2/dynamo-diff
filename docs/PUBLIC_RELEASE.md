@@ -1,6 +1,6 @@
 # Public release review: 0.1.0
 
-The first public release distributes the saved-capture analyzer and VS Code extension through [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). It includes the Python wheel, source archive, VSIX, 72-second MP4, transcript, release receipt and SHA-256 checksums. [Installation instructions](INSTALL.md) explain how to use them. The release tag identifies the source commit; the attached receipt identifies the build files and validation run.
+The first public release distributes the saved-capture analyzer and VS Code extension through [GitHub Releases](https://github.com/Arnavsharma2/dynamo-diff/releases/tag/v0.1.0). It includes the Python wheel, source archive, VSIX, release receipt and SHA-256 checksums. [Installation instructions](INSTALL.md) explain how to use them. The release tag identifies the source commit; the attached receipt identifies the build files and validation run.
 
 ## Repository and capture review
 
@@ -12,7 +12,7 @@ The scan checks common private-key headers, token formats, credentials in URLs a
 
 The public packages rebuild version 0.1.0 with release documentation and repository metadata. Analyzer and editor runtime code are unchanged from the verified portfolio implementation. The earlier [portfolio delivery receipt](../artifacts/portfolio-v1-delivery.json) remains a historical record; its package hashes must not be substituted for the new release downloads.
 
-Validation includes the installed-wheel core suite, both offline demonstrations, evaluation-harness checks, hosted macOS/Linux core jobs and the Linux development/installed-VSIX checks. The release receipt records exact results, source commit, CI URL and final asset hashes. The demo receipt retains its seven actual CLI calls and original output; video timing is intentional presentation pacing.
+Validation includes the installed-wheel core suite, both offline demonstrations, evaluation-harness checks, hosted macOS/Linux core jobs and the Linux development/installed-VSIX checks. The release receipt records exact results, source commit, CI URL and final asset hashes. The visual presentation and its public download assets were removed in a documentation-only revision; the recorded compiler inputs remain available for local inspection.
 
 ## Claim boundaries
 
